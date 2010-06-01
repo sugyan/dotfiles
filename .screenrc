@@ -1,0 +1,2 @@
+escape ^ ^ 
+hardstatus alwayslastline "%-w%{= ck} %n %t %{-}%+w"
