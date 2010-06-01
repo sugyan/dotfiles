@@ -7,3 +7,7 @@
 (set-background-color "Black")
 (set-foreground-color "White")
 (add-to-list 'default-frame-alist '(alpha . 85))
+;; スクロールバーを非表示
+(set-scroll-bar-mode nil)
+;; 折り返ししない
+(setq default-truncate-lines t)
