@@ -1,0 +1,11 @@
+[user]
+	name = sugyan
+	email = sugi1982@gmail.com
+[color]
+	ui = auto
+[alias]
+	ci = commit
+	st = status
+	co = checkout
+[core]
+	excludesfile = $HOME/.gitignore
