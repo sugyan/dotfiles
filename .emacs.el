@@ -1,5 +1,6 @@
 ;; load-path
 (add-to-list 'load-path "~/.emacs.d/elisp")
+(add-to-list 'load-path "~/.emacs.d/auto-install")
 
 ;; init-loader
 ;; デフォルトで"~/.emacs.d/inits"以下のファイルをロードする
