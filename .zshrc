@@ -30,6 +30,9 @@ alias em="emacsclient -n"
 ##################################################
 # others
 
+# options
+setopt autocd
+
 # completion
 autoload -Uz compinit
 compinit
