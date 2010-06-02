@@ -8,4 +8,4 @@
 	st = status
 	co = checkout
 [core]
-	excludesfile = $HOME/.gitignore
+	excludesfile = ~/.gitignore
