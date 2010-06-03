@@ -32,6 +32,8 @@ alias em="emacsclient -n"
 
 # options
 setopt autocd
+setopt autopushd
+setopt pushdignoredups
 
 # completion
 autoload -Uz compinit
