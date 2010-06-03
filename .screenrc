@@ -1,3 +1,4 @@
 escape ^ ^ 
+startup_message off
 hardstatus alwayslastline "%-w%{= ck} %n %t %{-}%+w"
 defscrollback 3000
