@@ -3,6 +3,8 @@
 (global-set-key "\C-c<" 'uncomment-region)
 ;; indent
 (global-set-key "\C-x\C-i" 'indent-region)
+;; shell-command
+(global-set-key "\M-s" 'shell-command)
 
 ;; 選択範囲を強調表示しない
 (setq transient-mark-mode nil)
