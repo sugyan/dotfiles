@@ -4,3 +4,7 @@
 ;; METAキーとALTキー交換
 (setq ns-alternate-modifier 'alt)
 (setq ns-command-modifier 'meta)
+
+;; C-j と C-m の動作を入れ替える
+(keyboard-translate ?\C-j ?\C-m)
+(keyboard-translate ?\C-m ?\C-j)
