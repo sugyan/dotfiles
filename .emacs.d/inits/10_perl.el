@@ -11,7 +11,8 @@
 
 ;; 対象拡張子の追加
 (setq auto-mode-alist
-      (append '(("\\.psgi\\'" . perl-mode))
+      (append '(("\\.psgi\\'" . perl-mode)
+                ("\\.t\\'" . perl-mode))
               auto-mode-alist))
 
 ;; tmt-mode

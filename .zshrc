@@ -39,6 +39,9 @@ setopt pushdignoredups
 autoload -Uz compinit
 compinit
 
+zstyle ':completion:*:-command-:*' \
+    fake-parameters CATALYST_DEBUG DBIC_TRACE PERL5LIB # for perl debug
+
 # vcs
 autoload -Uz vcs_info
 zstyle ':vcs_info:*' enable git svn

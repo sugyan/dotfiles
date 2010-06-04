@@ -1,3 +1,7 @@
+;; yaml-mode
+(require 'yaml-mode)
+(add-to-list 'auto-mode-alist '("\\.ya?ml\\'" . yaml-mode))
+
 ;; language
 (set-language-environment 'utf-8)
 ;; for emacsclient to work
