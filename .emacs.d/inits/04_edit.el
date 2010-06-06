@@ -4,6 +4,9 @@
 ;; indent
 (global-set-key "\C-x\C-i" 'indent-region)
 
+;; buffer-nameをuniqueに
+(require 'uniquify)
+(setq uniquify-buffer-name-style 'forward)
 ;; 選択範囲を強調表示しない
 (setq transient-mark-mode nil)
 ;; 行の折り返ししない
@@ -12,6 +15,7 @@
 (setq-default tab-width 4 indent-tabs-mode nil)
 ;; 対応する括弧のハイライト
 (show-paren-mode t)
+
 ;; auto-complete
 (require 'auto-complete)
 (global-auto-complete-mode t)

@@ -1,13 +1,18 @@
 ;; cperl-mode
 (defalias 'perl-mode 'cperl-mode)
-(setq cperl-indent-parens-as-block t
-      cperl-close-paren-offset -4)
+(setq cperl-indent-level 4
+      cperl-continued-statement-offset 4
+      cperl-close-paren-offset -4
+      cperl-indent-parens-as-block t)
 
 ;; perl-completion
 (add-hook 'cperl-mode-hook
           (lambda ()
             (require 'perl-completion)
             (perl-completion-mode t)))
+
+;; keybind
+(define-key cperl-mode-map (kbd "C-m") 'newline-and-indent)
 
 ;; 対象拡張子の追加
 (setq auto-mode-alist
