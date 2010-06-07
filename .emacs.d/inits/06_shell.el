@@ -7,6 +7,7 @@
 
 ;; shell-command
 (global-set-key "\M-s" 'multi-term-next)
+(global-set-key "\M-S" 'multi-term-prev)
 
 ;; term に奪われたくないキー
 (add-to-list 'term-unbind-key-list '"C-o")
@@ -15,5 +16,6 @@
 (add-hook 'term-mode-hook
           '(lambda ()
              (define-key term-raw-map (kbd "C-h") 'term-send-backspace)
+             (define-key term-raw-map (kbd "C-r") 'term-send-reverse-search-history)
              (define-key term-raw-map (kbd "C-y") 'term-paste)
              ))
