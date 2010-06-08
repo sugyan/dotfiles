@@ -6,22 +6,22 @@
 (setq ff-other-file-alist
       '(("\\.m$" (".h"))
         ("\\.h$" (".m"))))
-;; ビルド実行
-(defun xcode:buildandrun ()
+;; indent設定
+(add-hook 'c-mode-common-hook
+          '(lambda()
+             (c-set-style "cc-mode")))
+;; xcodeに切り替える
+(defun xcode ()
   (interactive)
   (do-applescript
    (format
-    (concat
-     "tell application \"Xcode\" to activate \r"
-     "tell application \"System Events\" \r"
-     "     tell process \"Xcode\" \r"
-     "          key code 36 using {command down} \r"
-     "    end tell \r"
-     "end tell \r"
-     ))))
+    (concat "tell application \"Xcode\" to activate"))))
+
 ;; キー割り当て
 (add-hook 'objc-mode-hook
           (lambda ()
-            (define-key objc-mode-map (kbd "C-c o") 'ff-find-other-file)
-            (define-key objc-mode-map (kbd "C-c C-c") 'xcode:buildandrun)
-            ))
+            (define-key objc-mode-map (kbd "C-m")     'newline-and-indent)
+            (define-key objc-mode-map (kbd "C-c o")   'ff-find-other-file)
+            (define-key objc-mode-map (kbd "C-c C-c") 'compile)
+            (define-key objc-mode-map (kbd "C-c RET") 'xcode)
+            (c-subword-mode)))

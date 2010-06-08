@@ -26,6 +26,8 @@ alias ll="ls -l"
 alias la="ll -a"
 alias em="emacsclient -n"
 
+alias gi=git
+
 
 ##################################################
 # others

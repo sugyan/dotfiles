@@ -11,15 +11,14 @@
             (require 'perl-completion)
             (perl-completion-mode t)))
 
-;; keybind
-(define-key cperl-mode-map (kbd "C-m") 'newline-and-indent)
-
 ;; 対象拡張子の追加
 (setq auto-mode-alist
       (append '(("\\.psgi\\'" . perl-mode)
                 ("\\.t\\'" . perl-mode))
               auto-mode-alist))
 
+;; ttはhtml-modeでごまかす
+(add-to-list 'auto-mode-alist '("\\.tt\\'" . html-mode))
 ;; tmt-mode
 (autoload 'tmt-mode "tmt-mode"
   "Major mode for editing Text::MicroTemplate syntax")
