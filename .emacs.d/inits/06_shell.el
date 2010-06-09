@@ -18,4 +18,6 @@
              (define-key term-raw-map (kbd "C-h") 'term-send-backspace)
              (define-key term-raw-map (kbd "C-r") 'term-send-reverse-search-history)
              (define-key term-raw-map (kbd "C-y") 'term-paste)
+             (define-key term-raw-map  (kbd "ESC ESC") 'term-line-mode)
+             (define-key term-mode-map (kbd "ESC ESC") 'term-char-mode)
              ))
