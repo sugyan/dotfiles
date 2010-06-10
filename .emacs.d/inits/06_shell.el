@@ -12,9 +12,11 @@
 ;; term に奪われたくないキー
 (add-to-list 'term-unbind-key-list '"C-o")
 
-;; term 内での文字削除、ペーストを有効にする
+;; key-bind
 (add-hook 'term-mode-hook
           '(lambda ()
+             (define-key term-raw-map (kbd "C-p") 'term-send-up)
+             (define-key term-raw-map (kbd "C-n") 'term-send-down)
              (define-key term-raw-map (kbd "C-h") 'term-send-backspace)
              (define-key term-raw-map (kbd "C-r") 'term-send-reverse-search-history)
              (define-key term-raw-map (kbd "C-y") 'term-paste)

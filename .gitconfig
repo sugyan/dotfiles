@@ -8,4 +8,5 @@
 	st = status
 	co = checkout
 [core]
+	pager = "LESS=-R less"
 	excludesfile = ~/.gitignore
