@@ -16,6 +16,11 @@
 ;; 対応する括弧のハイライト
 (show-paren-mode t)
 
+;; isearch中のC-hの動作をdeleteに
+(add-hook 'isearch-mode-hook
+          (lambda ()
+            (define-key isearch-mode-map (kbd "C-h") 'isearch-del-char)))
+
 ;; auto-complete
 (require 'auto-complete)
 (global-auto-complete-mode t)
