@@ -30,7 +30,8 @@ alias gi=git
 alias ga="git add"
 alias gs="git status"
 alias gd="git diff"
-alias gc="git commit"
+alias gci="git commit"
+alias gco="git checkout"
 alias gl="git log"
 
 
