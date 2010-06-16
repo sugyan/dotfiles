@@ -29,10 +29,14 @@ alias em="emacsclient -n"
 alias gi=git
 alias ga="git add"
 alias gs="git status"
+alias gsh="git show"
 alias gd="git diff"
 alias gci="git commit"
 alias gco="git checkout"
 alias gl="git log"
+alias gr="git reset"
+alias gsd="git svn dcommit"
+alias gsr="git svn rebase"
 
 
 ##################################################
