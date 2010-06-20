@@ -16,6 +16,10 @@ PROMPT=$'%{\e[31m%}%n@%M %{\e[33m%}%* %# %{\e[m%}'
 # special functions
 precmd_functions=(precmd_vcs)
 
+function redrev() {
+    perl -pe 's/^/\e[41m/ && s/$/\e[m/';
+}
+
 
 ##################################################
 # aliases
@@ -38,6 +42,8 @@ alias gm="git merge"
 alias gr="git reset"
 alias gsd="git svn dcommit"
 alias gsr="git svn rebase"
+
+alias -g RED='2> >(redrev)'
 
 
 ##################################################
