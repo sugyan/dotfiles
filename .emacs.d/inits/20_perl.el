@@ -43,6 +43,7 @@
 (add-hook 'cperl-mode-hook
           (lambda ()
             (define-key cperl-mode-map (kbd "C-c p") 'perl-run-test)
+            (define-key cperl-mode-map (kbd "C-m")   'newline-and-indent)
             (require 'perl-completion) ;; perl-completion
             (perl-completion-mode t)))
 
