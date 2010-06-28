@@ -43,8 +43,9 @@ alias gr="git reset"
 alias gsd="git svn dcommit"
 alias gsr="git svn rebase"
 
-alias -g RED='2> >(redrev)'
+alias pad='plackup -MPlack::App::Directory -e '\''$app = Plack::App::Directory->new({ root => "." })->to_app'\'''
 
+alias -g RED='2> >(redrev)'
 
 ##################################################
 # others
