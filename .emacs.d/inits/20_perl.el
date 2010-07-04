@@ -7,10 +7,11 @@
 
 
 ;; 対象拡張子の追加
-(setq auto-mode-alist
-      (append '(("\\.psgi\\'" . perl-mode)
-                ("\\.t\\'" . perl-mode))
-              auto-mode-alist))
+(add-to-list 'auto-mode-alist '("\\.psgi\\'" . perl-mode))
+(add-to-list 'auto-mode-alist '("\\.t\\'"    . perl-mode))
+(add-to-list 'flymake-allowed-file-name-masks '("\\.psgi\\'" flymake-perl-init))
+(add-to-list 'flymake-allowed-file-name-masks '("\\.t\\'"    flymake-perl-init))
+
 
 ;; *.t ファイルに対して prove コマンドで compile する
 (defvar root-files '("Makefile.PL"))
