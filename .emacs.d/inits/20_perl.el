@@ -40,6 +40,9 @@
     (list "perl" (cond (root-dir (list "-I" (concat root-dir "lib")
                                        "-wc" local-file))
                        (t (list "-wc" local-file))))))
+(defadvice flymake-post-syntax-check (before flymake-force-check-was-interrupted)
+  (setq flymake-check-was-interrupted t))
+(ad-activate 'flymake-post-syntax-check)
 
 ;; *.t ファイルに対して prove コマンドで compile する
 (defun perl-run-test ()
