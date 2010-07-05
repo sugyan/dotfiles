@@ -12,8 +12,7 @@
 (add-to-list 'flymake-allowed-file-name-masks '("\\.psgi\\'" flymake-perl-init))
 (add-to-list 'flymake-allowed-file-name-masks '("\\.t\\'"    flymake-perl-init))
 
-
-;; *.t ファイルに対して prove コマンドで compile する
+;; プロジェクトのルートディレクトリを取得
 (defvar root-files '("Makefile.PL"))
 (defun current-directory ()
   (file-name-directory (expand-file-name (or (buffer-file-name)
@@ -29,6 +28,20 @@
         (setq cur-dir (expand-file-name (concat cur-dir "../")))
         (incf i)
         finally return nil))
+
+;; flymake設定
+(defun flymake-perl-init ()
+  (let* ((temp-file  (flymake-init-create-temp-buffer-copy
+                       'flymake-create-temp-inplace))
+         (local-file (file-relative-name
+                       temp-file
+                       (file-name-directory buffer-file-name)))
+         (root-dir   (perl-get-root-directory)))
+    (list "perl" (cond (root-dir (list "-I" (concat root-dir "lib")
+                                       "-wc" local-file))
+                       (t (list "-wc" local-file))))))
+
+;; *.t ファイルに対して prove コマンドで compile する
 (defun perl-run-test ()
   (interactive)
   (let ((compile-command
