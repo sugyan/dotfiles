@@ -60,6 +60,9 @@ setopt pushdignoredups
 autoload -Uz compinit
 compinit
 
+zstyle ':completion:*' menu true select
+zstyle ':completion:*:default' list-colors ln=35 di=36
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 zstyle ':completion:*:-command-:*' \
     fake-parameters CATALYST_DEBUG DBIC_TRACE PERL5LIB # for perl debug
 
