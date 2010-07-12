@@ -24,8 +24,8 @@
 
 ;; auto-complete
 (require 'auto-complete)
-(global-auto-complete-mode t)
-(setq ac-sources '(ac-source-abbrev ac-source-words-in-buffer))
+(require 'auto-complete-config)
+(ac-config-default)
 (define-key ac-complete-mode-map (kbd "C-n") 'ac-next)
 (define-key ac-complete-mode-map (kbd "C-p") 'ac-previous)
 (define-key ac-complete-mode-map (kbd "C-j") 'ac-complete)
