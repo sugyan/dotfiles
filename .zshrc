@@ -68,6 +68,7 @@ zstyle ':completion:*:default' list-colors ln=35 di=36
 
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 
+zstyle ':completion:*:kill:*:processes' command 'ps x'
 zstyle ':completion:*:-command-:*' \
     fake-parameters CATALYST_DEBUG DBIC_TRACE PERL5LIB # for perl debug
 
@@ -79,5 +80,5 @@ zstyle ':vcs_info:*' formats $'%{\e[35m%} [%s %r %b]%{\e[m%}'
 # word-style
 autoload -Uz select-word-style
 select-word-style default
-zstyle ':zle:*' word-chars " _-./;@"
+zstyle ':zle:*' word-chars " _-./;:@"
 zstyle ':zle:*' word-style unspecified
