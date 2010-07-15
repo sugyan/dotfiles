@@ -26,6 +26,7 @@
 (require 'auto-complete)
 (require 'auto-complete-config)
 (ac-config-default)
+(setq ac-auto-show-menu 0.4)
 (define-key ac-complete-mode-map (kbd "C-n") 'ac-next)
 (define-key ac-complete-mode-map (kbd "C-p") 'ac-previous)
 (define-key ac-complete-mode-map (kbd "C-j") 'ac-complete)
