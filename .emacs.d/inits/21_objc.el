@@ -17,11 +17,36 @@
    (format
     (concat "tell application \"Xcode\" to activate"))))
 
+(defvar objc-root-files '("main.m"))
+(defun current-directory ()
+  (file-name-directory (expand-file-name (or (buffer-file-name)
+                                             default-directory))))
+(defun objc-get-root-directory ()
+  (loop with i = 0
+        with cur-dir = (current-directory)
+        while (< i 10)
+        do (if (some
+                (lambda (file) (find file (directory-files cur-dir) :test 'string=))
+                objc-root-files)
+               (return cur-dir))
+        (setq cur-dir (expand-file-name (concat cur-dir "../")))
+        (incf i)
+        finally return nil))
+;; compile
+(defun objc-xcodebuild ()
+  (interactive)
+  (let ((compile-command
+         (let ((root-dir (objc-get-root-directory)))
+           (concat (if root-dir
+                       (concat "cd " root-dir "; "))
+                   "xcodebuild -sdk iphonesimulator4.0 -configuration Debug"))))
+    (call-interactively 'compile)))
+
 ;; キー割り当て
 (add-hook 'objc-mode-hook
           (lambda ()
             (define-key objc-mode-map (kbd "C-m")     'newline-and-indent)
             (define-key objc-mode-map (kbd "C-c o")   'ff-find-other-file)
-            (define-key objc-mode-map (kbd "C-c C-c") 'compile)
+            (define-key objc-mode-map (kbd "C-c C-c") 'objc-xcodebuild)
             (define-key objc-mode-map (kbd "C-c RET") 'xcode)
             (c-subword-mode)))
