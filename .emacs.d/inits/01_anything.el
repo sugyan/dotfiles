@@ -10,4 +10,4 @@
 (define-key anything-map (kbd "C-v") 'anything-next-source)
 (define-key anything-map (kbd "C-;") 'abort-recursive-edit)
 (global-set-key (kbd "C-;") 'anything)
-(global-set-key (kbd "C-c C-r") 'anything-resume)
+(global-set-key (kbd "C-c r") 'anything-resume)

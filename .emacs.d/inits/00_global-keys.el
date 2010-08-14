@@ -12,7 +12,7 @@
 (global-set-key (kbd "M-s") 'shell-command)
 (global-set-key (kbd "C-c >") 'comment-region)
 (global-set-key (kbd "C-c <") 'uncomment-region)
-(global-set-key (kbd "C-c i") 'indent-region)
+(global-set-key (kbd "C-c TAB") 'indent-region)
 (global-set-key (kbd "C-c e b") 'describe-bindings)
 (global-set-key (kbd "C-c e f") 'describe-function)
 (global-set-key (kbd "C-c e m") 'describe-mode)

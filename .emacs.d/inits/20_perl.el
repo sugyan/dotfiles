@@ -57,13 +57,13 @@
     (call-interactively 'compile)))
 
 ;; hook
-(add-hook 'cperl-mode-hook
-          (lambda ()
-            (define-key cperl-mode-map (kbd "M-t") 'perl-run-test)
-            (define-key cperl-mode-map (kbd "C-m") 'newline-and-indent)
-            (flymake-mode)
-            (require 'perl-completion) ;; perl-completion
-            (perl-completion-mode t)))
+(defun my-cperl-mode-hook ()
+  (define-key cperl-mode-map (kbd "C-m") 'newline-and-indent)
+  (define-key cperl-mode-map (kbd "M-t") 'perl-run-test)
+  (flymake-mode)
+  (require 'perl-completion) ;; perl-completion
+  (perl-completion-mode t))
+(add-hook 'cperl-mode-hook 'my-cperl-mode-hook)
 
 ;; ttはhtml-modeでごまかす
 (add-to-list 'auto-mode-alist '("\\.tt\\'" . html-mode))

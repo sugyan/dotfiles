@@ -1,5 +1,8 @@
 ;; 編集操作系の設定
 
+(ffap-bindings)
+(iswitchb-mode t)
+
 ;; buffer-nameをuniqueに
 (require 'uniquify)
 (setq uniquify-buffer-name-style 'forward)
