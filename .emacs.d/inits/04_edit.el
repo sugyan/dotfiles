@@ -2,6 +2,11 @@
 
 (ffap-bindings)
 (iswitchb-mode t)
+(defalias 'yes-or-no-p 'y-or-n-p)
+
+;; auto-insert
+(auto-insert-mode)
+(setq auto-insert-directory "~/.emacs.d/auto-insert/")
 
 ;; buffer-nameをuniqueに
 (require 'uniquify)

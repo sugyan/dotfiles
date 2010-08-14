@@ -5,12 +5,14 @@
       cperl-close-paren-offset -4
       cperl-indent-parens-as-block t)
 
-
 ;; 対象拡張子の追加
 (add-to-list 'auto-mode-alist '("\\.psgi\\'" . perl-mode))
 (add-to-list 'auto-mode-alist '("\\.t\\'"    . perl-mode))
 (add-to-list 'flymake-allowed-file-name-masks '("\\.psgi\\'" flymake-perl-init))
 (add-to-list 'flymake-allowed-file-name-masks '("\\.t\\'"    flymake-perl-init))
+
+;; auto-insert
+(add-to-list 'auto-insert-alist '(cperl-mode . "perl-template.pl"))
 
 ;; プロジェクトのルートディレクトリを取得
 (defvar root-files '("Makefile.PL"))
