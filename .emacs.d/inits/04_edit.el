@@ -1,14 +1,16 @@
+;; 編集操作系の設定
+
 ;; comment-region
-(global-set-key "\C-c>" 'comment-region)
-(global-set-key "\C-c<" 'uncomment-region)
-;; indent
-(global-set-key "\C-x\C-i" 'indent-region)
+(global-set-key (kbd "C-c >") 'comment-region)
+(global-set-key (kbd "C-c <") 'uncomment-region)
+;; indent-region
+(global-set-key (kbd "C-x C-i") 'indent-region)
 
 ;; buffer-nameをuniqueに
 (require 'uniquify)
 (setq uniquify-buffer-name-style 'forward)
-;; 選択範囲を強調表示しない
-(setq transient-mark-mode nil)
+;; 選択範囲をハイライト
+(setq transient-mark-mode t)
 ;; 行の折り返ししない
 (setq default-truncate-lines t)
 ;; indentは半角スペース4つ
@@ -18,9 +20,7 @@
 (show-paren-mode t)
 
 ;; isearch中のC-hの動作をdeleteに
-(add-hook 'isearch-mode-hook
-          (lambda ()
-            (define-key isearch-mode-map (kbd "C-h") 'isearch-del-char)))
+(define-key isearch-mode-map (kbd "C-h") 'isearch-del-char)
 
 ;; auto-complete
 (require 'auto-complete)
