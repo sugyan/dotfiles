@@ -21,4 +21,7 @@
   (ad-activate 'flymake-post-syntax-check)
   (setq flymake-err-line-patterns flymake-js-err-line-patterns)
   (flymake-mode t))
-(add-hook 'js-mode-hook '(lambda () (flymake-js-load)))
+(add-hook 'js-mode-hook
+          (lambda ()
+            (flymake-js-load)
+            (define-key js-mode-map (kbd "C-m") 'newline-and-indent)))
