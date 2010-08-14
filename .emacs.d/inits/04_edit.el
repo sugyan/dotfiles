@@ -1,16 +1,11 @@
 ;; 編集操作系の設定
 
-;; comment-region
-(global-set-key (kbd "C-c >") 'comment-region)
-(global-set-key (kbd "C-c <") 'uncomment-region)
-;; indent-region
-(global-set-key (kbd "C-x C-i") 'indent-region)
-
 ;; buffer-nameをuniqueに
 (require 'uniquify)
 (setq uniquify-buffer-name-style 'forward)
-;; 選択範囲をハイライト
-(setq transient-mark-mode t)
+
+;; 選択範囲をハイライトしない
+(setq transient-mark-mode nil)
 ;; 行の折り返ししない
 (setq default-truncate-lines t)
 ;; indentは半角スペース4つ
