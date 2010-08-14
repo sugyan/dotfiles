@@ -8,3 +8,6 @@
 ;; C-j と C-m の動作を入れ替える
 (keyboard-translate ?\C-j ?\C-m)
 (keyboard-translate ?\C-m ?\C-j)
+
+;; 最小化いらない
+(global-unset-key (kbd "C-z"))
