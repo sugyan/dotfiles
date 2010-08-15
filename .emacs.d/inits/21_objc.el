@@ -42,11 +42,11 @@
                    "xcodebuild -sdk iphonesimulator4.0 -configuration Debug"))))
     (call-interactively 'compile)))
 
-;; キー割り当て
-(add-hook 'objc-mode-hook
-          (lambda ()
-            (define-key objc-mode-map (kbd "C-m")     'newline-and-indent)
-            (define-key objc-mode-map (kbd "C-c o")   'ff-find-other-file)
-            (define-key objc-mode-map (kbd "C-c C-c") 'objc-xcodebuild)
-            (define-key objc-mode-map (kbd "C-c RET") 'xcode)
-            (c-subword-mode)))
+;; hook
+(defun my-objc-mode-hook ()
+  (define-key objc-mode-map (kbd "C-m")   'newline-and-indent)
+  (define-key objc-mode-map (kbd "C-c o") 'ff-find-other-file)
+  (define-key objc-mode-map (kbd "C-c c") 'objc-xcodebuild)
+  (define-key objc-mode-map (kbd "C-c x") 'xcode)
+  (c-subword-mode))
+(add-hook 'objc-mode-hook 'my-objc-mode-hook)
