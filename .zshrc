@@ -70,7 +70,7 @@ zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 
 zstyle ':completion:*:kill:*:processes' command 'ps x'
 zstyle ':completion:*:-command-:*' \
-    fake-parameters CATALYST_DEBUG DBIC_TRACE PERL5LIB # for perl debug
+    fake-parameters CATALYST_DEBUG DBIC_TRACE PERL5LIB MICRO_TEMPLATE_DEBUG # for perl debug
 
 # vcs
 autoload -Uz vcs_info
