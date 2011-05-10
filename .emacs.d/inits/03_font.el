@@ -18,7 +18,7 @@
 
 ;; neta
 ;; http://d.hatena.ne.jp/masaking/20080720/1216543178
-(create-fontset-from-ascii-font "-apple-aquafont-medium-normal-normal-*-18-*-*-*-m-0-iso10646-1" nil "aqua")
+(create-fontset-from-ascii-font "-apple-aquafont-medium-normal-normal-*-17-*-*-*-p-0-iso10646-1" nil "aqua")
 (set-fontset-font "fontset-aqua"
                   'unicode
                   (font-spec :family "aquafont" :size 18)
