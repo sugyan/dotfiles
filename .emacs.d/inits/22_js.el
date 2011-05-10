@@ -1,26 +1,24 @@
-;; flymake設定
+;; flymake
+;; node-jslint (https://github.com/reid/node-jslint)
+;; "npm install jslint -g"
+;; exec-path, process-environment にPATH追加する必要あり
 (require 'flymake)
 (add-to-list 'flymake-allowed-file-name-masks '("\\.js\\'" flymake-js-init))
-(defcustom flymake-js-detect-trailing-comma t nil :type 'boolean)
-;; TODO 何度も読むとおかしくなる？
-(defvar flymake-js-err-line-patterns '(("^\\(.+\\)\:\\([0-9]+\\)\: \\(.+Error\:.+\\)$" 1 2 nil 3)))
-(when flymake-js-detect-trailing-comma
-  (setq flymake-js-err-line-patterns (append flymake-js-err-line-patterns
-                                             '(("^\\(.+\\)\:\\([0-9]+\\)\: \\(strict warning: trailing comma.+\\)\:$" 1 2 nil 3)))))
 (defun flymake-js-init ()
   (let* ((temp-file (flymake-init-create-temp-buffer-copy
                      'flymake-create-temp-inplace))
          (local-file (file-relative-name
                       temp-file
                       (file-name-directory buffer-file-name))))
-    (list "js" (list "-s" local-file))))
+    (list "jslint" (list "--no-es5" local-file))))
 (defun flymake-js-load ()
   (interactive)
-  (defadvice flymake-post-syntax-check (before flymake-force-check-was-interrupted)
-    (setq flymake-check-was-interrupted t))
-  (ad-activate 'flymake-post-syntax-check)
-  (setq flymake-err-line-patterns flymake-js-err-line-patterns)
+  (setq flymake-err-line-patterns
+        (cons '("^ *[[:digit:]] \\([[:digit:]]+\\),\\([[:digit:]]+\\)\: \\(.+\\)$"
+                nil 1 2 3)
+              flymake-err-line-patterns))
   (flymake-mode t))
+
 (add-hook 'js-mode-hook
           (lambda ()
             (flymake-js-load)
