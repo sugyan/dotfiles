@@ -43,6 +43,8 @@ alias gm="git merge"
 alias gr="git reset"
 alias gsd="git svn dcommit"
 alias gsr="git svn rebase"
+alias gst="git stash"
+alias gsp="git stash pop"
 
 alias pad='plackup -MPlack::App::Directory -e '\''$app = Plack::App::Directory->new({ root => "." })->to_app'\'''
 
