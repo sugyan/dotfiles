@@ -21,5 +21,11 @@
 ;; make install EMACS=$HOME/Applications/Emacs.app/Contents/MacOS/Emacs
 (require 'skk-autoloads)
 (global-set-key (kbd "C-x C-m") 'skk-mode)
+(setq skk-sticky-key ";")
 (setq skk-large-jisyo "~/.emacs.d/skk/SKK-JISYO.L")
 (setq skk-tut-file "~/local/etc/skk/SKK.tut")
+
+;; auto-install-from-emacswiki
+;; sticky.el
+(require 'sticky)
+(use-sticky-key ";" sticky-alist:en)

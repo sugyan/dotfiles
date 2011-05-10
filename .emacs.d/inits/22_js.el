@@ -24,4 +24,6 @@
 (add-hook 'js-mode-hook
           (lambda ()
             (flymake-js-load)
-            (define-key js-mode-map (kbd "C-m") 'newline-and-indent)))
+            (define-key js-mode-map (kbd "C-m") 'newline-and-indent)
+            (define-key js-mode-map (kbd ";")   nil) ; stickyと競合したので
+            ))

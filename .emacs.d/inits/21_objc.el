@@ -44,6 +44,7 @@
 
 ;; hook
 (defun my-objc-mode-hook ()
+  (define-key objc-mode-map (kbd ";")     nil)
   (define-key objc-mode-map (kbd "C-m")   'newline-and-indent)
   (define-key objc-mode-map (kbd "C-c o") 'ff-find-other-file)
   (define-key objc-mode-map (kbd "C-c c") 'objc-xcodebuild)
