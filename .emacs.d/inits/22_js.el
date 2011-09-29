@@ -10,12 +10,12 @@
          (local-file (file-relative-name
                       temp-file
                       (file-name-directory buffer-file-name))))
-    (list "jslint" (list "--no-es5" local-file))))
+    (list "nodelint" (list "--config" (concat (getenv "HOME") "/local/etc/nodelint_config.js") local-file))))
 (defun flymake-js-load ()
   (interactive)
   (setq flymake-err-line-patterns
-        (cons '("^ *[[:digit:]] \\([[:digit:]]+\\),\\([[:digit:]]+\\)\: \\(.+\\)$"
-                nil 1 2 3)
+        (cons '("^\\(.+\\), line \\([[:digit:]]+\\), character \\([[:digit:]]+\\): \\(.+\\)$"
+                1 2 3 4)
               flymake-err-line-patterns))
   (flymake-mode t))
 
