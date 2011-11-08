@@ -6,6 +6,6 @@
 ;; 色と透過
 (set-background-color "Black")
 (set-foreground-color "White")
-(add-to-list 'default-frame-alist '(alpha . 85))
+(add-to-list 'default-frame-alist '(alpha . 80))
 ;; スクロールバーを非表示
 (set-scroll-bar-mode nil)
