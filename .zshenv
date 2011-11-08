@@ -8,3 +8,6 @@ path=($HOME/perl5/perlbrew/bin(N) $HOME/perl5/perlbrew/perls/current/bin(N) $pat
 path=(/Developer/SDKs/flex_sdk_4/bin(N) $path)
 
 export LANG=ja_JP.UTF-8
+
+# nvm
+source $HOME/.nvm/nvm.sh
