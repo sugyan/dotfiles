@@ -7,7 +7,7 @@
     ci = commit
     st = status
     co = checkout
-    tr = log --graph --pretty='format:%C(yellow)%h%Creset %s %Cgreen(%an)%Creset %Cred%d%Creset'
+    tr = log --graph --pretty='format:%C(yellow)%h%Creset %C(magenta)%cd%Creset %s %Cgreen(%an)%Creset %Cred%d%Creset' --date=iso
 [core]
     pager = "LESS=-R less"
     excludesfile = ~/.gitignore
