@@ -3,7 +3,7 @@ typeset -U path
 # $HOME/local/bin があれば先頭に追加
 path=($HOME/local/bin(N) $path)
 # perlbrew
-path=($HOME/perl5/perlbrew/bin(N) $HOME/perl5/perlbrew/perls/current/bin(N) $path)
+source $HOME/perl5/perlbrew/etc/bashrc
 # flex_sdk
 path=(/Developer/SDKs/flex_sdk_4/bin(N) $path)
 
