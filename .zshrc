@@ -53,6 +53,10 @@ alias -g RED='2> >(redrev)'
 ##################################################
 # others
 
+# key binds
+bindkey '^R' history-incremental-pattern-search-backward
+bindkey '^S' history-incremental-pattern-search-forward
+
 # options
 setopt autocd
 setopt autopushd
