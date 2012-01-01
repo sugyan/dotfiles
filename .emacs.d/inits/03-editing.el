@@ -19,8 +19,10 @@
 (require 'auto-complete-config)
 (global-auto-complete-mode t)
 (setq-default ac-sources '(ac-source-filename ac-source-words-in-same-mode-buffers))
-(define-key ac-complete-mode-map (kbd "C-n") 'ac-next)
-(define-key ac-complete-mode-map (kbd "C-p") 'ac-previous)
+(setq ac-use-menu-map t)
+(setq ac-quick-help-delay 0.5)
+(define-key ac-menu-map (kbd "C-n") 'ac-next)
+(define-key ac-menu-map (kbd "C-p") 'ac-previous)
 
 ;; uniquify
 ;; set to "bar/mumble/name" style

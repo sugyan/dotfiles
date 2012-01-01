@@ -9,5 +9,14 @@
   (lambda ()
     (interactive)
     (anything-other-buffer
-     '(anything-c-source-extended-command-history anything-c-source-emacs-commands)
+     '(anything-c-source-extended-command-history
+       anything-c-source-emacs-commands)
      "*anything emacs commands*")))
+(define-key global-map (kbd "C-;")
+  (lambda ()
+    (interactive)
+    (anything-other-buffer
+     '(anything-c-source-buffers-list
+       anything-c-source-recentf
+       anything-c-source-extended-command-history)
+     "*my-anything*")))
