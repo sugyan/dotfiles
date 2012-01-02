@@ -18,7 +18,7 @@
 ;; (auto-install-batch "auto-complete development version")
 (require 'auto-complete-config)
 (global-auto-complete-mode t)
-(setq-default ac-sources '(ac-source-filename ac-source-words-in-same-mode-buffers))
+(setq-default ac-sources '(ac-source-filename ac-source-words-in-same-mode-buffers ac-source-yasnippet))
 (setq ac-use-menu-map t)
 (setq ac-quick-help-delay 1.0)
 (define-key ac-menu-map (kbd "C-n") 'ac-next)
@@ -34,9 +34,17 @@
 (define-key dired-mode-map (kbd "r")   'wdired-change-to-wdired-mode)
 (define-key dired-mode-map (kbd "C-o") nil)
 
+;; isearch
+(define-key isearch-mode-map (kbd "C-h") 'isearch-delete-char)
+
 ;; iswitchb
 (iswitchb-mode t)
 (setq read-buffer-function 'iswitchb-read-buffer)
+
+;; recentf
+;; (auto-install-from-emacswiki "recentf-ext.el")
+(require 'recentf-ext)
+(setq recentf-max-saved-items 100)
 
 ;; yes-or-no-p
 (defalias 'yes-or-no-p 'y-or-n-p)
