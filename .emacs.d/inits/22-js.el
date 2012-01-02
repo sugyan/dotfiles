@@ -6,6 +6,9 @@
 (add-to-list 'auto-mode-alist '("\\.js$" . js2-mode))
 (add-to-list 'auto-mode-alist '("\\.json$" . js-mode))
 
+;; key config
+(define-key js2-mode-map (kbd "C-m") 'newline-and-indent)
+
 ;; hook
 (defun my-js2-mode-hook ()
   (interactive)

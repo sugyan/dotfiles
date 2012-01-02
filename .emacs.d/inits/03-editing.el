@@ -44,7 +44,7 @@
 ;; recentf
 ;; (auto-install-from-emacswiki "recentf-ext.el")
 (require 'recentf-ext)
-(setq recentf-max-saved-items 100)
+(setq recentf-max-saved-items 200)
 
 ;; yes-or-no-p
 (defalias 'yes-or-no-p 'y-or-n-p)
