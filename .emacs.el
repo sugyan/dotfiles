@@ -1,3 +1,11 @@
+;; benchmark
+(defun my-show-init-time ()
+  (interactive)
+  (message "init time: %d msec"
+           (+ (* (- (nth 1 after-init-time) (nth 1 before-init-time)) 1000)
+              (/ (- (nth 2 after-init-time) (nth 2 before-init-time)) 1000))))
+(add-hook 'after-init-hook 'my-show-init-time)
+
 ;; load-path
 (add-to-list 'load-path "~/.emacs.d/elisp")
 (add-to-list 'load-path "~/.emacs.d/auto-install")
