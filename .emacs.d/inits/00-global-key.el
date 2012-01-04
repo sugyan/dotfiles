@@ -1,8 +1,9 @@
 ;;; key config
 
 ;; exchange alt <-> meta
-(setq ns-alternate-modifier 'alt)
-(setq ns-command-modifier 'meta)
+(custom-set-variables
+ '(ns-alternate-modifier 'alt)
+ '(ns-command-modifier   'meta))
 
 ;; exchange C-j <-> C-m
 (keyboard-translate ?\C-j ?\C-m)

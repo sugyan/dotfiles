@@ -1,9 +1,8 @@
 ;;; editing config
 
-(setq-default
- truncate-lines t                       ; truncate line
- tab-width 4                            ; tab width
- indent-tabs-mode nil)                  ; no use tab
+(setq-default truncate-lines   t	; truncate line
+              tab-width        4	; tab width
+              indent-tabs-mode nil)	; no use tab
 
 ;; find-file-at-point
 (ffap-bindings)
@@ -18,9 +17,9 @@
 ;; (auto-install-batch "auto-complete development version")
 (require 'auto-complete-config)
 (global-auto-complete-mode t)
-(setq-default ac-sources '(ac-source-filename ac-source-words-in-same-mode-buffers ac-source-yasnippet))
-(setq ac-use-menu-map t)
-(setq ac-quick-help-delay 1.0)
+(setq ac-sources          '(ac-source-filename ac-source-words-in-same-mode-buffers ac-source-yasnippet)
+      ac-use-menu-map     t
+      ac-quick-help-delay 1.0)
 (define-key ac-menu-map (kbd "C-n") 'ac-next)
 (define-key ac-menu-map (kbd "C-p") 'ac-previous)
 

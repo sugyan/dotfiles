@@ -3,8 +3,9 @@
 (require 'anything-config)
 (setq anything-input-idle-delay 0.1)
 
-;; key
-(define-key global-map (kbd "C-z") 'anything-command-map)
+(custom-set-variables
+ ;; prefix key
+ '(anything-command-map-prefix-key "C-z"))
 
 ;; replace commands
 (define-key global-map (kbd "C-x b") 'anything-for-files)
