@@ -20,7 +20,8 @@
 (global-auto-complete-mode t)
 (setq ac-sources          '(ac-source-filename ac-source-words-in-same-mode-buffers ac-source-yasnippet)
       ac-use-menu-map     t
-      ac-quick-help-delay 1.0)
+      ac-auto-show-menu   0.4
+      ac-quick-help-delay 0.3)
 (define-key ac-menu-map (kbd "C-n") 'ac-next)
 (define-key ac-menu-map (kbd "C-p") 'ac-previous)
 
