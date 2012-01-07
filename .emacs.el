@@ -34,3 +34,7 @@
     (message "init time: %d msec"
              (+ (* (- (nth 1 after-init-time) (nth 1 before-init-time)) 1000)
                 (/ (- (nth 2 after-init-time) (nth 2 before-init-time)) 1000)))))
+
+;; set environment variable `PATH' from zsh configuration
+(setenv "PATH"
+        (substring (shell-command-to-string "~/local/bin/zsh -c 'echo $PATH' 2> /dev/null") 0 -1))
