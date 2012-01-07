@@ -25,6 +25,16 @@
 (define-key ac-menu-map (kbd "C-n") 'ac-next)
 (define-key ac-menu-map (kbd "C-p") 'ac-previous)
 
+;; smartchr
+;; (auto-install-from-url "https://raw.github.com/imakado/emacs-smartchr/master/smartchr.el")
+(require 'smartchr)
+(define-key global-map (kbd "=")  (smartchr '(" = " " == " " === " "=")))
+(define-key global-map (kbd "(")  (smartchr '("(`!!')" "(")))
+(define-key global-map (kbd "{")  (smartchr '("{`!!'}" "{")))
+(define-key global-map (kbd "[")  (smartchr '("[`!!']" "[")))
+(define-key global-map (kbd "'")  (smartchr '("'`!!''" "'")))
+(define-key global-map (kbd "\"") (smartchr '("\"`!!'\"" "\"")))
+
 ;; uniquify
 ;; set to "bar/mumble/name" style
 (require 'uniquify)
