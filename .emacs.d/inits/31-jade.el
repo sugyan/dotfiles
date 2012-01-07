@@ -6,3 +6,6 @@
 (autoload 'sws-mode "sws-mode" nil t)
 (autoload 'jade-mode "jade-mode" nil t)
 (add-to-list 'auto-mode-alist '("\\.jade$" . jade-mode))
+;; auto-complete
+(when (boundp 'auto-complete-mode)
+  (add-to-list 'ac-modes 'jade-mode))
