@@ -28,7 +28,8 @@ alias sl=ls
 alias ls="LSCOLORS=gxfxxxxxcxxxxxxxxxxxxx ls -G"
 alias ll="ls -l"
 alias la="ll -a"
-alias em="emacsclient -n"
+alias e="emacsclient -n"
+alias em="emacs-minimum"
 
 alias gi=git
 alias ga="git add"

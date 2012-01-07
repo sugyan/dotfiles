@@ -1,13 +1,18 @@
-# シェル変数 path をuniqueに
+# make unique 'path'
 typeset -U path
-# $HOME/local/bin があれば先頭に追加
+# add "$HOME/local/bin" to head
 path=($HOME/local/bin(N) $path)
+
+# environment variables
+export H=$HOME
+
+# fpath
+typeset -U fpath
+fpath=($fpath $HOME/.zsh/functions(N))
+
 # perlbrew
 source $HOME/perl5/perlbrew/etc/bashrc
-# flex_sdk
-path=(/Developer/SDKs/flex_sdk_4/bin(N) $path)
-
-export LANG=ja_JP.UTF-8
-
-# nvm
-source $HOME/.nvm/nvm.sh
+# nodebrew
+path=($HOME/.nodebrew/current/bin(N) $path)
+# flex SDK
+path=(/Developer/SDKs/flex_sdk_4.5.1.21328/bin(N) $path)
