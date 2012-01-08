@@ -29,6 +29,7 @@
 ;; (auto-install-from-url "https://raw.github.com/imakado/emacs-smartchr/master/smartchr.el")
 (require 'smartchr)
 (define-key global-map (kbd "=")  (smartchr '(" = " " == " " === " "=")))
+(define-key global-map (kbd "+")  (smartchr '(" + " "+")))
 (define-key global-map (kbd "(")  (smartchr '("(`!!')" "(")))
 (define-key global-map (kbd "{")  (smartchr '("{`!!'}" "{")))
 (define-key global-map (kbd "[")  (smartchr '("[`!!']" "[")))
