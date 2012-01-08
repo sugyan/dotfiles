@@ -7,7 +7,6 @@
 
 ;; auto-complete
 (defun my-emacs-lisp-mode-hook ()
-  (interactive)
   (when (boundp 'auto-complete-mode)
     (add-to-list 'ac-sources 'ac-source-functions)
     (add-to-list 'ac-sources 'ac-source-variables)

@@ -19,7 +19,6 @@
 
 ;; hook
 (defun my-cperl-mode-hook ()
-  (interactive)
   (perl-completion-mode t)
   (when (boundp 'auto-complete-mode)
     (add-to-list 'ac-sources 'ac-source-my-perl-completion)))

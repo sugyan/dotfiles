@@ -11,6 +11,5 @@
 
 ;; hook
 (defun my-js2-mode-hook ()
-  (interactive)
   (set-face-foreground 'js2-function-param-face "SeaGreen3"))
 (add-hook 'js2-mode-hook 'my-js2-mode-hook)
