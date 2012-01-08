@@ -47,12 +47,11 @@
 (define-key dired-mode-map (kbd "r")   'wdired-change-to-wdired-mode)
 (define-key dired-mode-map (kbd "C-o") nil)
 
+;; grep
+(setq grep-command "ack --nogroup ")
+
 ;; isearch
 (define-key isearch-mode-map (kbd "C-h") 'isearch-delete-char)
-
-;; iswitchb
-(iswitchb-mode t)
-(setq read-buffer-function 'iswitchb-read-buffer)
 
 ;; recentf
 ;; (auto-install-from-emacswiki "recentf-ext.el")
