@@ -1,14 +1,16 @@
 ;;; anything
 ;; (auto-install-batch "anything-minimal")
 
-;; load anything-config
-(define-key global-map (kbd "C-z")
-  (lambda () (interactive)
-    (require 'anything-config)))
+;; delay load
+(defvar my-anything-key (kbd "C-z"))
+(define-key global-map my-anything-key
+  (lambda ()
+    (interactive)
+    (require 'anything-config)
+    (define-key global-map my-anything-key 'anything-command-map)))
 
 (eval-after-load "anything-config"
   '(progn
-     (custom-set-variables '(anything-command-map-prefix-key "C-z"))
      (setq anything-input-idle-delay 0.1)
      ;; anything-grep
      ;; (auto-install-from-emacswiki "anything-grep.el")
