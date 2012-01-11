@@ -19,9 +19,11 @@
 (require 'auto-complete-config)
 (global-auto-complete-mode t)
 (custom-set-variables
- '(ac-use-menu-map t))
-(define-key ac-menu-map (kbd "C-n") 'ac-next)
-(define-key ac-menu-map (kbd "C-p") 'ac-previous)
+ '(ac-use-menu-map           t)
+ '(ac-dictionary-directories '("~/.emacs.d/etc/ac-dict")))
+(define-key ac-menu-map (kbd "C-n")   'ac-next)
+(define-key ac-menu-map (kbd "C-p")   'ac-previous)
+(define-key ac-menu-map (kbd "M-TAB") nil)
 
 ;; smartchr
 ;; (auto-install-from-url "https://raw.github.com/imakado/emacs-smartchr/master/smartchr.el")
