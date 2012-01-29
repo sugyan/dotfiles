@@ -29,9 +29,8 @@
 ;; show init time
 (add-hook 'after-init-hook
   (lambda ()
-    (message "init time: %d msec"
-             (+ (* (- (nth 1 after-init-time) (nth 1 before-init-time)) 1000)
-                (/ (- (nth 2 after-init-time) (nth 2 before-init-time)) 1000)))))
+    (message "init time: %.3f sec"
+             (float-time (time-subtract after-init-time before-init-time)))))
 
 ;; set environment variable `PATH' from zsh configuration
 (setenv "PATH"
