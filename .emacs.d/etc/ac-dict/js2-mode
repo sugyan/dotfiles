@@ -4,6 +4,7 @@ true
 false
 null
 function
+return
 arguments
 window
 console
