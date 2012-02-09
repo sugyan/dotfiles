@@ -13,6 +13,11 @@
 
 ;; auto insert
 (auto-insert-mode t)
+(eval-after-load "yasnippet"
+  '(progn
+     (custom-set-variables '(auto-insert-alist '(())))
+     (dolist (mode '(html-mode cperl-mode))
+       (define-auto-insert mode (lambda () (insert "template") (yas/expand))))))
 
 ;; auto-complete
 ;; (auto-install-batch "auto-complete development version")
