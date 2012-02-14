@@ -38,6 +38,7 @@
 (define-key global-map (kbd "{")  (smartchr '("{`!!'}" "{")))
 (define-key global-map (kbd "[")  (smartchr '("[`!!']" "[")))
 (define-key global-map (kbd "<")  (smartchr '("<`!!'>" "<")))
+(define-key global-map (kbd ">")  (smartchr '(">" " => ")))
 (define-key global-map (kbd "'")  (smartchr '("'`!!''" "'")))
 (define-key global-map (kbd "\"") (smartchr '("\"`!!'\"" "\"")))
 
