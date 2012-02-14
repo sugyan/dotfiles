@@ -7,7 +7,8 @@
   '(progn
      (define-key cperl-mode-map (kbd "C-m") 'newline-and-indent)
      (define-key cperl-mode-map (kbd "(") nil)
-     (define-key cperl-mode-map (kbd "{") nil)))
+     (define-key cperl-mode-map (kbd "{") nil)
+     (define-key cperl-mode-map (kbd "[") nil)))
 (custom-set-variables
  '(cperl-indent-level           4)
  '(cperl-indent-parens-as-block t)
