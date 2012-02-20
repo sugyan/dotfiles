@@ -15,6 +15,7 @@ source $HOME/perl5/perlbrew/etc/bashrc
 # nodebrew
 path=($HOME/.nodebrew/current/bin(N) $path)
 # rbenv
+path=($HOME/.rbenv/bin(N) $path)
 eval "$(SHELL=zsh rbenv init -)"
 # flex SDK
 path=(/Developer/SDKs/flex_sdk_4.5.1.21328/bin(N) $path)
