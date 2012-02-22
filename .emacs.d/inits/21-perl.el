@@ -3,12 +3,15 @@
 ;; cperl-mode
 (defalias 'perl-mode 'cperl-mode)
 (add-to-list 'auto-mode-alist '("\\.psgi$" . cperl-mode))
+(add-to-list 'auto-mode-alist '("\\.t\\'"  . cperl-mode))
 (eval-after-load "cperl-mode"
   '(progn
      (define-key cperl-mode-map (kbd "C-m") 'newline-and-indent)
      (define-key cperl-mode-map (kbd "(") nil)
      (define-key cperl-mode-map (kbd "{") nil)
-     (define-key cperl-mode-map (kbd "[") nil)))
+     (define-key cperl-mode-map (kbd "[") nil)
+     (define-key cperl-mode-map (kbd "M-n") 'flymake-goto-next-error)
+     (define-key cperl-mode-map (kbd "M-p") 'flymake-goto-prev-error)))
 (custom-set-variables
  '(cperl-indent-level           4)
  '(cperl-indent-parens-as-block t)
@@ -25,6 +28,7 @@
 ;; hook
 (defun my-cperl-mode-hook ()
   (perl-completion-mode t)
+  (flymake-mode t)
   (when (boundp 'auto-complete-mode)
     (defvar ac-source-my-perl-completion
       '((candidates . plcmp-ac-make-cands)))
