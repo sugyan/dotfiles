@@ -2,7 +2,8 @@ escape ^z^z
 startup_message off
 hardstatus alwayslastline "%-w%{= ck} %n %t %{-}%+w"
 defscrollback 3000
-shell $HOME/local/bin/zsh
+shell zsh
+term xterm-256color
 bindkey -m ' ' eval 'stuff " "' writebuf 'exec sh -c "pbcopy < /tmp/screen-exchange"'
 bindkey -m 'Y' eval 'stuff "Y"' writebuf 'exec sh -c "pbcopy < /tmp/screen-exchange"'
 bindkey -m 'W' eval 'stuff "W"' writebuf 'exec sh -c "pbcopy < /tmp/screen-exchange"'
