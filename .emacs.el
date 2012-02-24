@@ -33,15 +33,11 @@
       (error (message "load error: %s - %s" target e)))))
 (init-loader-load init-loader-directory init-loader-regexp)
 
-;; show init time
+;; after init
 (add-hook 'after-init-hook
   (lambda ()
+    ;; split window
+    (split-window-horizontally)
+    ;; show init time
     (message "init time: %.3f sec"
              (float-time (time-subtract after-init-time before-init-time)))))
-
-;; set environment variable `PATH' from zsh configuration
-(setenv "PATH"
-        (substring (shell-command-to-string "~/local/bin/zsh -c 'echo $PATH' 2> /dev/null") 0 -1))
-;; add PATH to 'exec-path
-(loop for path in (reverse (split-string (getenv "PATH") ":"))
-      do (add-to-list 'exec-path path))
