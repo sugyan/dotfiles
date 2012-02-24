@@ -2,7 +2,7 @@
 ;; (auto-install-batch "anything-minimal")
 
 ;; delay load
-(defvar my-anything-key (kbd "C-q"))
+(defvar my-anything-key (kbd "C-z"))
 (define-key global-map my-anything-key
   (lambda ()
     (interactive)
@@ -31,4 +31,4 @@
         '(anything-c-source-buffers-list
           anything-c-source-recentf)
         "*anything my-anything*"))
-     (define-key anything-command-map (kbd "C-q") 'my-anything)))
+     (define-key global-map (kbd "C-q") 'my-anything)))
