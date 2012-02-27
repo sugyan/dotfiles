@@ -6,6 +6,7 @@
 (add-to-list 'auto-mode-alist '("\\.t\\'"  . cperl-mode))
 (eval-after-load "cperl-mode"
   '(progn
+     (cperl-set-style "PerlStyle")
      (define-key cperl-mode-map (kbd "C-m") 'newline-and-indent)
      (define-key cperl-mode-map (kbd "(") nil)
      (define-key cperl-mode-map (kbd "{") nil)
@@ -13,7 +14,6 @@
      (define-key cperl-mode-map (kbd "M-n") 'flymake-goto-next-error)
      (define-key cperl-mode-map (kbd "M-p") 'flymake-goto-prev-error)))
 (custom-set-variables
- '(cperl-indent-level           4)
  '(cperl-indent-parens-as-block t)
  '(cperl-close-paren-offset     -4))
 
@@ -22,6 +22,7 @@
 (autoload 'perl-completion-mode "perl-completion" nil t)
 (eval-after-load "perl-completion"
   '(progn
+     (defadvice flymake-start-syntax-check-process (around flymake-start-syntax-check-lib-path activate) (plcmp-with-set-perl5-lib ad-do-it))
      (define-key plcmp-mode-map (kbd "M-TAB") nil)
      (define-key plcmp-mode-map (kbd "M-C-o") 'plcmp-cmd-smart-complete)))
 
