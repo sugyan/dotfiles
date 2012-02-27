@@ -22,7 +22,9 @@
 (autoload 'perl-completion-mode "perl-completion" nil t)
 (eval-after-load "perl-completion"
   '(progn
-     (defadvice flymake-start-syntax-check-process (around flymake-start-syntax-check-lib-path activate) (plcmp-with-set-perl5-lib ad-do-it))
+     (defadvice flymake-start-syntax-check-process (around flymake-start-syntax-check-perl-lib-path activate)
+       (when perl-completion-mode
+         (plcmp-with-set-perl5-lib ad-do-it)))
      (define-key plcmp-mode-map (kbd "M-TAB") nil)
      (define-key plcmp-mode-map (kbd "M-C-o") 'plcmp-cmd-smart-complete)))
 
