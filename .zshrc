@@ -28,7 +28,6 @@ alias sl=ls
 alias ls="LSCOLORS=gxfxxxxxcxxxxxxxxxxxxx ls -G"
 alias ll="ls -l"
 alias la="ll -a"
-alias e="emacsclient -n"
 alias em="emacs-minimum"
 
 alias gi=git
@@ -89,3 +88,21 @@ autoload -Uz select-word-style
 select-word-style default
 zstyle ':zle:*' word-chars " _-./;:@"
 zstyle ':zle:*' word-style unspecified
+
+# function
+function e() {
+    # have you started the server?
+    if ! emacsclient -e 1 > /dev/null; then
+        return
+    fi
+
+    # open files
+    emacsclient -n "$@"
+    # find from tmux windows
+    if tmux list-windows > /dev/null 2>&1; then
+        EMACS_WINDOW_INDEX=$(tmux list-windows -F '#{window_index}:#{window_name}' | perl -ne '/^(\d+):emacs$/ and print $1 and exit')
+        if ! [ -z $EMACS_WINDOW_INDEX ]; then
+            tmux select-window -t $EMACS_WINDOW_INDEX
+        fi
+    fi
+}
