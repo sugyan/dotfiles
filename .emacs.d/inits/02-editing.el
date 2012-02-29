@@ -1,9 +1,10 @@
 ;;; editing config
 
-(setq-default truncate-lines           t   ; truncate line
-              tab-width                4   ; tab width
-              indent-tabs-mode         nil ; no use tab
-              find-file-visit-truename t)  ; visit truename
+(custom-set-variables
+ '(truncate-lines           t)   ; truncate line
+ '(indent-tabs-mode         nil) ; don't use tab
+ '(make-backup-files        nil) ; don't make *~ files
+ '(find-file-visit-truename t))  ; visit truename
 
 ;; find-file-at-point
 (ffap-bindings)
