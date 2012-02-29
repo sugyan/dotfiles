@@ -1,0 +1,19 @@
+#!/bin/sh
+if ! $(which emacsclient) -e 1 > /dev/null; then
+    exit
+fi
+
+# open files
+if [ $# -eq 0 ]; then
+    $(which emacsclient) -n .
+else
+    $(which emacsclient) -n "$@"
+fi
+
+# find from tmux windows
+if [ -n $TMUX ]; then
+    EMACS_WINDOW_INDEX=$(tmux list-windows -F '#{window_index}:#{window_name}' | perl -ne '/^(\d+):emacs$/ and print $1 and exit')
+    if ! [ -z $EMACS_WINDOW_INDEX ]; then
+        tmux select-window -t $EMACS_WINDOW_INDEX
+    fi
+fi
