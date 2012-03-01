@@ -12,7 +12,9 @@ typeset -U fpath
 fpath=($fpath $HOME/.zsh/functions(N))
 
 # perlbrew
-source $HOME/perl5/perlbrew/etc/bashrc
+if [ -e $HOME/perl5/perlbrew/etc/bashrc ]; then
+    source $HOME/perl5/perlbrew/etc/bashrc
+fi
 # nodebrew
 path=($HOME/.nodebrew/current/bin(N) $path)
 # rbenv
@@ -20,3 +22,11 @@ path=($HOME/.rbenv/bin(N) $path)
 eval "$(SHELL=zsh rbenv init -)"
 # flex SDK
 path=(/Developer/SDKs/flex_sdk_4.5.1.21328/bin(N) $path)
+
+# autojump
+# https://github.com/joelthelion/autojump
+# $ SHELL=zsh ./install.sh --zsh --local --prefix $HOME/local
+if [ -e $HOME/local/etc/profile.d/autojump.zsh ]; then
+    source $HOME/local/etc/profile.d/autojump.zsh
+fi
+fpath=($fpath $HOME/local/functions(N))
