@@ -25,7 +25,9 @@ path=(/Developer/SDKs/flex_sdk_4.5.1.21328/bin(N) $path)
 
 # autojump
 # https://github.com/joelthelion/autojump
-# $ SHELL=zsh ./install.sh --zsh --local --prefix $HOME/local
+# $ git clone git://github.com/joelthelion/autojump.git
+# $ cd autojump
+# $ ./install.sh --zsh --local --prefix $HOME/local
 if [ -e $HOME/local/etc/profile.d/autojump.zsh ]; then
     source $HOME/local/etc/profile.d/autojump.zsh
 fi
