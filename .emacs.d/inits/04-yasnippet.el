@@ -2,7 +2,7 @@
 ;; (auto-install-from-url "https://raw.github.com/capitaomorte/yasnippet/master/yasnippet.el")
 (require 'yasnippet)
 (custom-set-variables
- '(yas/trigger-key  "M-TAB")
+ '(yas/trigger-key  "M-o")
  '(yas/snippet-dirs '("~/.emacs.d/etc/snippets")))
 (yas/global-mode t)
 
