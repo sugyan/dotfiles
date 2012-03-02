@@ -32,3 +32,7 @@ if [ -e $HOME/local/etc/profile.d/autojump.zsh ]; then
     source $HOME/local/etc/profile.d/autojump.zsh
 fi
 fpath=($fpath $HOME/local/functions(N))
+
+if ! [ "$TMUX" = "" ]; then
+    tmux set-option status-bg $(perl -MList::Util=sum -e'print+(red,green,blue,yellow,cyan,magenta,white)[sum(unpack"C*",shift)%7]' $(hostname)) | cat > /dev/null
+fi
