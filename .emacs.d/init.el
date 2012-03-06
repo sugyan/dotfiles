@@ -15,7 +15,7 @@
 ;; init loader
 ;; http://coderepos.org/share/browser/lang/elisp/init-loader/init-loader.el
 (eval-when-compile (require 'cl))
-(defvar init-loader-directory (expand-file-name "~/.emacs.d/inits"))
+(defvar init-loader-directory (expand-file-name "~/.emacs.d/conf"))
 (defvar init-loader-regexp "\\(?:^[[:digit:]]\\{2\\}-.*\.elc?\\)$")
 (defun init-loader-files (dir regexp)
   (let ((common-files (directory-files dir t))
@@ -37,7 +37,7 @@
 (add-hook 'after-init-hook
   (lambda ()
     ;; split window
-    (split-window-horizontally)
+    ;; (split-window-horizontally)
     ;; show init time
     (message "init time: %.3f sec"
              (float-time (time-subtract after-init-time before-init-time)))))
