@@ -25,7 +25,14 @@ function redrev() {
 # aliases
 
 alias sl=ls
-alias ls="LSCOLORS=gxfxxxxxcxxxxxxxxxxxxx ls -G"
+case "$OSTYPE" in
+    darwin*)
+        alias ls="LSCOLORS=gxfxxxxxcxxxxxxxxxxxxx ls -G"
+        ;;
+    linux*)
+        alias ls="ls --color=auto"
+        ;;
+esac
 alias ll="ls -l"
 alias la="ll -a"
 alias em="emacs-minimum"
