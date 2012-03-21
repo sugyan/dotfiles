@@ -65,5 +65,10 @@
 (require 'recentf-ext)
 (setq recentf-max-saved-items 200)
 
+;; (auto-install-from-emacswiki "open-junk-file.el")
+(require 'open-junk-file)
+(custom-set-variables
+ '(open-junk-file-format "~/.emacs.d/junk/%Y/%m/%d-%H%M%S."))
+
 ;; yes-or-no-p
 (defalias 'yes-or-no-p 'y-or-n-p)
