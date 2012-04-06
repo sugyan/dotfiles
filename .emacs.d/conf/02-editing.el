@@ -63,7 +63,7 @@
 ;; recentf
 ;; (auto-install-from-emacswiki "recentf-ext.el")
 (require 'recentf-ext)
-(setq recentf-max-saved-items 200)
+(setq recentf-max-saved-items 500)
 
 ;; (auto-install-from-emacswiki "open-junk-file.el")
 (require 'open-junk-file)
