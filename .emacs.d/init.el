@@ -11,6 +11,7 @@
 (require 'package)
 (package-initialize)
 (package-activate 'magit '(1 1 1))
+(package-activate 'auto-complete '(1 4))
 
 ;; init loader
 ;; http://coderepos.org/share/browser/lang/elisp/init-loader/init-loader.el

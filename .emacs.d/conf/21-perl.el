@@ -18,7 +18,7 @@
  '(cperl-close-paren-offset     -4))
 
 ;; perl-completion
-;; (auto-install-from-emacswiki "perl-completion.el")
+;; (auto-install-from-url "https://raw.github.com/imakado/perl-completion/master/perl-completion.el")
 (autoload 'perl-completion-mode "perl-completion" nil t)
 (eval-after-load "perl-completion"
   '(progn
