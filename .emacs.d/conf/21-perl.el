@@ -12,7 +12,8 @@
      (define-key cperl-mode-map (kbd "{") nil)
      (define-key cperl-mode-map (kbd "[") nil)
      (define-key cperl-mode-map (kbd "M-n") 'flymake-goto-next-error)
-     (define-key cperl-mode-map (kbd "M-p") 'flymake-goto-prev-error)))
+     (define-key cperl-mode-map (kbd "M-p") 'flymake-goto-prev-error)
+     (define-key cperl-mode-map (kbd "C-c t") 'perl-run-prove)))
 (custom-set-variables
  '(cperl-indent-parens-as-block t)
  '(cperl-close-paren-offset     -4))
@@ -27,6 +28,14 @@
          (plcmp-with-set-perl5-lib ad-do-it)))
      (define-key plcmp-mode-map (kbd "M-TAB") nil)
      (define-key plcmp-mode-map (kbd "M-C-o") 'plcmp-cmd-smart-complete)))
+
+;; commands
+(require 'vc-git)
+(defun perl-run-prove ()
+  (interactive)
+  (let* ((filename (buffer-file-name))
+         (compile-command (concat "cd " (vc-git-root filename) "; prove --nocolor " filename)))
+    (call-interactively 'compile)))
 
 ;; hook
 (defun my-cperl-mode-hook ()
