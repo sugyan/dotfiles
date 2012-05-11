@@ -4,6 +4,8 @@
 (defalias 'perl-mode 'cperl-mode)
 (add-to-list 'auto-mode-alist '("\\.psgi$" . cperl-mode))
 (add-to-list 'auto-mode-alist '("\\.t\\'"  . cperl-mode))
+(add-to-list 'flymake-allowed-file-name-masks '("\\.t\\'"    flymake-perl-init))
+(add-to-list 'flymake-allowed-file-name-masks '("\\.psgi\\'" flymake-perl-init))
 (eval-after-load "cperl-mode"
   '(progn
      (cperl-set-style "PerlStyle")
@@ -34,7 +36,7 @@
 (defun perl-run-prove ()
   (interactive)
   (let* ((filename (buffer-file-name))
-         (compile-command (concat "cd " (vc-git-root filename) "; prove --nocolor " filename)))
+         (compile-command (concat "cd " (vc-git-root filename) "; prove -v --nocolor " filename)))
     (call-interactively 'compile)))
 
 ;; hook
