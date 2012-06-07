@@ -85,6 +85,11 @@ zstyle ':completion:*:kill:*:processes' command 'ps x'
 zstyle ':completion:*:-command-:*' \
     fake-parameters PERL5LIB # for perl
 
+## git completion
+if [ -e $HOME/.git-completion.sh ]; then
+    source $HOME/.git-completion.sh
+fi
+
 # vcs
 autoload -Uz vcs_info
 zstyle ':vcs_info:*' enable git svn
