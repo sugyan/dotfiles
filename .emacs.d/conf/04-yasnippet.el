@@ -1,5 +1,5 @@
 ;;; Yasnippet
-;; (auto-install-from-url "https://raw.github.com/capitaomorte/yasnippet/master/yasnippet.el")
+;; (package-install 'yasnippet)
 (require 'yasnippet)
 (custom-set-variables
  '(yas/trigger-key  "M-o")

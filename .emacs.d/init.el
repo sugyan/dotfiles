@@ -11,13 +11,6 @@
 (add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/") t)
 (package-initialize)
 ;; (package-install 'magit)
-;; (package-install 'auto-complete)
-;; (package-install 'yasnippet)
-;; (package-install 'js2-mode)
-;; (package-install 'ruby-mode)
-;; (package-install 'markdown-mode)
-;; (package-install 'yaml-mode)
-;; (package-install 'haml-mode)
 
 ;; init loader
 ;; http://coderepos.org/share/browser/lang/elisp/init-loader/init-loader.el

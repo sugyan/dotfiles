@@ -22,7 +22,7 @@
        (define-auto-insert mode (lambda () (insert "template") (yas/expand))))))
 
 ;; auto-complete
-;; (auto-install-batch "auto-complete development version")
+;; (package-install 'auto-complete)
 (require 'auto-complete-config)
 (global-auto-complete-mode t)
 (custom-set-variables

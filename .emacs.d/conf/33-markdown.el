@@ -1,7 +1,7 @@
 ;;; Markdown
 
 ;; markdown-mode
-;; (auto-install-from-url "http://jblevins.org/projects/markdown-mode/markdown-mode.el")
+;; (package-install 'markdown-mode)
 ;; to install markdown command (Markdown.pl) :
 ;; $ cpanm Text::Markdown
 (autoload 'markdown-mode "markdown-mode" nil t)
