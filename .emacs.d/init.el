@@ -6,12 +6,18 @@
 (add-to-list 'load-path "~/.emacs.d/auto-install")
 
 ;; package.el
-;; (auto-install-from-url "http://repo.or.cz/w/emacs.git/blob_plain/1a0a666f941c99882093d7bd08ced15033bc3f0c:/lisp/emacs-lisp/package.el")
-;; (add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/"))
 (require 'package)
+(add-to-list 'package-archives '("melpa"     . "http://melpa.milkbox.net/packages/")  t)
+(add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/") t)
 (package-initialize)
-(package-activate 'magit '(1 1 1))
-(package-activate 'auto-complete '(1 4))
+;; (package-install 'magit)
+;; (package-install 'auto-complete)
+;; (package-install 'yasnippet)
+;; (package-install 'js2-mode)
+;; (package-install 'ruby-mode)
+;; (package-install 'markdown-mode)
+;; (package-install 'yaml-mode)
+;; (package-install 'haml-mode)
 
 ;; init loader
 ;; http://coderepos.org/share/browser/lang/elisp/init-loader/init-loader.el
