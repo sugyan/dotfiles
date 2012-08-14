@@ -6,6 +6,9 @@ HISTFILE=~/.histfile
 HISTSIZE=1000
 SAVEHIST=1000
 
+# report time
+REPORTTIME=3
+
 # prompt
 function precmd_vcs() {
     vcs_info
