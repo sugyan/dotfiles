@@ -6,6 +6,7 @@
 (set-frame-font "fontset-bitstreammarugo")
 (set-fontset-font (frame-parameter nil 'font)
                   'unicode
-                  (font-spec :family "Hiragino Maru Gothic ProN" :size 16)
+                  (font-spec :family "Hiragino Maru Gothic ProN")
                   nil
                   'append)
+(setq face-font-rescale-alist '(("Hiragino.*" . 1.2)))
