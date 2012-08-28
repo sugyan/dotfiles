@@ -52,10 +52,8 @@
 
 ;; dired
 (require 'dired)
-(require 'ls-lisp)
 (define-key dired-mode-map (kbd "r")   'wdired-change-to-wdired-mode)
 (define-key dired-mode-map (kbd "C-o") nil)
-(setq ls-lisp-use-insert-directory-program nil)
 
 ;; grep
 (setq grep-command "ack --nogroup ")
