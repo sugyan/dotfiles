@@ -1,11 +1,12 @@
 ;;; editing config
 
 (custom-set-variables
- '(truncate-lines           t)               ; truncate line
- '(indent-tabs-mode         nil)             ; don't use tab
- '(make-backup-files        nil)             ; don't make *~ files
- '(find-file-visit-truename t)               ; visit truename
- '(read-file-name-completion-ignore-case t)) ; for case insensitive find-file
+ '(truncate-lines           t)              ; truncate line
+ '(indent-tabs-mode         nil)            ; don't use tab
+ '(make-backup-files        nil)            ; don't make *~ files
+ '(find-file-visit-truename t)              ; visit truename
+ '(read-file-name-completion-ignore-case t) ; for case insensitive find-file
+ '(dired-use-ls-dired nil))                 ; dired ls
 
 ;; find-file-at-point
 (ffap-bindings)

@@ -11,6 +11,7 @@
 (add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/") t)
 (package-initialize)
 ;; (package-install 'magit)
+;; (package-install 'slim-mode)
 
 ;; init loader
 ;; http://coderepos.org/share/browser/lang/elisp/init-loader/init-loader.el
