@@ -1,5 +1,5 @@
 ;;; anything
-;; (auto-install-batch "anything-minimal")
+;; (package-install 'anything)
 
 (require 'anything-config)
 ;; anything-grep
