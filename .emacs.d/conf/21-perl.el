@@ -2,7 +2,9 @@
 
 (require 'flymake)
 
-;; cperl-mode
+;; cperl-mode from package-install for cperl-indent-subs-specially
+;; http://d.hatena.ne.jp/syohex/20120818/1345302707
+;; (package-install 'cperl-mode)
 (defalias 'perl-mode 'cperl-mode)
 (add-to-list 'auto-mode-alist '("\\.psgi$" . cperl-mode))
 (add-to-list 'auto-mode-alist '("\\.t\\'"  . cperl-mode))
@@ -20,7 +22,8 @@
      (define-key cperl-mode-map (kbd "C-c t") 'perl-run-prove)))
 (custom-set-variables
  '(cperl-indent-parens-as-block t)
- '(cperl-close-paren-offset     -4))
+ '(cperl-close-paren-offset     -4)
+ '(cperl-indent-subs-specially  nil))
 
 ;; perl-completion
 ;; (auto-install-from-url "https://raw.github.com/imakado/perl-completion/master/perl-completion.el")
