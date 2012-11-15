@@ -49,8 +49,10 @@
   (perl-completion-mode t)
   (flymake-mode t)
   (when (boundp 'auto-complete-mode)
-    (defvar ac-source-my-perl-completion
-      '((candidates . plcmp-ac-make-cands)))
-    (add-to-list 'ac-sources 'ac-source-my-perl-completion)
-    (add-to-list 'ac-sources 'ac-source-dictionary)))
+    (eval
+     '(progn
+        (defvar ac-source-my-perl-completion
+          '((candidates . plcmp-ac-make-cands)))
+        (add-to-list 'ac-sources 'ac-source-my-perl-completion)
+        (add-to-list 'ac-sources 'ac-source-dictionary)))))
 (add-hook 'cperl-mode-hook 'my-cperl-mode-hook)
