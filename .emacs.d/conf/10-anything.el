@@ -1,5 +1,5 @@
 ;;; anything
-;; (package-install 'anything)
+;; (auto-install-batch "anything-minimal")
 
 (require 'anything-config)
 ;; anything-grep
@@ -22,7 +22,7 @@
 (defun my-anything ()
   (interactive)
   (anything-other-buffer
-   '(anything-c-source-buffers-list
+   '(anything-c-source-buffers+
      anything-c-source-recentf)
    "*anything my-anything*"))
 (define-key global-map (kbd "C-q") 'my-anything)
