@@ -31,6 +31,8 @@ alias sl=ls
 case "$OSTYPE" in
     darwin*)
         alias ls="LSCOLORS=gxfxxxxxcxxxxxxxxxxxxx ls -G"
+        alias -s html='open -a Google\ Chrome'
+        alias -s {png,jpg,bmp,PNG,JPG,pdf}='open -a Preview'
         ;;
     linux*)
         alias ls="ls --color=auto"
