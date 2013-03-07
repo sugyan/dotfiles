@@ -1,6 +1,7 @@
 // hot key launch
 var launch_and_focus = function (target) {
     return function (win) {
+        win = win || S.window();
         var apps = [];
         S.eachApp(function (app) { apps.push(app.name()); });
         if (! _.find(apps, function (name) { return name === target; })) {
