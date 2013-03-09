@@ -18,3 +18,4 @@ var launch_and_focus = function (target) {
 S.bind('q:ctrl,cmd', launch_and_focus('iTerm'));
 S.bind('w:ctrl,cmd', launch_and_focus('Emacs'));
 S.bind('e:ctrl,cmd', launch_and_focus('Google Chrome'));
+S.bind('t:ctrl,cmd', launch_and_focus('Twitter'));
