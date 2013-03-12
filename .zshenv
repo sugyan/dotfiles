@@ -11,15 +11,16 @@ export H=$HOME
 typeset -U fpath
 fpath=($fpath $HOME/.zsh/functions(N))
 
-# perlbrew
-if [ -e $HOME/perl5/perlbrew/etc/bashrc ]; then
-    source $HOME/perl5/perlbrew/etc/bashrc
-fi
 # nodebrew
 path=($HOME/.nodebrew/current/bin(N) $path)
 # rbenv
 path=($HOME/.rbenv/bin(N) $path)
 eval "$(SHELL=zsh rbenv init -)"
+# plenv
+if which plenv > /dev/null; then
+    eval "$(plenv init -)"
+fi
+
 # flex SDK
 path=(/Developer/SDKs/flex_sdk_4.5.1.21328/bin(N) $path)
 
