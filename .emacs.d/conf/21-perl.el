@@ -28,13 +28,15 @@
 ;; perl-completion
 ;; (auto-install-from-url "https://raw.github.com/imakado/perl-completion/master/perl-completion.el")
 (autoload 'perl-completion-mode "perl-completion" nil t)
-(eval-after-load "perl-completion"
-  '(progn
-     (defadvice flymake-start-syntax-check-process (around flymake-start-syntax-check-perl-lib-path activate)
-       (when perl-completion-mode
-         (plcmp-with-set-perl5-lib ad-do-it)))
-     (define-key plcmp-mode-map (kbd "M-TAB") nil)
-     (define-key plcmp-mode-map (kbd "M-C-o") 'plcmp-cmd-smart-complete)))
+
+;; flymake (use Project::Libs)
+(defun flymake-perl-init ()
+  (let* ((temp-file   (flymake-init-create-temp-buffer-copy
+                       'flymake-create-temp-inplace))
+	 (local-file  (file-relative-name
+                       temp-file
+                       (file-name-directory buffer-file-name))))
+    (list "perl" (list "-MProject::Libs lib_dirs => [qw(local/lib/perl5)]" "-wc" local-file))))
 
 ;; commands
 (require 'vc-git)
