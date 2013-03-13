@@ -17,10 +17,8 @@ path=($HOME/.nodebrew/current/bin(N) $path)
 path=($HOME/.rbenv/bin(N) $path)
 eval "$(SHELL=zsh rbenv init -)"
 # plenv
-if which plenv > /dev/null; then
-    eval "$(plenv init -)"
-fi
-
+path=($HOME/.plenv/bin(N) $path)
+eval "$(SHELL=zsh plenv init -)"
 # flex SDK
 path=(/Developer/SDKs/flex_sdk_4.5.1.21328/bin(N) $path)
 
