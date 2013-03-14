@@ -2,9 +2,10 @@
 # shell variables
 
 # history
-HISTFILE=~/.histfile
-HISTSIZE=1000
-SAVEHIST=1000
+HISTFILE=~/.zsh_history
+HISTSIZE=10000
+SAVEHIST=10000
+setopt sharehistory
 
 # report time
 REPORTTIME=3
