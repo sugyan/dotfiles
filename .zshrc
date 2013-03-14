@@ -10,13 +10,18 @@ SAVEHIST=1000
 REPORTTIME=3
 
 # prompt
+PROMPT=$'%{\e[31m%}%n@%M %{\e[33m%}%* %# %{\e[m%}'
+
+# pre exec
+function preexec_fluent() {
+    (curl -X POST -d 'json={"command":"'${1%% *}'"}' localhost:9880/zsh &)
+}
+preexec_functions=(preexec_fluent)
+# pre cmd
 function precmd_vcs() {
     vcs_info
     RPROMPT=$'%{\e[32m%}%~'${vcs_info_msg_0_}$'%{\e[m%}'
 }
-PROMPT=$'%{\e[31m%}%n@%M %{\e[33m%}%* %# %{\e[m%}'
-
-# special functions
 precmd_functions=(precmd_vcs)
 
 function redrev() {
