@@ -14,7 +14,7 @@ PROMPT=$'%{\e[31m%}%n@%M %{\e[33m%}%* %# %{\e[m%}'
 
 # pre exec
 function preexec_fluent() {
-    (curl -X POST -d 'json={"command":"'${1%% *}'"}' localhost:9880/zsh &)
+    (curl -X POST -d 'json={"command":"'${1%% *}'"}' localhost:9880/zsh 2> /dev/null &)
 }
 preexec_functions=(preexec_fluent)
 # pre cmd
