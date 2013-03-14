@@ -25,10 +25,10 @@ function precmd_vcs() {
 }
 precmd_functions=(precmd_vcs)
 
+# special functions
 function redrev() {
     perl -pe 's/^/\e[41m/ && s/$/\e[m/';
 }
-
 
 ##################################################
 # aliases
