@@ -9,3 +9,4 @@
  '(markdown-command                "Markdown.pl")
  '(markdown-command-needs-filename t))
 (add-to-list 'auto-mode-alist '("\\.md$" . markdown-mode))
+(add-to-list 'auto-mode-alist '("\\.mkdn\\'"  . markdown-mode))
