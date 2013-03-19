@@ -22,14 +22,12 @@ eval "$(SHELL=zsh plenv init -)"
 # flex SDK
 path=(/Developer/SDKs/flex_sdk_4.5.1.21328/bin(N) $path)
 
-# autojump
-# https://github.com/joelthelion/autojump
-# $ git clone git://github.com/joelthelion/autojump.git
-# $ cd autojump
-# $ ./install.sh --zsh --local --prefix $HOME/local
-if [ -e $HOME/local/etc/profile.d/autojump.zsh ]; then
-    source $HOME/local/etc/profile.d/autojump.zsh
+# z.sh (https://github.com/rupa/z)
+if which brew > /dev/null; then
+    _Z_CMD=j
+    source $(brew --prefix)/etc/profile.d/z.sh
 fi
+
 fpath=($fpath $HOME/local/functions(N))
 
 if [ "$TMUX" != "" ]; then

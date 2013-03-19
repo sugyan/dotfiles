@@ -23,7 +23,7 @@ function precmd_vcs() {
     vcs_info
     RPROMPT=$'%{\e[32m%}%~'${vcs_info_msg_0_}$'%{\e[m%}'
 }
-precmd_functions=(precmd_vcs)
+precmd_functions+=(precmd_vcs)
 
 # special functions
 function redrev() {
