@@ -56,7 +56,9 @@
 (define-key dired-mode-map (kbd "C-o") nil)
 
 ;; grep
-(setq grep-command "ack --nogroup ")
+;; use 'The Silver Searcher'
+;; http://geoff.greer.fm/2011/12/27/the-silver-searcher-better-than-ack/
+(setq grep-command "ag --nogroup ")
 
 ;; isearch
 (define-key isearch-mode-map (kbd "C-h") 'isearch-delete-char)
