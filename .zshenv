@@ -26,6 +26,9 @@ path=(/Developer/SDKs/flex_sdk_4.5.1.21328/bin(N) $path)
 if which brew > /dev/null; then
     _Z_CMD=j
     source $(brew --prefix)/etc/profile.d/z.sh
+elif [ -f $HOME/.z.sh/z.sh ]; then
+    _Z_CMD=j
+    source $HOME/.z.sh/z.sh
 fi
 
 fpath=($fpath $HOME/local/functions(N))
