@@ -30,11 +30,6 @@
 ;; (auto-install-from-url "https://raw.github.com/imakado/perl-completion/master/perl-completion.el")
 (autoload 'perl-completion-mode "perl-completion" nil t)
 
-;; template toolkit
-;; (package-install 'tt-mode)
-(autoload 'tt-mode "tt-mode" nil t)
-(add-to-list 'auto-mode-alist '("\\.tt\\'" . tt-mode))
-
 ;; flymake (use Project::Libs)
 (defun flymake-perl-init ()
   (let* ((temp-file   (flymake-init-create-temp-buffer-copy

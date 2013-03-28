@@ -8,3 +8,6 @@
         (add-to-list 'ac-modes 'html-mode)
         (add-to-list 'ac-sources 'ac-source-dictionary)))))
 (add-hook 'html-mode-hook 'my-html-mode-hook)
+
+;; html-mode for *.tt files
+(add-to-list 'auto-mode-alist '("\\.tt$" . html-mode))
