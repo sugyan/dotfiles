@@ -8,6 +8,7 @@
 (defalias 'perl-mode 'cperl-mode)
 (add-to-list 'auto-mode-alist '("\\.psgi$" . cperl-mode))
 (add-to-list 'auto-mode-alist '("\\.t\\'"  . cperl-mode))
+(add-to-list 'auto-mode-alist '("cpanfile" . cperl-mode))
 (add-to-list 'flymake-allowed-file-name-masks '("\\.t\\'"    flymake-perl-init))
 (add-to-list 'flymake-allowed-file-name-masks '("\\.psgi\\'" flymake-perl-init))
 (eval-after-load "cperl-mode"
@@ -28,6 +29,11 @@
 ;; perl-completion
 ;; (auto-install-from-url "https://raw.github.com/imakado/perl-completion/master/perl-completion.el")
 (autoload 'perl-completion-mode "perl-completion" nil t)
+
+;; template toolkit
+;; (package-install 'tt-mode)
+(autoload 'tt-mode "tt-mode" nil t)
+(add-to-list 'auto-mode-alist '("\\.tt\\'" . tt-mode))
 
 ;; flymake (use Project::Libs)
 (defun flymake-perl-init ()
