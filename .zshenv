@@ -31,6 +31,10 @@ elif [ -f $HOME/.z.sh/z.sh ]; then
     source $HOME/.z.sh/z.sh
 fi
 
+if which brew > /dev/null; then
+    fpath=($fpath $(brew --prefix)/share/zsh/site-functions(N))
+fi
+
 fpath=($fpath $HOME/local/functions(N))
 
 if [ "$TMUX" != "" ]; then
