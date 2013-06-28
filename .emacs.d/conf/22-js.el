@@ -17,6 +17,5 @@
 (defun my-js2-mode-hook ()
   (when (boundp 'auto-complete-mode)
     (eval
-     '(add-to-list 'ac-sources 'ac-source-dictionary)))
-  (set-face-foreground 'js2-function-param-face "SeaGreen3"))
+     '(add-to-list 'ac-sources 'ac-source-dictionary))))
 (add-hook 'js2-mode-hook 'my-js2-mode-hook)
