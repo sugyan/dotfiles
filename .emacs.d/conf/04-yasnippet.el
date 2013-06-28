@@ -2,9 +2,12 @@
 ;; (package-install 'yasnippet)
 (require 'yasnippet)
 (custom-set-variables
- '(yas/trigger-key  "M-o")
  '(yas/snippet-dirs '("~/.emacs.d/etc/snippets")))
-(yas/global-mode t)
+(yas-global-mode t)
+
+;; use "M-o" to expand, not "TAB"
+(define-key yas-minor-mode-map (kbd "M-o") 'yas-expand)
+(define-key yas-minor-mode-map (kbd "TAB") nil)
 
 ;; anything interface
 (eval-after-load "anything-config"
