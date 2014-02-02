@@ -15,10 +15,10 @@ fpath=($fpath $HOME/.zsh/functions(N))
 path=($HOME/.nodebrew/current/bin(N) $path)
 # rbenv
 path=($HOME/.rbenv/bin(N) $path)
-eval "$(SHELL=zsh rbenv init -)"
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 # plenv
 path=($HOME/.plenv/bin(N) $path)
-eval "$(SHELL=zsh plenv init -)"
+if which plenv > /dev/null; then eval "$(plenv init -)"; fi
 # flex SDK
 path=(/Developer/SDKs/flex_sdk_4.5.1.21328/bin(N) $path)
 
