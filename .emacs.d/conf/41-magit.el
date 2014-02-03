@@ -1,4 +1,5 @@
 ;;; Magit
+;; (package-install 'magit)
 
 ;; color
 (eval-after-load 'magit
