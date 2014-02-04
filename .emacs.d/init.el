@@ -7,16 +7,18 @@
 (package-initialize)
 ;; install if not installed
 (defvar my-package-list
-  '(init-loader
-    auto-async-byte-compile
+  '(auto-async-byte-compile
     auto-complete
-    helm
-    yasnippet
-    recentf-ext
-    open-junk-file
     cperl-mode
+    helm
+    init-loader
+    magit
+    markdown-mode
+    open-junk-file
     perl-completion
-    ruby-mode))
+    recentf-ext
+    ruby-mode
+    yasnippet))
 (let ((not-installed
        (loop for package in my-package-list
              when (not (package-installed-p package))
