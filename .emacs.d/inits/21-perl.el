@@ -27,7 +27,6 @@
  '(cperl-indent-subs-specially  nil))
 
 ;; perl-completion
-;; (auto-install-from-url "https://raw.github.com/imakado/perl-completion/master/perl-completion.el")
 (autoload 'perl-completion-mode "perl-completion" nil t)
 
 ;; flymake (use Project::Libs)

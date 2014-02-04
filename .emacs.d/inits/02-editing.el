@@ -18,7 +18,6 @@
 (auto-insert-mode t)
 (eval-after-load "yasnippet"
   '(progn
-     (custom-set-variables '(auto-insert-alist '(())))
      (dolist (mode '(html-mode cperl-mode))
        (define-auto-insert mode (lambda () (insert "template") (yas/expand))))))
 
@@ -32,18 +31,6 @@
 (define-key ac-menu-map (kbd "C-n")   'ac-next)
 (define-key ac-menu-map (kbd "C-p")   'ac-previous)
 (define-key ac-menu-map (kbd "M-TAB") nil)
-
-;; smartchr
-;; (auto-install-from-url "https://raw.github.com/imakado/emacs-smartchr/master/smartchr.el")
-(require 'smartchr)
-(define-key global-map (kbd "=")  (smartchr '(" = " "=")))
-(define-key global-map (kbd "(")  (smartchr '("(`!!')" "(")))
-(define-key global-map (kbd "{")  (smartchr '("{`!!'}" "{")))
-(define-key global-map (kbd "[")  (smartchr '("[`!!']" "[")))
-(define-key global-map (kbd "<")  (smartchr '("<`!!'>" "<")))
-(define-key global-map (kbd ">")  (smartchr '(">" " => ")))
-(define-key global-map (kbd "'")  (smartchr '("'`!!''" "'")))
-(define-key global-map (kbd "\"") (smartchr '("\"`!!'\"" "\"")))
 
 ;; uniquify
 ;; set to "bar/mumble/name" style
@@ -64,11 +51,12 @@
 (define-key isearch-mode-map (kbd "C-h") 'isearch-delete-char)
 
 ;; recentf
-;; (auto-install-from-emacswiki "recentf-ext.el")
 (require 'recentf-ext)
-(setq recentf-max-saved-items 500)
+(custom-set-variables
+ '(recentf-auto-cleanup 300)
+ '(recentf-max-saved-items 500))
 
-;; (auto-install-from-emacswiki "open-junk-file.el")
+;; open junk file
 (require 'open-junk-file)
 (custom-set-variables
  '(open-junk-file-format "~/.emacs.d/junk/%Y/%m/%d-%H%M%S."))

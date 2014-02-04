@@ -1,7 +1,6 @@
 ;;; Emacs lisp
 
 ;; auto-async-byte-compile
-;; (auto-install-from-emacswiki "auto-async-byte-compile.el")
 (autoload 'enable-auto-async-byte-compile-mode "auto-async-byte-compile" nil t)
 (add-hook 'emacs-lisp-mode-hook 'enable-auto-async-byte-compile-mode)
 

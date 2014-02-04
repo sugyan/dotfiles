@@ -14,6 +14,5 @@
 (define-key global-map (kbd "C-o") 'other-window)
 
 ;; sticky
-;; (auto-install-from-emacswiki "sticky.el")
 ;; (require 'sticky)
 ;; (use-sticky-key ?\; sticky-alist:en)
