@@ -13,6 +13,8 @@
 
 ;; show parentheses
 (show-paren-mode t)
+;; electric pair mode
+(electric-pair-mode t)
 
 ;; auto insert
 (auto-insert-mode t)
@@ -41,11 +43,6 @@
 (require 'dired)
 (define-key dired-mode-map (kbd "r")   'wdired-change-to-wdired-mode)
 (define-key dired-mode-map (kbd "C-o") nil)
-
-;; grep
-;; use 'The Silver Searcher'
-;; http://geoff.greer.fm/2011/12/27/the-silver-searcher-better-than-ack/
-(setq grep-command "ag --nogroup ")
 
 ;; isearch
 (define-key isearch-mode-map (kbd "C-h") 'isearch-delete-char)
