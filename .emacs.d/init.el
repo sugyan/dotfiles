@@ -11,6 +11,7 @@
     auto-complete
     cperl-mode
     helm
+    helm-ag
     init-loader
     magit
     markdown-mode
