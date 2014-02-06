@@ -13,6 +13,7 @@
     helm
     helm-ag
     init-loader
+    js2-mode
     magit
     markdown-mode
     open-junk-file
