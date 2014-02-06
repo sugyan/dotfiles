@@ -24,6 +24,7 @@
 (global-set-key (kbd "C-x C-b") 'helm-buffers-list)
 (define-key helm-command-map (kbd "g") 'helm-ag)
 (define-key helm-command-map (kbd "o") 'helm-occur)
+(define-key helm-command-map (kbd "M-/") 'helm-dabbrev)
 
 (define-key helm-map (kbd "C-h") 'delete-backward-char)
 (eval-after-load "helm-files"
