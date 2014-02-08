@@ -12,6 +12,7 @@
     cperl-mode
     helm
     helm-ag
+    helm-descbinds
     init-loader
     js2-mode
     magit
