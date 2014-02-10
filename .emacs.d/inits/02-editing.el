@@ -15,6 +15,9 @@
 (show-paren-mode t)
 ;; electric pair mode
 (electric-pair-mode t)
+;; key-combo
+(require 'key-combo)
+(key-combo-load-default)
 
 ;; auto insert
 (auto-insert-mode t)
