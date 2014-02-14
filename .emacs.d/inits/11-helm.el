@@ -5,6 +5,7 @@
 ;; customize
 (custom-set-variables
  '(helm-truncate-lines t)
+ '(helm-buffer-max-length 30)
  '(helm-delete-minibuffer-contents-from-point t)
  '(helm-ff-skip-boring-files t)
  '(helm-boring-file-regexp-list '("~$" "\\.elc$")))
