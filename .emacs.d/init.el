@@ -15,7 +15,6 @@
     helm-descbinds
     init-loader
     js2-mode
-    key-combo
     magit
     markdown-mode
     open-junk-file
