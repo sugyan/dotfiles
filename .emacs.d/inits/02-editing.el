@@ -55,7 +55,7 @@
 (require 'recentf-ext)
 (custom-set-variables
  '(recentf-auto-cleanup 300)
- '(recentf-max-saved-items 500))
+ '(recentf-max-saved-items 1000))
 
 ;; open junk file
 (require 'open-junk-file)
