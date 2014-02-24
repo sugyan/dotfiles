@@ -26,9 +26,6 @@
  '(cperl-close-paren-offset     -4)
  '(cperl-indent-subs-specially  nil))
 
-;; perl-completion
-(autoload 'perl-completion-mode "perl-completion" nil t)
-
 ;; flymake (use Project::Libs)
 (defun flymake-perl-init ()
   (let* ((temp-file   (flymake-init-create-temp-buffer-copy
@@ -48,13 +45,9 @@
 
 ;; hook
 (defun my-cperl-mode-hook ()
-  (perl-completion-mode t)
   (flymake-mode t)
   (when (boundp 'auto-complete-mode)
     (eval
      '(progn
-        (defvar ac-source-my-perl-completion
-          '((candidates . plcmp-ac-make-cands)))
-        (add-to-list 'ac-sources 'ac-source-my-perl-completion)
         (add-to-list 'ac-sources 'ac-source-dictionary)))))
 (add-hook 'cperl-mode-hook 'my-cperl-mode-hook)
