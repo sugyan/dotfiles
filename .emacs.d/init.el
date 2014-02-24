@@ -10,6 +10,7 @@
   '(auto-async-byte-compile
     auto-complete
     cperl-mode
+    direx
     helm
     helm-ag
     helm-descbinds

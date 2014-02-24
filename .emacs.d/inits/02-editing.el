@@ -43,6 +43,10 @@
 (require 'dired)
 (define-key dired-mode-map (kbd "r")   'wdired-change-to-wdired-mode)
 (define-key dired-mode-map (kbd "C-o") nil)
+;; direx
+(require 'direx)
+(global-set-key (kbd "C-x d") 'direx-project:jump-to-project-root-other-window)
+(define-key direx:direx-mode-map (kbd "C-o") nil)
 
 ;; isearch
 (define-key isearch-mode-map (kbd "C-h") 'isearch-delete-char)
