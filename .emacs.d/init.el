@@ -14,12 +14,12 @@
     helm
     helm-ag
     helm-descbinds
+    helm-ls-git
     init-loader
     js2-mode
     magit
     markdown-mode
     open-junk-file
-    perl-completion
     recentf-ext
     ruby-mode
     yasnippet))
