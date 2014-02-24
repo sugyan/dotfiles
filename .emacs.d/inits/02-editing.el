@@ -45,7 +45,7 @@
 (define-key dired-mode-map (kbd "C-o") nil)
 ;; direx
 (require 'direx)
-(global-set-key (kbd "C-x d") 'direx-project:jump-to-project-root-other-window)
+(global-set-key (kbd "C-x d") 'direx-project:jump-to-project-root)
 (define-key direx:direx-mode-map (kbd "C-o") nil)
 
 ;; isearch
