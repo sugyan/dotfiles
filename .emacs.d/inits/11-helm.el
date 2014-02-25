@@ -7,7 +7,7 @@
   (require 'helm-ls-git)
   (custom-set-variables
    '(helm-truncate-lines t)
-   '(helm-buffer-max-length nil)
+   '(helm-buffer-max-length 35)
    '(helm-delete-minibuffer-contents-from-point t)
    '(helm-ff-skip-boring-files t)
    '(helm-boring-file-regexp-list '("~$" "\\.elc$"))
