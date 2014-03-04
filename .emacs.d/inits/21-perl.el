@@ -1,10 +1,10 @@
 ;;; Perl
-
-(require 'flymake)
-
 ;; cperl-mode from package-install for cperl-indent-subs-specially
 ;; http://d.hatena.ne.jp/syohex/20120818/1345302707
 ;; (package-install 'cperl-mode)
+(require 'flymake)
+(require 'helm-perldoc)
+
 (defalias 'perl-mode 'cperl-mode)
 (add-to-list 'auto-mode-alist '("\\.psgi$" . cperl-mode))
 (add-to-list 'auto-mode-alist '("\\.t\\'"  . cperl-mode))
@@ -20,7 +20,8 @@
      (define-key cperl-mode-map (kbd "[") nil)
      (define-key cperl-mode-map (kbd "M-n") 'flymake-goto-next-error)
      (define-key cperl-mode-map (kbd "M-p") 'flymake-goto-prev-error)
-     (define-key cperl-mode-map (kbd "C-c t") 'perl-run-prove)))
+     (define-key cperl-mode-map (kbd "C-c t") 'perl-run-prove)
+     (define-key cperl-mode-map (kbd "C-c d") 'helm-perldoc)))
 (custom-set-variables
  '(cperl-indent-parens-as-block t)
  '(cperl-close-paren-offset     -4)
@@ -45,6 +46,7 @@
 
 ;; hook
 (defun my-cperl-mode-hook ()
+  (helm-perldoc:setup)
   (flymake-mode t)
   (when (boundp 'auto-complete-mode)
     (eval

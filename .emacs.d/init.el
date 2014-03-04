@@ -15,6 +15,7 @@
     helm-ag
     helm-descbinds
     helm-ls-git
+    helm-perldoc
     init-loader
     js2-mode
     magit

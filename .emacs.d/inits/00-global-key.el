@@ -12,7 +12,3 @@
 ;; global-set-key
 (define-key global-map (kbd "C-h") 'delete-backward-char)
 (define-key global-map (kbd "C-o") 'other-window)
-
-;; sticky
-;; (require 'sticky)
-;; (use-sticky-key ?\; sticky-alist:en)
