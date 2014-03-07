@@ -38,5 +38,5 @@ fi
 fpath=($fpath $HOME/local/functions(N))
 
 if [ "$TMUX" != "" ]; then
-    tmux set-option status-bg colour$(($(echo -n $(whoami)@$(hostname) | sum | cut -f1 -d' ') % 8)) | cat > /dev/null
+    tmux set-option status-bg colour$(($(echo -n $(whoami)@$(hostname) | sum | cut -f1 -d' ') % 7 + 1)) | cat > /dev/null
 fi
