@@ -47,6 +47,15 @@
 (require 'direx)
 (global-set-key (kbd "C-x d") 'direx-project:jump-to-project-root)
 (define-key direx:direx-mode-map (kbd "C-o") nil)
+;; projectile
+(custom-set-variables
+ '(projectile-project-root-files
+   '(".projectile"        ; projectile project marker
+     "Gemfile"            ; Bundler file
+     "package.json"       ; npm package file
+     "cpanfile"           ; CPAN dependencies for Perl applications
+     ".git"               ; Git VCS root dir
+     )))
 
 ;; isearch
 (define-key isearch-mode-map (kbd "C-h") 'isearch-delete-char)
