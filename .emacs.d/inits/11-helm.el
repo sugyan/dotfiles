@@ -4,18 +4,13 @@
 
 ;; customize
 (progn
-  (require 'helm-ls-git)
   (custom-set-variables
    '(helm-truncate-lines t)
    '(helm-buffer-max-length 35)
    '(helm-delete-minibuffer-contents-from-point t)
    '(helm-ff-skip-boring-files t)
    '(helm-boring-file-regexp-list '("~$" "\\.elc$"))
-   '(helm-ls-git-show-abs-or-relative 'relative)
-   '(helm-mini-default-sources '(helm-source-buffers-list
-                                 helm-source-ls-git
-                                 helm-source-recentf
-                                 helm-source-buffer-not-found))))
+   '(helm-ls-git-show-abs-or-relative 'relative)))
 
 ;; set helm-command-prefix-key to "C-z"
 (progn
@@ -33,6 +28,7 @@
 (define-key helm-command-map (kbd "d") 'helm-descbinds)
 (define-key helm-command-map (kbd "g") 'helm-ag)
 (define-key helm-command-map (kbd "o") 'helm-occur)
+(define-key helm-command-map (kbd "p") 'helm-projectile)
 (define-key helm-command-map (kbd "y") 'yas/insert-snippet)
 (define-key helm-command-map (kbd "M-/") 'helm-dabbrev)
 

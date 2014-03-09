@@ -3,7 +3,6 @@
 ;; http://d.hatena.ne.jp/syohex/20120818/1345302707
 ;; (package-install 'cperl-mode)
 (require 'flymake)
-(require 'helm-perldoc)
 
 (defalias 'perl-mode 'cperl-mode)
 (add-to-list 'auto-mode-alist '("\\.psgi$" . cperl-mode))
@@ -15,36 +14,24 @@
   '(progn
      (cperl-set-style "PerlStyle")
      (define-key cperl-mode-map (kbd "C-m") 'newline-and-indent)
-     (define-key cperl-mode-map (kbd "(") nil)
-     (define-key cperl-mode-map (kbd "{") nil)
-     (define-key cperl-mode-map (kbd "[") nil)
      (define-key cperl-mode-map (kbd "M-n") 'flymake-goto-next-error)
      (define-key cperl-mode-map (kbd "M-p") 'flymake-goto-prev-error)
-     (define-key cperl-mode-map (kbd "C-c t") 'perl-run-prove)
-     (define-key cperl-mode-map (kbd "C-c d") 'helm-perldoc)))
+     (define-key cperl-mode-map (kbd "C-c d") 'helm-perldoc)
+     (define-key cperl-mode-map (kbd "C-c h") 'helm-perldoc:history)))
 (custom-set-variables
  '(cperl-indent-parens-as-block t)
  '(cperl-close-paren-offset     -4)
  '(cperl-indent-subs-specially  nil))
 
-;; flymake (use Project::Libs)
-(defun flymake-perl-init ()
-  (let* ((temp-file   (flymake-init-create-temp-buffer-copy
-                       'flymake-create-temp-inplace))
-	 (local-file  (file-relative-name
-                       temp-file
-                       (file-name-directory buffer-file-name))))
-    (list "perl" (list "-MProject::Libs lib_dirs => [qw(local/lib/perl5 .)]" "-wc" local-file))))
-
-;; commands
-(require 'vc-git)
-(defun perl-run-prove ()
-  (interactive)
-  (let* ((filename (buffer-file-name))
-         (compile-command (concat "cd " (vc-git-root filename) "; prove -v --nocolor " filename)))
-    (call-interactively 'compile)))
+;; flymake
+(require 'projectile)
+(defadvice flymake-perl-init (after flymake-perl-init-add-libs activate)
+  (when (projectile-verify-file "cpanfile")
+    (push (concat "-I" (projectile-expand-root "local/lib/perl5")) (nth 1 ad-return-value))
+    (push (concat "-I" (projectile-expand-root "lib")) (nth 1 ad-return-value))))
 
 ;; hook
+(require 'helm-perldoc)
 (defun my-cperl-mode-hook ()
   (helm-perldoc:setup)
   (flymake-mode t)
