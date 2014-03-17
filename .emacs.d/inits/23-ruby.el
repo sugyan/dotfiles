@@ -1,5 +1,7 @@
 ;;; Ruby
 
+(add-to-list 'auto-mode-alist '("Gemfile$" . ruby-mode))
+
 ;; ruby-mode
 (custom-set-variables
  '(ruby-deep-indent-paren nil)) ;; indent
