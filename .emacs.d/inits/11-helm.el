@@ -10,7 +10,7 @@
    '(helm-delete-minibuffer-contents-from-point t)
    '(helm-ff-skip-boring-files t)
    '(helm-boring-file-regexp-list '("~$" "\\.elc$"))
-   '(helm-ls-git-show-abs-or-relative 'relative)))
+   '(helm-split-window-default-side 'other)))
 
 ;; set helm-command-prefix-key to "C-z"
 (progn
