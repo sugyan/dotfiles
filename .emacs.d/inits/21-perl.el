@@ -12,6 +12,7 @@
 (add-to-list 'flymake-allowed-file-name-masks '("\\.psgi\\'" flymake-perl-init))
 (eval-after-load "cperl-mode"
   '(progn
+     (helm-perldoc:setup)
      (cperl-set-style "PerlStyle")
      (define-key cperl-mode-map (kbd "C-m") 'newline-and-indent)
      (define-key cperl-mode-map (kbd "M-n") 'flymake-goto-next-error)
@@ -27,24 +28,15 @@
 (require 'projectile)
 (defadvice flymake-perl-init (after flymake-perl-init-add-libs activate)
   (when (projectile-verify-file "cpanfile")
-    (push (concat "-I" (projectile-expand-root "local/lib/perl5")) (nth 1 ad-return-value))
-    (push (concat "-I" (projectile-expand-root "lib")) (nth 1 ad-return-value))))
+    (push (concat "-I" (projectile-expand-root "local/lib/perl5")) (nth 1 ad-return-value)))
+  (when (projectile-project-p)
+    (push (concat "-I" (projectile-expand-root "lib")) (nth 1 ad-return-value))
+    (push (concat "-I" (projectile-project-root)) (nth 1 ad-return-value))))
 
 ;; hook
 (require 'helm-perldoc)
 (defun my-cperl-mode-hook ()
-  ;; add helm-perldoc:perl5lib automatically
-  (let ((perl5libs (split-string (or helm-perldoc:perl5lib "") path-separator t))
-        (local-lib (projectile-expand-root "local/lib/perl5")))
-    (when (and (projectile-verify-file "cpanfile")
-               (not (member local-lib perl5libs)))
-      (setq helm-perldoc:perl5lib
-            (if perl5libs
-                (mapconcat 'identity (cons local-lib perl5libs) path-separator)
-              local-lib))
-      (message "helm-perldoc:perl5lib is updated. (%s)" helm-perldoc:perl5lib)
-      (setq helm-perldoc:modules nil)))
-  (helm-perldoc:setup)
+  (helm-perldoc:carton-setup)
   (flymake-mode t)
   (when (boundp 'auto-complete-mode)
     (eval
