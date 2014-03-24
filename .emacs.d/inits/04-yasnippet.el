@@ -2,12 +2,10 @@
 ;; (package-install 'yasnippet)
 (require 'yasnippet)
 (custom-set-variables
- '(yas/snippet-dirs '("~/.emacs.d/etc/snippets")))
+ '(yas-snippet-dirs '("~/.emacs.d/etc/snippets")))
 (yas-global-mode t)
 
-;; use "M-o" to expand, not "TAB"
-(define-key yas-minor-mode-map (kbd "M-o") 'yas-expand)
-(define-key yas-minor-mode-map (kbd "TAB") nil)
+(define-key yas-minor-mode-map (kbd "M-i") 'yas-expand)
 
 ;; helm interface
 ;; http://d.hatena.ne.jp/syohex/20121207/1354885367
