@@ -10,7 +10,7 @@
    '(helm-delete-minibuffer-contents-from-point t)
    '(helm-ff-skip-boring-files t)
    '(helm-boring-file-regexp-list '("~$" "\\.elc$"))
-   '(helm-split-window-default-side 'other)))
+   '(helm-split-window-default-side 'right)))
 
 ;; set helm-command-prefix-key to "C-z"
 (progn
@@ -35,5 +35,5 @@
 (define-key helm-map (kbd "C-h") 'delete-backward-char)
 (eval-after-load "helm-files"
   '(progn
-     (define-key helm-find-files-map (kbd "C-h") 'helm-ff-backspace)
+     (define-key helm-find-files-map (kbd "C-h") nil)
      (define-key helm-find-files-map (kbd "C-i") 'helm-execute-persistent-action)))
