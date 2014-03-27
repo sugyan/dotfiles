@@ -23,6 +23,8 @@
     open-junk-file
     recentf-ext
     ruby-mode
+    smooth-scroll
+    yascroll
     yasnippet))
 (let ((not-installed
        (loop for package in my-package-list
