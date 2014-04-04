@@ -35,5 +35,8 @@
 (define-key helm-map (kbd "C-h") 'delete-backward-char)
 (eval-after-load "helm-files"
   '(progn
+     ;; don't use presel for find-files
+     (defadvice helm-find-files-1 (before helm-find-files-1-remove-presel activate)
+       (ad-set-arg 1 nil))
      (define-key helm-find-files-map (kbd "C-h") nil)
      (define-key helm-find-files-map (kbd "C-i") 'helm-execute-persistent-action)))
