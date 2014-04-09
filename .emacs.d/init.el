@@ -25,6 +25,7 @@
     recentf-ext
     ruby-mode
     smooth-scroll
+    undo-tree
     yascroll
     yasnippet))
 (let ((not-installed

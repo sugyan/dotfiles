@@ -16,13 +16,6 @@
 ;; electric pair mode
 (electric-pair-mode t)
 
-;; auto insert
-(auto-insert-mode t)
-(eval-after-load "yasnippet"
-  '(progn
-     (dolist (mode '(html-mode cperl-mode))
-       (define-auto-insert mode (lambda () (insert "template") (yas/expand))))))
-
 ;; auto-complete
 ;; (package-install 'auto-complete)
 (require 'auto-complete-config)
@@ -33,6 +26,17 @@
 (define-key ac-menu-map (kbd "C-n")   'ac-next)
 (define-key ac-menu-map (kbd "C-p")   'ac-previous)
 (define-key ac-menu-map (kbd "M-TAB") nil)
+
+;; auto insert
+(auto-insert-mode t)
+(eval-after-load "yasnippet"
+  '(progn
+     (dolist (mode '(html-mode cperl-mode))
+       (define-auto-insert mode (lambda () (insert "template") (yas/expand))))))
+
+;; undo
+(require 'undo-tree)
+(global-undo-tree-mode)
 
 ;; uniquify
 ;; set to "bar/mumble/name" style
