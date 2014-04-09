@@ -38,6 +38,10 @@
 (require 'undo-tree)
 (global-undo-tree-mode)
 
+;; expand region
+(require 'expand-region)
+(global-set-key (kbd "C-=") 'er/expand-region)
+
 ;; uniquify
 ;; set to "bar/mumble/name" style
 (require 'uniquify)

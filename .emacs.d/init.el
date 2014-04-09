@@ -11,6 +11,7 @@
     auto-complete
     cperl-mode
     direx
+    expand-region
     helm
     helm-ag
     helm-descbinds
