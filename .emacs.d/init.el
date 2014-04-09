@@ -21,6 +21,7 @@
     magit
     markdown-mode
     open-junk-file
+    powerline
     recentf-ext
     ruby-mode
     smooth-scroll
