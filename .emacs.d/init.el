@@ -27,6 +27,7 @@
     ruby-mode
     smooth-scroll
     undo-tree
+    yaml-mode
     yascroll
     yasnippet))
 (let ((not-installed
