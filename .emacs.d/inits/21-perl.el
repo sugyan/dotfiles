@@ -27,9 +27,9 @@
 ;; flymake
 (require 'projectile)
 (defadvice flymake-perl-init (after flymake-perl-init-add-libs activate)
-  (when (projectile-verify-file "cpanfile")
-    (push (concat "-I" (projectile-expand-root "local/lib/perl5")) (nth 1 ad-return-value)))
   (when (projectile-project-p)
+    (when (projectile-verify-file "cpanfile")
+      (push (concat "-I" (projectile-expand-root "local/lib/perl5")) (nth 1 ad-return-value)))
     (push (concat "-I" (projectile-expand-root "lib")) (nth 1 ad-return-value))
     (push (concat "-I" (projectile-project-root)) (nth 1 ad-return-value))))
 
