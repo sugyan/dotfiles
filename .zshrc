@@ -6,6 +6,7 @@ HISTFILE=~/.zsh_history
 HISTSIZE=10000
 SAVEHIST=10000
 setopt sharehistory
+setopt histignorealldups
 
 # report time
 REPORTTIME=3
