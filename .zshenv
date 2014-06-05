@@ -15,10 +15,10 @@ fpath=($fpath $HOME/.zsh/functions(N))
 path=($HOME/.nodebrew/current/bin(N) $path)
 # rbenv
 path=($HOME/.rbenv/bin(N) $path)
-if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+if which rbenv > /dev/null; then eval "$(rbenv init - zsh)"; fi
 # plenv
 path=($HOME/.plenv/bin(N) $path)
-if which plenv > /dev/null; then eval "$(plenv init -)"; fi
+if which plenv > /dev/null; then eval "$(plenv init - zsh)"; fi
 
 # z.sh (https://github.com/rupa/z)
 if which brew > /dev/null; then
