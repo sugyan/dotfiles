@@ -22,7 +22,7 @@ preexec_functions=(preexec_fluent)
 # pre cmd
 function precmd_vcs() {
     vcs_info
-    RPROMPT=$'%{\e[32m%}%~'${vcs_info_msg_0_}$'%{\e[m%}'
+    RPROMPT=$'%{\e[32m%}%~ %{\e[35m%}'${vcs_info_msg_0_}$'%{\e[m%}'
 }
 precmd_functions+=(precmd_vcs)
 
@@ -101,7 +101,7 @@ fi
 # vcs
 autoload -Uz vcs_info
 zstyle ':vcs_info:*' enable git svn
-zstyle ':vcs_info:*' formats $'%{\e[35m%} [%s %r %b]%{\e[m%}'
+zstyle ':vcs_info:*' formats $'[%s %r %b]'
 
 # word-style
 autoload -Uz select-word-style
