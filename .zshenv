@@ -19,6 +19,9 @@ if which rbenv > /dev/null; then eval "$(rbenv init - zsh)"; fi
 # plenv
 path=($HOME/.plenv/bin(N) $path)
 if which plenv > /dev/null; then eval "$(plenv init - zsh)"; fi
+# golang
+export GOPATH=$HOME/dev/go
+path=($GOPATH/bin(N) $path)
 
 # z.sh (https://github.com/rupa/z)
 if which brew > /dev/null; then
