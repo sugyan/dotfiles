@@ -12,6 +12,7 @@
     cperl-mode
     direx
     expand-region
+    go-mode
     helm
     helm-ag
     helm-descbinds
