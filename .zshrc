@@ -76,7 +76,7 @@ setopt pushdignoredups
 
 # completion
 autoload -Uz compinit
-compinit
+compinit -u
 
 zstyle ':completion:*' group-name ''
 zstyle ':completion:*:descriptions' format '%B--- %d ---%b'
