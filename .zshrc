@@ -23,11 +23,6 @@ function precmd_vcs() {
 }
 precmd_functions+=(precmd_vcs)
 
-# special functions
-function redrev() {
-    perl -pe 's/^/\e[41m/ && s/$/\e[m/';
-}
-
 ##################################################
 # aliases
 
@@ -64,7 +59,8 @@ alias gsp="git stash pop"
 
 alias pad='plackup -MPlack::App::Directory -e '\''$app = Plack::App::Directory->new({ root => "." })->to_app'\'''
 
-alias -g RED='2> >(redrev)'
+alias -g L='| less'
+alias -g P='| peco'
 
 ##################################################
 # others
