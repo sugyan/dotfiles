@@ -1,12 +1,13 @@
 ;;; editing config
 
 (custom-set-variables
- '(truncate-lines           t)               ; truncate line
- '(indent-tabs-mode         nil)             ; don't use tab
- '(make-backup-files        nil)             ; don't make *~ files
- '(find-file-visit-truename t)               ; visit truename
+ '(truncate-lines           t)              ; truncate line
+ '(indent-tabs-mode         nil)            ; don't use tab
+ '(make-backup-files        nil)            ; don't make *~ files
+ '(find-file-visit-truename t)              ; visit truename
+ '(read-file-name-completion-ignore-case t) ; for case insensitive find-file
  '(tab-width 4)
- '(read-file-name-completion-ignore-case t)) ; for case insensitive find-file
+ '(whitespace-style '(face tabs trailing empty tab-mark)))
 
 ;; find-file-at-point
 (ffap-bindings)
@@ -15,6 +16,11 @@
 (show-paren-mode t)
 ;; electric pair mode
 (electric-pair-mode t)
+;; visualize whitespaces(tabs)
+(global-whitespace-mode t)
+(custom-set-faces
+ '(whitespace-tab ((((class color) (background dark))
+     :background "grey10" :foreground "grey20"))))
 
 ;; auto-complete
 ;; (package-install 'auto-complete)
