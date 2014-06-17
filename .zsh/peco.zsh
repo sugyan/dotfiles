@@ -6,7 +6,7 @@ function percol_select_history() {
     else
         tac="tail -r"
     fi
-    BUFFER=$(fc -l -n 1 | eval $tac | percol --query "$LBUFFER")
+    BUFFER=$(fc -l -n 1 | eval $tac | peco --query "$LBUFFER")
     CURSOR=$#BUFFER             # move cursor
     zle -R -c                   # refresh
 }
@@ -21,9 +21,10 @@ function percol_select_directory() {
     else
         tac="tail -r"
     fi
-    local dest=$(_z -r 2>&1 | eval $tac | percol --query "$LBUFFER" | awk '{ print $2 }')
+    local dest=$(_z -r 2>&1 | eval $tac | peco --query "$LBUFFER" | awk '{ print $2 }')
     if [ -n "${dest}" ]; then
         cd ${dest}
+        precmd_vcs
     fi
     zle reset-prompt
 }

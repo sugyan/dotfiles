@@ -51,9 +51,7 @@ alias gpl="git pull"
 alias gps="git push"
 alias gci="git commit"
 alias gco="git checkout"
-alias gcp="git cherry-pick"
-alias gsd="git svn dcommit"
-alias gsr="git svn rebase"
+alias gcp='git checkout $(git branch | peco)'
 alias gst="git stash"
 alias gsp="git stash pop"
 
