@@ -16,6 +16,7 @@
     helm
     helm-ag
     helm-descbinds
+    helm-go-package
     helm-perldoc
     helm-projectile
     init-loader
