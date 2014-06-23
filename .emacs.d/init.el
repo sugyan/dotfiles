@@ -27,6 +27,7 @@
     powerline
     recentf-ext
     ruby-mode
+    shell-pop
     smooth-scroll
     undo-tree
     yaml-mode
