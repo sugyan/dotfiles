@@ -7,7 +7,10 @@
 
 (eval-after-load "go-mode"
   '(progn
-     (require 'go-autocomplete)         ; requires `gocode` command
+     ;; `go-autocomplete` and `go-eldoc` require `gocode` command
+     (require 'go-autocomplete)
+     (add-hook 'go-mode-hook 'go-eldoc-setup)
+     ;; key binding
      (define-key go-mode-map (kbd "C-c d") 'helm-go-package)))
 
 ;; use "Show documentation" as 1st action

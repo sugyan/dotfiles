@@ -14,6 +14,7 @@
     exec-path-from-shell
     expand-region
     go-autocomplete
+    go-eldoc
     go-mode
     helm
     helm-ag
