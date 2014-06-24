@@ -11,6 +11,7 @@
     auto-complete
     cperl-mode
     direx
+    exec-path-from-shell
     expand-region
     go-mode
     helm
