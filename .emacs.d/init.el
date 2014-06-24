@@ -13,6 +13,7 @@
     direx
     exec-path-from-shell
     expand-region
+    go-autocomplete
     go-mode
     helm
     helm-ag
