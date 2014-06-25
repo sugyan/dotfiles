@@ -1,15 +1,16 @@
-;;; Perl
+;;; Perl --- perl
+
+;;; Commentary:
 ;; cperl-mode from package-install for cperl-indent-subs-specially
 ;; http://d.hatena.ne.jp/syohex/20120818/1345302707
 ;; (package-install 'cperl-mode)
-(require 'flymake)
+
+;;; Code:
 
 (defalias 'perl-mode 'cperl-mode)
 (add-to-list 'auto-mode-alist '("\\.psgi$" . cperl-mode))
 (add-to-list 'auto-mode-alist '("\\.t\\'"  . cperl-mode))
 (add-to-list 'auto-mode-alist '("cpanfile" . cperl-mode))
-(add-to-list 'flymake-allowed-file-name-masks '("\\.t\\'"    flymake-perl-init))
-(add-to-list 'flymake-allowed-file-name-masks '("\\.psgi\\'" flymake-perl-init))
 (eval-after-load "cperl-mode"
   '(progn
      (helm-perldoc:setup)
@@ -25,8 +26,9 @@
  '(cperl-indent-subs-specially  nil))
 
 ;; flymake
-(require 'projectile)
 (defadvice flymake-perl-init (after flymake-perl-init-add-libs activate)
+  "Modify perl-init function."
+  (require 'projectile)
   (when (projectile-project-p)
     (when (projectile-verify-file "cpanfile")
       (push (concat "-I" (projectile-expand-root "local/lib/perl5")) (nth 1 ad-return-value)))
@@ -36,6 +38,7 @@
 ;; hook
 (require 'helm-perldoc)
 (defun my-cperl-mode-hook ()
+  "Hook function for `cperl-mode'."
   (helm-perldoc:carton-setup)
   (flymake-mode t)
   (when (boundp 'auto-complete-mode)
@@ -43,3 +46,5 @@
      '(progn
         (add-to-list 'ac-sources 'ac-source-dictionary)))))
 (add-hook 'cperl-mode-hook 'my-cperl-mode-hook)
+
+;;; 21-perl.el ends here

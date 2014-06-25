@@ -13,9 +13,11 @@
     direx
     exec-path-from-shell
     expand-region
+    flycheck
     go-autocomplete
     go-eldoc
     go-mode
+    golint
     helm
     helm-ag
     helm-descbinds
