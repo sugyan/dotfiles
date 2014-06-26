@@ -25,6 +25,7 @@
      (helm-perldoc:setup)
      (cperl-set-style "PerlStyle")
      ;; my flycheck checkers
+     (require 'projectile)
      (flycheck-define-checker my-perl
        "A Perl syntax checker using the Perl interpreter."
        :command ("perl" "-w" "-c"
