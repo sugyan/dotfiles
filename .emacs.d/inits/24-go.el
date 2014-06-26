@@ -1,7 +1,15 @@
-;;; Go
+;;; 24-go.el --- Go setting
+
+;;; Commentary:
 ;; (package-install 'go-mode)
 ;; (package-install 'go-autocomplete)
 ;; (package-install 'helm-go-package)
+;; `gocode': (for go-autocomplete)
+;; $ go get -u github.com/nsf/gocode
+;; `golint':
+;; $ go get -u github.com/golang/lint/golint
+
+;;; Code:
 
 (add-hook 'before-save-hook #'gofmt-before-save)
 
@@ -21,3 +29,5 @@
        (delete godoc actions)
        (push godoc actions)
        (helm-attrset 'action actions helm-source-go-package))))
+
+;;; 24-go.el ends here

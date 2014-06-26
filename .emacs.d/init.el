@@ -1,3 +1,9 @@
+;;; init.el --- init file
+
+;;; Commentary:
+
+;;; Code:
+
 (eval-when-compile (require 'cl))
 
 ;; package.el setting
@@ -61,3 +67,5 @@
     ;; show init time
     (message "init time: %.3f sec"
              (float-time (time-subtract after-init-time before-init-time)))))
+
+;;; init.el ends here
