@@ -1,0 +1,17 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: template-with-main-func
+# key: template
+# --
+package main
+
+import (
+	"log"
+)
+
+func init() {
+	log.SetFlags(log.LstdFlags | log.Lshortfile)
+}
+
+func main() {
+	$0
+}
