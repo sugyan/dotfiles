@@ -1,5 +1,5 @@
 # https://github.com/mooz/percol#zsh-history-search
-function percol_select_history() {
+function peco_select_history() {
     local tac
     if which tac > /dev/null; then
         tac="tac"
@@ -10,11 +10,11 @@ function percol_select_history() {
     CURSOR=$#BUFFER             # move cursor
     zle -R -c                   # refresh
 }
-zle -N percol_select_history
-bindkey '^R' percol_select_history
+zle -N peco_select_history
+bindkey '^R' peco_select_history
 
 # z.sh directory search
-function percol_select_directory() {
+function peco_select_directory() {
     local tac
     if which tac > /dev/null; then
         tac="tac"
@@ -28,5 +28,5 @@ function percol_select_directory() {
     fi
     zle reset-prompt
 }
-zle -N percol_select_directory
-bindkey "^X^J" percol_select_directory
+zle -N peco_select_directory
+bindkey "^X^J" peco_select_directory
