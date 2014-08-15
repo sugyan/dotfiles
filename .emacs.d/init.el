@@ -61,11 +61,9 @@
 
 ;; after init
 (add-hook 'after-init-hook
-  (lambda ()
-    ;; split window
-    (split-window-horizontally)
-    ;; show init time
-    (message "init time: %.3f sec"
-             (float-time (time-subtract after-init-time before-init-time)))))
+          (lambda ()
+            ;; show init time
+            (message "init time: %.3f sec"
+                     (float-time (time-subtract after-init-time before-init-time)))))
 
 ;;; init.el ends here

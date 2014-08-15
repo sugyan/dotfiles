@@ -1,9 +1,14 @@
-;;; window
+;;; window.el --- Window setting for cocoa emacs
+
+;;; Commentary:
+
+;;; Code:
 (custom-set-variables
  '(tool-bar-mode nil)                   ; hide tool bar
  '(scroll-bar-mode nil)                 ; hide scroll bar
+ '(ns-use-native-fullscreen nil)        ; no native fullscreen
  '(initial-frame-alist
-   '((top    . 1)
-     (width  . 237)
-     (height . 60)
-     (alpha  . 80))))
+   '((alpha . 80))))
+(toggle-frame-maximized)
+
+;;; cocoa-emacs-02-window.el ends here
