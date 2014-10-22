@@ -1,16 +1,17 @@
-;;; helm
+;;; 11-helm.el --- helm settings
+;;; Commentary:
 ;; (package-install 'helm)
 (require 'helm)
 
-;; customize
-(progn
-  (custom-set-variables
-   '(helm-truncate-lines t)
-   '(helm-buffer-max-length 35)
-   '(helm-delete-minibuffer-contents-from-point t)
-   '(helm-ff-skip-boring-files t)
-   '(helm-boring-file-regexp-list '("~$" "\\.elc$"))
-   '(helm-split-window-default-side 'right)))
+;;; Code:
+
+(custom-set-variables
+ '(helm-truncate-lines t)
+ '(helm-buffer-max-length 35)
+ '(helm-delete-minibuffer-contents-from-point t)
+ '(helm-ff-skip-boring-files t)
+ '(helm-boring-file-regexp-list '("~$" "\\.elc$"))
+ '(helm-split-window-default-side 'right))
 
 ;; set helm-command-prefix-key to "C-z"
 (progn
@@ -33,10 +34,13 @@
 (define-key helm-command-map (kbd "M-/") 'helm-dabbrev)
 
 (define-key helm-map (kbd "C-h") 'delete-backward-char)
-(eval-after-load "helm-files"
-  '(progn
-     ;; don't use presel for find-files
-     (defadvice helm-find-files-1 (before helm-find-files-1-remove-presel activate)
-       (ad-set-arg 1 nil))
-     (define-key helm-find-files-map (kbd "C-h") nil)
-     (define-key helm-find-files-map (kbd "C-i") 'helm-execute-persistent-action)))
+(with-eval-after-load "helm-files"
+  (eval
+   '(progn
+      ;; don't use presel for find-files
+      (defadvice helm-find-files-1 (before helm-find-files-1-remove-presel activate)
+        (ad-set-arg 1 nil))
+      (define-key helm-find-files-map (kbd "C-h") nil)
+      (define-key helm-find-files-map (kbd "C-i") 'helm-execute-persistent-action))))
+
+;;; 11-helm.el ends here
