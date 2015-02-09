@@ -20,6 +20,7 @@
     exec-path-from-shell
     expand-region
     flycheck
+    glsl-mode
     go-autocomplete
     go-eldoc
     go-mode
