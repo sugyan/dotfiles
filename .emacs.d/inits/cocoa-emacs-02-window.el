@@ -9,6 +9,5 @@
  '(ns-use-native-fullscreen nil)        ; no native fullscreen
  '(initial-frame-alist
    '((alpha . 80))))
-(toggle-frame-maximized)
 
 ;;; cocoa-emacs-02-window.el ends here
