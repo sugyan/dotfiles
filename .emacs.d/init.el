@@ -40,8 +40,10 @@
     recentf-ext
     ruby-mode
     shell-pop
+    slim-mode
     smooth-scroll
     undo-tree
+    web-mode
     yaml-mode
     yascroll
     yasnippet))
