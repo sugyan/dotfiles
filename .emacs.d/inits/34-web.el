@@ -5,6 +5,7 @@
 
 ;;; Code:
 (add-to-list 'auto-mode-alist '("\\.erb\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.jsx\\'" . web-mode))
 (with-eval-after-load "web-mode"
   (eval
    '(progn
