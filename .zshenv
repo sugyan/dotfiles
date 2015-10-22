@@ -47,5 +47,6 @@ fpath=($fpath $HOME/local/functions(N))
 
 # tmux
 if [ "$TMUX" != "" ]; then
+    tmux set-option status-fg black
     tmux set-option status-bg colour$(($(echo -n $(whoami)@$(hostname) | sum | cut -f1 -d' ') % 7 + 1)) | cat > /dev/null
 fi
