@@ -36,6 +36,7 @@
     magit
     markdown-mode
     open-junk-file
+    perl6-mode
     powerline
     recentf-ext
     ruby-mode
