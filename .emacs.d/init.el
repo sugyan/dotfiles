@@ -17,6 +17,7 @@
     auto-complete
     cperl-mode
     direx
+    dockerfile-mode
     exec-path-from-shell
     expand-region
     flycheck
