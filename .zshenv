@@ -1,6 +1,7 @@
 # make unique 'path'
 typeset -U path
 # add "$HOME/local/bin" to head
+path=(/usr/local/bin(N) $path)
 path=($HOME/local/bin(N) $path)
 path=($HOME/.bin(N) $path)
 
