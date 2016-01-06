@@ -1,5 +1,5 @@
 #!/bin/sh
-if ! which -s emacsclient; then
+if ! (command -v emacsclient > /dev/null); then
     echo 'emacsclient not found'
     exit
 fi
