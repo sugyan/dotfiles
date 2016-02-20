@@ -4,7 +4,7 @@ if ! (command -v emacsclient > /dev/null); then
     exit
 fi
 
-if [ "$1" == "-" ]; then
+if [ "$1" = "-" ]; then
     # read from STDIN
     TMP="$(mktemp /tmp/stdin-XXX)"
     cat > $TMP
