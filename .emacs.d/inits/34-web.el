@@ -14,6 +14,10 @@
 (with-eval-after-load "web-mode"
   (eval
    '(progn
+      (defun my-web-mode-hook ()
+        "Hook function for `web-mode'."
+        (when (equal web-mode-content-type "jsx")
+          (flycheck-add-mode 'javascript-eslint 'web-mode)))
       (setq web-mode-content-types
             '(("css"        . "\\.\\(s?css\\|css\\.erb\\)\\'")
               ("javascript" . "\\.\\(js\\|js\\.erb\\)\\'")
@@ -21,5 +25,7 @@
               ("jsx"        . "\\.\\(jsx\\|jsx\\.erb\\)\\'")
               ("xml"        . "\\.xml\\'")
               ("html"       . "."))))))
+
+(add-hook 'web-mode-hook 'my-web-mode-hook)
 
 ;;; 34-web.el ends here

@@ -40,10 +40,11 @@
     perl6-mode
     powerline
     recentf-ext
-    ruby-mode
+    sass-mode
     shell-pop
     slim-mode
     smooth-scroll
+    swift-mode
     undo-tree
     web-mode
     yaml-mode
