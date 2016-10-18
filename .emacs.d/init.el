@@ -21,6 +21,7 @@
     exec-path-from-shell
     expand-region
     flycheck
+    flycheck-rust
     glsl-mode
     go-autocomplete
     go-eldoc
@@ -40,11 +41,13 @@
     perl6-mode
     powerline
     recentf-ext
+    rust-mode
     sass-mode
     shell-pop
     slim-mode
     smooth-scroll
     swift-mode
+    toml-mode
     undo-tree
     web-mode
     yaml-mode
