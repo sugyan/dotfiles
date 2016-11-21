@@ -27,17 +27,17 @@
 # https://atom.io/docs/latest/using-atom-basic-customization#cson
 
 'atom-workspace':
- 'ctrl-q': 'fuzzy-finder:toggle-buffer-finder'
+  'ctrl-q': 'fuzzy-finder:toggle-buffer-finder'
+  'cmd-1': 'tree-view:toggle-focus'
 
 'atom-text-editor':
-    'cmd-;': 'editor:toggle-line-comments'
-    'cmd-f': 'atomic-emacs:forward-word'
-    'cmd-b': 'atomic-emacs:backward-word'
-    'ctrl-v': 'atomic-emacs:scroll-up'
-    'cmd-v': 'atomic-emacs:scroll-down'
-    'cmd-w': 'atomic-emacs:copy-region-as-kill'
-    'ctrl-z p': 'fuzzy-finder:toggle-file-finder'
+  'ctrl-i': 'editor:indent'
+  'cmd-;': 'editor:toggle-line-comments'
+  'cmd-f': 'atomic-emacs:forward-word'
+  'cmd-b': 'atomic-emacs:backward-word'
+  'cmd-w': 'atomic-emacs:copy-region-as-kill'
+  'ctrl-z p': 'fuzzy-finder:toggle-file-finder'
 
 'atom-text-editor[data-grammar~="go"]:not([mini])':
-    'ctrl-c ctrl-m': 'golang:godef'
-    'ctrl-c d': 'golang:showdoc'
+  'ctrl-c ctrl-m': 'golang:godef'
+  'ctrl-c d': 'golang:showdoc'

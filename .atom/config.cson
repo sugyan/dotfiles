@@ -1,0 +1,8 @@
+"*":
+  editor:
+    showInvisibles: true
+    tabLength: 4
+  "exception-reporting":
+    userId: "1d182fd3-7345-4aa8-3377-126ecbb9816b"
+  welcome:
+    showOnStartup: false
