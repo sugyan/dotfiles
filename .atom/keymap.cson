@@ -1,0 +1,43 @@
+# Your keymap
+#
+# Atom keymaps work similarly to style sheets. Just as style sheets use
+# selectors to apply styles to elements, Atom keymaps use selectors to associate
+# keystrokes with events in specific contexts. Unlike style sheets however,
+# each selector can only be declared once.
+#
+# You can create a new keybinding in this file by typing "key" and then hitting
+# tab.
+#
+# Here's an example taken from Atom's built-in keymap:
+#
+# 'atom-text-editor':
+#   'enter': 'editor:newline'
+#
+# 'atom-workspace':
+#   'ctrl-shift-p': 'core:move-up'
+#   'ctrl-p': 'core:move-down'
+#
+# You can find more information about keymaps in these guides:
+# * https://atom.io/docs/latest/using-atom-basic-customization#customizing-key-bindings
+# * https://atom.io/docs/latest/behind-atom-keymaps-in-depth
+#
+# This file uses CoffeeScript Object Notation (CSON).
+# If you are unfamiliar with CSON, you can read more about it in the
+# Atom Flight Manual:
+# https://atom.io/docs/latest/using-atom-basic-customization#cson
+
+'atom-workspace':
+ 'ctrl-q': 'fuzzy-finder:toggle-buffer-finder'
+
+'atom-text-editor':
+    'cmd-;': 'editor:toggle-line-comments'
+    'cmd-f': 'atomic-emacs:forward-word'
+    'cmd-b': 'atomic-emacs:backward-word'
+    'ctrl-v': 'atomic-emacs:scroll-up'
+    'cmd-v': 'atomic-emacs:scroll-down'
+    'cmd-w': 'atomic-emacs:copy-region-as-kill'
+    'ctrl-z p': 'fuzzy-finder:toggle-file-finder'
+
+'atom-text-editor[data-grammar~="go"]:not([mini])':
+    'ctrl-c ctrl-m': 'golang:godef'
+    'ctrl-c d': 'golang:showdoc'
