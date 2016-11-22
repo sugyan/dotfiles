@@ -26,6 +26,9 @@
 # Atom Flight Manual:
 # https://atom.io/docs/latest/using-atom-basic-customization#cson
 
+'atom-workspace atom-text-editor':
+  'ctrl-o': 'window:focus-next-pane'
+
 'atom-workspace':
   'ctrl-q': 'fuzzy-finder:toggle-buffer-finder'
   'cmd-1': 'tree-view:toggle-focus'
@@ -36,6 +39,11 @@
   'cmd-f': 'atomic-emacs:forward-word'
   'cmd-b': 'atomic-emacs:backward-word'
   'cmd-w': 'atomic-emacs:copy-region-as-kill'
+  'cmd-d': 'atomic-emacs:kill-word'
+  'cmd-n': 'linter:next-error'
+  'cmd-p': 'linter:previous-error'
+  'ctrl-s': 'incremental-search:forward'
+  'ctrl-r': 'incremental-search:backward'
   'ctrl-z p': 'fuzzy-finder:toggle-file-finder'
 
 'atom-text-editor[data-grammar~="go"]:not([mini])':
