@@ -26,11 +26,15 @@
 # Atom Flight Manual:
 # https://atom.io/docs/latest/using-atom-basic-customization#cson
 
+'body':
+  'cmd-m': 'unset!'
+
 'atom-workspace atom-text-editor':
   'ctrl-o': 'window:focus-next-pane'
 
 'atom-workspace':
   'ctrl-q': 'fuzzy-finder:toggle-buffer-finder'
+  'ctrl-z p': 'fuzzy-finder:toggle-file-finder'
   'cmd-1': 'tree-view:toggle-focus'
 
 'atom-text-editor':
@@ -44,7 +48,6 @@
   'cmd-p': 'linter:previous-error'
   'ctrl-s': 'incremental-search:forward'
   'ctrl-r': 'incremental-search:backward'
-  'ctrl-z p': 'fuzzy-finder:toggle-file-finder'
 
 'atom-text-editor[data-grammar~="go"]:not([mini])':
   'ctrl-c ctrl-m': 'golang:godef'
