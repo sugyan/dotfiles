@@ -36,6 +36,7 @@
   'ctrl-q': 'fuzzy-finder:toggle-buffer-finder'
   'ctrl-z p': 'fuzzy-finder:toggle-file-finder'
   'cmd-1': 'tree-view:toggle-focus'
+  'ctrl-cmd-o': 'advanced-open-file:toggle'
 
 'atom-text-editor':
   'ctrl-i': 'editor:indent'
@@ -48,6 +49,8 @@
   'cmd-p': 'linter:previous-error'
   'ctrl-s': 'incremental-search:forward'
   'ctrl-r': 'incremental-search:backward'
+  'escape <': 'core:move-to-top'
+  'escape >': 'core:move-to-bottom'
 
 'atom-text-editor[data-grammar~="go"]:not([mini])':
   'ctrl-c ctrl-m': 'golang:godef'
