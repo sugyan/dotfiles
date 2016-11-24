@@ -38,6 +38,9 @@
   'cmd-1': 'tree-view:toggle-focus'
   'ctrl-cmd-o': 'advanced-open-file:toggle'
 
+'.advanced-open-file atom-text-editor':
+  'ctrl-k': 'advanced-open-file:delete-path-component'
+
 'atom-text-editor':
   'ctrl-i': 'editor:indent'
   'cmd-;': 'editor:toggle-line-comments'
