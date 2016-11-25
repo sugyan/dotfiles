@@ -52,6 +52,7 @@
   'cmd-p': 'linter:previous-error'
   'ctrl-s': 'incremental-search:forward'
   'ctrl-r': 'incremental-search:backward'
+  'ctrl-m': 'unset!'
   'escape <': 'core:move-to-top'
   'escape >': 'core:move-to-bottom'
 
