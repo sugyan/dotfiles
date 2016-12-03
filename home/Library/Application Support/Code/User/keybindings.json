@@ -10,6 +10,8 @@
                             "when": "editorFocus" },
     { "key": "ctrl+w",   "command": "editor.action.clipboardCutAction",
                             "when": "editorTextFocus && !editorReadonly" },
+    { "key": "ctrl+i",   "command": "tab",
+                            "when": "editorTextFocus && !editorReadonly && !editorTabMovesFocus" },
     { "key": "cmd+x",    "command": "workbench.action.showCommands" },
     { "key": "cmd+x",    "command": "workbench.action.closeQuickOpen",
                             "when": "inQuickOpen" },
@@ -18,6 +20,10 @@
     { "key": "cmd+b",    "command": "emacs.cursorWordLeft" },
     { "key": "cmd+d",    "command": "deleteWordRight",
                             "when": "editorTextFocus" },
+    { "key": "cmd+n",    "command": "editor.action.marker.next",
+                            "when": "editorFocus && !editorReadonly" },
+    { "key": "cmd+p",    "command": "editor.action.marker.prev",
+                            "when": "editorFocus && !editorReadonly" },
     { "key": "cmd+;",    "command": "editor.action.blockComment" },
     { "key": "ctrl+o",   "command": "emacs.C-x_C-o" }
 ]
