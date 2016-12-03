@@ -12,6 +12,7 @@
                             "when": "editorTextFocus && !editorReadonly" },
     { "key": "ctrl+i",   "command": "tab",
                             "when": "editorTextFocus && !editorReadonly && !editorTabMovesFocus" },
+    { "key": "ctrl+o",   "command": "workbench.action.navigateEditorGroups" },
     { "key": "cmd+x",    "command": "workbench.action.showCommands" },
     { "key": "cmd+x",    "command": "workbench.action.closeQuickOpen",
                             "when": "inQuickOpen" },
@@ -24,6 +25,6 @@
                             "when": "editorFocus && !editorReadonly" },
     { "key": "cmd+p",    "command": "editor.action.marker.prev",
                             "when": "editorFocus && !editorReadonly" },
-    { "key": "cmd+;",    "command": "editor.action.blockComment" },
-    { "key": "ctrl+o",   "command": "emacs.C-x_C-o" }
+    { "key": "cmd+;",    "command": "editor.action.commentLine" },
+    { "key": "ctrl-z b", "command": "workbench.action.openGlobalKeybindings" }
 ]

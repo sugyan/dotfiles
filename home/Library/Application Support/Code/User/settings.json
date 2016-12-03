@@ -2,5 +2,8 @@
     "editor.fontFamily": "'Bitstream Vera Sans Mono', Menlo, Monaco, 'Courier New', monospace",
     "editor.fontSize": 13,
     "editor.renderWhitespace": "boundary",
-    "workbench.sideBar.location": "left"
+    "workbench.sideBar.location": "left",
+
+    "python.linting.pylintEnabled": false,
+    "python.linting.flake8Enabled": true
 }
