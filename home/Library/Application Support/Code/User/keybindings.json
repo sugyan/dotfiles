@@ -6,6 +6,7 @@
     { "key": "ctrl+q",   "command": "workbench.action.quickOpen" },
     { "key": "ctrl+q",   "command": "workbench.action.closeQuickOpen",
                             "when": "inQuickOpen" },
+    { "key": "ctrl+t",   "command": "workbench.action.terminal.toggleTerminal" },
     { "key": "ctrl+=",   "command": "editor.action.addSelectionToNextFindMatch",
                             "when": "editorFocus" },
     { "key": "ctrl+w",   "command": "editor.action.clipboardCutAction",
