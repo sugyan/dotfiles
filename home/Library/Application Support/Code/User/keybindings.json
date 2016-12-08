@@ -27,5 +27,6 @@
     { "key": "cmd+p",    "command": "editor.action.marker.prev",
                             "when": "editorFocus && !editorReadonly" },
     { "key": "cmd+;",    "command": "editor.action.commentLine" },
-    { "key": "ctrl-z b", "command": "workbench.action.openGlobalKeybindings" }
+    { "key": "ctrl-z b", "command": "workbench.action.openGlobalKeybindings" },
+    { "key": "cmd+1",    "command": "workbench.action.toggleSidebarVisibility" }
 ]
