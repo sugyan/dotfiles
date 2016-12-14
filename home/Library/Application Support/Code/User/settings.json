@@ -4,6 +4,11 @@
     "editor.renderWhitespace": "boundary",
     "workbench.sideBar.location": "left",
 
+    // ruby language settings
+    "ruby.lint": {
+        "rubocop": true
+    },
+    // Python Configuration
     "python.linting.pylintEnabled": false,
     "python.linting.flake8Enabled": true
 }

@@ -2,3 +2,4 @@ azemoh.one-monokai
 donjayamanne.python
 hiro-sun.vscode-emacs
 lukehoban.Go
+rebornix.Ruby
