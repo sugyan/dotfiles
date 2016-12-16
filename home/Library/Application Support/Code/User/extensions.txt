@@ -1,4 +1,5 @@
 azemoh.one-monokai
+dbaeumer.vscode-eslint
 donjayamanne.python
 hiro-sun.vscode-emacs
 lukehoban.Go
