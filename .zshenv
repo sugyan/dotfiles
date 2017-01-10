@@ -25,9 +25,6 @@ if command -v rbenv > /dev/null; then eval "$(rbenv init - zsh)"; fi
 # plenv
 path=($HOME/.plenv/bin(N-/) $path)
 if command -v plenv > /dev/null; then eval "$(plenv init - zsh)"; fi
-# pyenv
-path=($HOME/.pyenv/bin(N-/) $path)
-if command -v pyenv > /dev/null; then eval "$(pyenv init - zsh)"; fi
 
 # golang
 if command -v go > /dev/null; then
