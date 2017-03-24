@@ -30,3 +30,5 @@ function peco_select_directory() {
 }
 zle -N peco_select_directory
 bindkey "^X^J" peco_select_directory
+
+unset zle_bracketed_paste
