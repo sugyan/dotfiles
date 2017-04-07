@@ -28,5 +28,18 @@
                             "when": "editorFocus && !editorReadonly" },
     { "key": "cmd+;",    "command": "editor.action.commentLine" },
     { "key": "ctrl-z b", "command": "workbench.action.openGlobalKeybindings" },
-    { "key": "cmd+1",    "command": "workbench.action.toggleSidebarVisibility" }
+    {
+        "key": "cmd+1",
+        "command": "workbench.action.toggleSidebarVisibility"
+    },
+    {
+        "key": "ctrl+c ctrl+m",
+        "command": "editor.action.goToDeclaration",
+        "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
+    },
+    {
+        "key": "f12",
+        "command": "-editor.action.goToDeclaration",
+        "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
+    }
 ]
