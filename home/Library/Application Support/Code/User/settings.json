@@ -3,12 +3,15 @@
     "editor.fontSize": 13,
     "editor.renderWhitespace": "boundary",
     "workbench.sideBar.location": "left",
-
     // ruby language settings
     "ruby.lint": {
         "rubocop": true
     },
     // Python Configuration
     "python.linting.pylintEnabled": false,
-    "python.linting.flake8Enabled": true
+    "python.linting.flake8Enabled": true,
+    // Others
+    "workbench.activityBar.visible": false,
+    "workbench.colorTheme": "One Monokai",
+    "window.zoomLevel": 0
 }
