@@ -1,3 +1,4 @@
+PeterJausovec.vscode-docker
 azemoh.one-monokai
 dbaeumer.vscode-eslint
 donjayamanne.python
