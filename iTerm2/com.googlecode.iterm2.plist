@@ -10,6 +10,8 @@
 	<integer>1</integer>
 	<key>Default Bookmark Guid</key>
 	<string>7A184905-C80D-4086-B1A6-4335DCC0B086</string>
+	<key>FlashTabBarInFullscreen</key>
+	<true/>
 	<key>GlobalKeyMap</key>
 	<dict>
 		<key>0x19-0x60000</key>
@@ -154,7 +156,7 @@
 		<integer>1</integer>
 	</dict>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>165 187 1016 502 0 0 1680 1027 </string>
+	<string>165 279 770 381 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
 	<string>0 0 1680 1050 0 0 1680 1027 </string>
 	<key>New Bookmarks</key>
@@ -1392,6 +1394,8 @@
 	<true/>
 	<key>NoSyncInstallationId</key>
 	<string>1F41727C-DEE8-4E48-801E-076D8EF4E618</string>
+	<key>NoSyncPermissionToShowTip</key>
+	<false/>
 	<key>NoSyncTimeOfFirstLaunchOfVersionWithTip</key>
 	<real>515046915.904441</real>
 	<key>PointerActions</key>
@@ -1438,8 +1442,10 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2017-04-28T05:43:00Z</date>
+	<date>2017-05-01T04:24:56Z</date>
 	<key>SUSendProfileInfo</key>
+	<false/>
+	<key>ShowFullScreenTabBar</key>
 	<false/>
 	<key>UseLionStyleFullscreen</key>
 	<false/>
