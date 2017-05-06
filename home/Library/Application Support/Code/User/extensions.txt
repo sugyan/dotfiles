@@ -6,4 +6,3 @@ hiro-sun.vscode-emacs
 lukehoban.Go
 rebornix.Ruby
 sianglim.slim
-taichi.vscode-textlint
