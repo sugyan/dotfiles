@@ -1,95 +1,113 @@
 // Place your key bindings in this file to overwrite the defaults
 [
-    { "key": "cmd+-",    "command": "noop" },
-    { "key": "cmd+=",    "command": "-workbench.action.zoomIn" },
-    { "key": "ctrl+x k", "command": "workbench.action.closeActiveEditor" },
-    { "key": "ctrl+q",   "command": "workbench.action.quickOpen" },
-    { "key": "ctrl+q",   "command": "workbench.action.closeQuickOpen",
-                            "when": "inQuickOpen" },
-    { "key": "ctrl+t",   "command": "workbench.action.terminal.toggleTerminal" },
-    { "key": "ctrl+=",   "command": "editor.action.addSelectionToNextFindMatch",
-                            "when": "editorFocus" },
-    { "key": "ctrl+w",   "command": "editor.action.clipboardCutAction",
-                            "when": "editorTextFocus && !editorReadonly" },
-    { "key": "ctrl+i",   "command": "tab",
-                            "when": "editorTextFocus && !editorReadonly && !editorTabMovesFocus" },
-    { "key": "ctrl+o",   "command": "workbench.action.navigateEditorGroups" },
-    { "key": "cmd+x",    "command": "workbench.action.showCommands" },
-    { "key": "cmd+x",    "command": "workbench.action.closeQuickOpen",
-                            "when": "inQuickOpen" },
-    { "key": "cmd+w",    "command": "editor.action.clipboardCopyAction" },
-    { "key": "cmd+f",    "command": "emacs.cursorWordRight" },
-    { "key": "cmd+b",    "command": "emacs.cursorWordLeft" },
-    { "key": "cmd+d",    "command": "deleteWordRight",
-                            "when": "editorTextFocus" },
-    { "key": "cmd+n",    "command": "editor.action.marker.next",
-                            "when": "editorFocus && !editorReadonly" },
-    { "key": "cmd+p",    "command": "editor.action.marker.prev",
-                            "when": "editorFocus && !editorReadonly" },
-    { "key": "cmd+;",    "command": "editor.action.commentLine" },
-    { "key": "ctrl-z b", "command": "workbench.action.openGlobalKeybindings" },
     {
         "key": "cmd+1",
         "command": "workbench.action.toggleSidebarVisibility"
     },
     {
-        "key": "ctrl+c ctrl+m",
-        "command": "editor.action.goToDeclaration",
-        "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
+        "key": "cmd+b",
+        "command": "-workbench.action.toggleSidebarVisibility"
     },
     {
-        "key": "f12",
-        "command": "-editor.action.goToDeclaration",
-        "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
+        "key": "shift+cmd+e",
+        "command": "-workbench.view.explorer"
+    },
+    {
+        "key": "ctrl+q",
+        "command": "workbench.action.quickOpen"
+    },
+    {
+        "key": "cmd+p",
+        "command": "-workbench.action.quickOpen"
+    },
+    {
+        "key": "cmd+x",
+        "command": "workbench.action.showCommands"
+    },
+    {
+        "key": "shift+cmd+p",
+        "command": "-workbench.action.showCommands"
+    },
+    {
+        "key": "ctrl+i",
+        "command": "tab",
+        "when": "editorTextFocus && !editorReadonly && !editorTabMovesFocus"
+    },
+    {
+        "key": "tab",
+        "command": "-tab",
+        "when": "editorTextFocus && !editorReadonly && !editorTabMovesFocus"
+    },
+    {
+        "key": "ctrl+o",
+        "command": "workbench.action.navigateEditorGroups"
+    },
+    {
+        "key": "cmd+n",
+        "command": "editor.action.marker.next",
+        "when": "editorFocus && !editorReadonly"
+    },
+    {
+        "key": "f8",
+        "command": "-editor.action.marker.next",
+        "when": "editorFocus && !editorReadonly"
+    },
+    {
+        "key": "cmd+p",
+        "command": "editor.action.marker.prev",
+        "when": "editorFocus && !editorReadonly"
+    },
+    {
+        "key": "shift+f8",
+        "command": "-editor.action.marker.prev",
+        "when": "editorFocus && !editorReadonly"
     },
     {
         "key": "cmd+v",
-        "command": "-editor.action.clipboardPasteAction",
-        "when": "editorTextFocus && !editorReadonly"
-    },
-    {
-        "key": "ctrl+y",
-        "command": "editor.action.clipboardPasteAction",
-        "when": "editorTextFocus && !editorReadonly"
-    },
-    {
-        "key": "pageup",
-        "command": "-workbench.action.interactivePlayground.pageUp",
-        "when": "interactivePlaygroundFocus && !editorTextFocus"
-    },
-    {
-        "key": "ctrl+y",
-        "command": "-emacs.C-y",
+        "command": "cursorPageUp",
         "when": "editorTextFocus"
     },
     {
-        "key": "cmd+v",
-        "command": "emacs.cursorPageUp",
-        "when": "editorTextFocus && !suggestWidgetVisible"
+        "key": "pageup",
+        "command": "-cursorPageUp",
+        "when": "editorTextFocus"
     },
     {
-        "key": "alt+v",
-        "command": "-emacs.cursorPageUp",
-        "when": "editorTextFocus && !suggestWidgetVisible"
+        "key": "cmd+b",
+        "command": "emacs.cursorWordLeft",
+        "when": "editorTextFocus"
     },
     {
-        "key": "ctrl+j",
-        "command": "acceptSelectedSuggestionOnEnter",
-        "when": "acceptSuggestionOnEnter && editorTextFocus && suggestWidgetVisible"
+        "key": "alt+b",
+        "command": "-emacs.cursorWordLeft",
+        "when": "editorTextFocus"
     },
     {
-        "key": "enter",
-        "command": "-acceptSelectedSuggestionOnEnter",
-        "when": "acceptSuggestionOnEnter && editorTextFocus && suggestWidgetVisible"
+        "key": "cmd+f",
+        "command": "emacs.cursorWordRight",
+        "when": "editorTextFocus"
     },
     {
-        "key": "ctrl+j",
-        "command": "list.select",
-        "when": "listFocus"
+        "key": "alt+f",
+        "command": "-emacs.cursorWordRight",
+        "when": "editorTextFocus"
     },
     {
-        "key": "enter",
-        "command": "-list.select",
-        "when": "listFocus"
+        "key": "cmd+w",
+        "command": "emacs.M-w",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "alt+w",
+        "command": "-emacs.M-w",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+x k",
+        "command": "workbench.action.closeActiveEditor"
+    },
+    {
+        "key": "cmd+w",
+        "command": "-workbench.action.closeActiveEditor"
     }
 ]
