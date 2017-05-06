@@ -1,42 +1,54 @@
-local function pressFn(mods, key)
+-- KeyRepeat:
+-- $ defaults write -globalDomain KeyRepeat -int 1
+-- $ defaults write -globalDomain InitialKeyRepeat -int 10
+-- $ reboot
+
+local log = hs.logger.new('init','debug')
+
+local function keyStroke(mods, key)
   return function() hs.eventtap.keyStroke(mods, key, 0) end
 end
 
-local function remap(mods, key, pressFn)
-  hs.hotkey.bind(mods, key, pressFn, nil, pressFn)
+local function remap(mods, key, fn)
+  return hs.hotkey.bind(mods, key, fn, nil, fn)
 end
 
-local function disableAllHotkeys()
-  for k, v in pairs(hs.hotkey.getHotkeys()) do
-    v['_hk']:disable()
+remap({'ctrl'}, 'b', keyStroke({}, 'left'))
+remap({'ctrl'}, 'f', keyStroke({}, 'right'))
+remap({'ctrl'}, 'n', keyStroke({}, 'down'))
+remap({'ctrl'}, 'p', keyStroke({}, 'up'))
+
+remap({'ctrl'}, 'j', keyStroke({}, 'return'))
+remap({'ctrl'}, '[', keyStroke({}, 'escape'))
+
+keys = {
+  remap({'ctrl'}, 'y', keyStroke({'cmd'}, 'v'))
+}
+
+local function disableHotkeys()
+  for i, key in ipairs(keys) do
+    key:disable()
   end
 end
 
-local function enableAllHotkeys()
-  for k, v in pairs(hs.hotkey.getHotkeys()) do
-    v['_hk']:enable()
+local function enableHotkeys()
+  for i, key in ipairs(keys) do
+    key:enable()
   end
 end
 
 local function handleGlobalAppEvent(name, event, app)
   if event == hs.application.watcher.activated then
     if name == 'iTerm2' or name == 'Code' then
-      disableAllHotkeys()
+      disableHotkeys()
     else
-      enableAllHotkeys()
+      enableHotkeys()
     end
   end
 end
 
-remap({'ctrl'}, 'j', pressFn({}, 'return'))
-remap({'ctrl'}, 'y', pressFn({'cmd'}, 'v'))
-remap({'ctrl'}, 'f', pressFn({}, 'right'))
-remap({'ctrl'}, 'b', pressFn({}, 'left'))
-remap({'ctrl'}, 'p', pressFn({}, 'up'))
-remap({'ctrl'}, 'n', pressFn({}, 'down'))
-remap({'ctrl'}, '[', pressFn({}, 'escape'))
-
 appsWatcher = hs.application.watcher.new(handleGlobalAppEvent)
 appsWatcher:start()
 
-hs.alert.show('Config loaded')
+local configWatcher = hs.pathwatcher.new(os.getenv('HOME') .. '/.hammerspoon/', hs.reload):start()
+hs.notify.new({title="Hammerspoon", informativeText='Config loaded'}):send()
