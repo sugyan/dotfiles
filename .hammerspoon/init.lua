@@ -61,6 +61,35 @@ appsWatcher = hs.application.watcher.new(handleGlobalAppEvent)
 appsWatcher:start()
 
 
+-- SKK
+local sticky_shift = false
+local targets = {}
+for i = 96, 122 do
+  targets[hs.keycodes.map[string.char(i)]] = true
+end
+
+hs.hotkey.bind({}, ';', function()
+  if hs.keycodes.currentMethod():find('AquaSKK') then
+    sticky_shift = true
+  else
+    hs.eventtap.keyStrokes(';')
+  end
+end)
+
+hs.eventtap.new({hs.eventtap.event.types.keyDown}, function(event)
+  if sticky_shift and targets[event:getKeyCode()] then
+    event:setFlags({shift = true})
+  end
+  sticky_shift = false
+end):start()
+
+hs.hotkey.bind({'ctrl'}, 'm', function()
+  if hs.keycodes.currentMethod():find('AquaSKK') then
+    hs.eventtap.keyStroke({'shift', 'ctrl'}, 'j', 0)
+  end
+end)
+
+
 -- Config watcher:
 
 local configWatcher = hs.pathwatcher.new(os.getenv('HOME') .. '/.hammerspoon/', hs.reload):start()
