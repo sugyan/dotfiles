@@ -29,6 +29,6 @@ function peco_select_directory() {
     zle reset-prompt
 }
 zle -N peco_select_directory
-bindkey "^X^J" peco_select_directory
+bindkey "^Z" peco_select_directory
 
 unset zle_bracketed_paste

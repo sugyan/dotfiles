@@ -9,10 +9,6 @@
         "command": "-workbench.action.toggleSidebarVisibility"
     },
     {
-        "key": "shift+cmd+e",
-        "command": "-workbench.view.explorer"
-    },
-    {
         "key": "ctrl+q",
         "command": "workbench.action.quickOpen"
     },
@@ -27,6 +23,14 @@
     {
         "key": "shift+cmd+p",
         "command": "-workbench.action.showCommands"
+    },
+    {
+        "key": "ctrl+t",
+        "command": "workbench.action.terminal.toggleTerminal"
+    },
+    {
+        "key": "ctrl+`",
+        "command": "-workbench.action.terminal.toggleTerminal"
     },
     {
         "key": "ctrl+i",
@@ -93,14 +97,54 @@
         "when": "editorTextFocus"
     },
     {
-        "key": "cmd+w",
-        "command": "emacs.M-w",
+        "key": "cmd+;",
+        "command": "editor.action.commentLine",
         "when": "editorTextFocus"
     },
     {
-        "key": "alt+w",
-        "command": "-emacs.M-w",
+        "key": "ctrl+c d",
+        "command": "editor.action.goToDeclaration",
+        "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
+    },
+    {
+        "key": "f12",
+        "command": "-editor.action.goToDeclaration",
+        "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
+    },
+    {
+        "key": "ctrl+;",
+        "command": "-editor.action.commentLine",
         "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+w",
+        "command": "editor.action.clipboardCutAction",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "cmd+x",
+        "command": "-editor.action.clipboardCutAction",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "cmd+w",
+        "command": "editor.action.clipboardCopyAction",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "cmd+c",
+        "command": "-editor.action.clipboardCopyAction",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+y",
+        "command": "editor.action.clipboardPasteAction",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "cmd+v",
+        "command": "-editor.action.clipboardPasteAction",
+        "when": "editorTextFocus && !editorReadonly"
     },
     {
         "key": "ctrl+x k",
@@ -109,5 +153,25 @@
     {
         "key": "cmd+w",
         "command": "-workbench.action.closeActiveEditor"
+    },
+    {
+        "key": "ctrl+=",
+        "command": "editor.action.smartSelect.grow",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+shift+cmd+right",
+        "command": "-editor.action.smartSelect.grow",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "cmd+d",
+        "command": "deleteWordRight",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "alt+delete",
+        "command": "-deleteWordRight",
+        "when": "editorTextFocus && !editorReadonly"
     }
 ]

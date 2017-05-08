@@ -15,7 +15,9 @@ launcher({'cmd', 'ctrl'}, 'q', 'iTerm')
 launcher({'cmd', 'ctrl'}, 'w', 'Visual Studio Code')
 launcher({'cmd', 'ctrl'}, 'e', 'Google Chrome')
 launcher({'cmd', 'ctrl'}, 't', 'Twitter')
-launcher({'cmd', 'ctrl'}, 'l', 'Slack')
+launcher({'cmd', 'ctrl'}, 's', 'Slack')
+launcher({'cmd', 'ctrl'}, 'l', 'LINE')
+launcher({'cmd', 'ctrl'}, 'c', 'HipChat')
 
 
 -- KeyBind:
@@ -32,6 +34,7 @@ end
 remap({'ctrl'}, 'j', keyStroke({}, 'return'))
 remap({'ctrl'}, '[', keyStroke({}, 'escape'))
 
+-- disable when a specific application is active
 local remapKeys = {
   remap({'ctrl'}, 'b', keyStroke({}, 'left')),
   remap({'ctrl'}, 'f', keyStroke({}, 'right')),
