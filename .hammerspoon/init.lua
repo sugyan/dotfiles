@@ -31,8 +31,10 @@ local function remap(mods, key, fn)
 end
 
 -- global
-remap({'ctrl'}, 'j', keyStroke({}, 'return'))
+remap({'ctrl'}, 'h', keyStroke({}, 'delete'))
 remap({'ctrl'}, '[', keyStroke({}, 'escape'))
+remap({'ctrl'}, 'j', keyStroke({}, 'return'))
+remap({'ctrl', 'cmd'}, 'j', keyStroke({'cmd'}, 'return'))
 
 -- disable when a specific application is active
 local remapKeys = {
@@ -62,7 +64,7 @@ appsWatcher:start()
 
 
 -- SKK
-local sticky_shift = false
+local stickyShift = false
 local targets = {}
 for i = 96, 122 do
   targets[hs.keycodes.map[string.char(i)]] = true
@@ -70,17 +72,17 @@ end
 
 hs.hotkey.bind({}, ';', function()
   if hs.keycodes.currentMethod():find('AquaSKK') then
-    sticky_shift = true
+    stickyShift = true
   else
     hs.eventtap.keyStrokes(';')
   end
 end)
 
-hs.eventtap.new({hs.eventtap.event.types.keyDown}, function(event)
-  if sticky_shift and targets[event:getKeyCode()] then
+keyTap = hs.eventtap.new({hs.eventtap.event.types.keyDown}, function(event)
+  if stickyShift and targets[event:getKeyCode()] then
     event:setFlags({shift = true})
   end
-  sticky_shift = false
+  stickyShift = false
 end):start()
 
 hs.hotkey.bind({'ctrl'}, 'm', function()
@@ -92,5 +94,5 @@ end)
 
 -- Config watcher:
 
-local configWatcher = hs.pathwatcher.new(os.getenv('HOME') .. '/.hammerspoon/', hs.reload):start()
+configWatcher = hs.pathwatcher.new(os.getenv('HOME') .. '/.hammerspoon/', hs.reload):start()
 hs.notify.new({title="Hammerspoon", informativeText='Config loaded'}):send()

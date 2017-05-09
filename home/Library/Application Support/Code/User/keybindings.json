@@ -147,22 +147,14 @@
         "when": "editorTextFocus && !editorReadonly"
     },
     {
-        "key": "ctrl+x k",
-        "command": "workbench.action.closeActiveEditor"
-    },
-    {
-        "key": "cmd+w",
-        "command": "-workbench.action.closeActiveEditor"
-    },
-    {
         "key": "ctrl+=",
-        "command": "editor.action.smartSelect.grow",
-        "when": "editorTextFocus"
+        "command": "editor.action.addSelectionToNextFindMatch",
+        "when": "editorFocus"
     },
     {
-        "key": "ctrl+shift+cmd+right",
-        "command": "-editor.action.smartSelect.grow",
-        "when": "editorTextFocus"
+        "key": "cmd+d",
+        "command": "-editor.action.addSelectionToNextFindMatch",
+        "when": "editorFocus"
     },
     {
         "key": "cmd+d",
@@ -173,5 +165,13 @@
         "key": "alt+delete",
         "command": "-deleteWordRight",
         "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "ctrl+x k",
+        "command": "workbench.action.closeActiveEditor"
+    },
+    {
+        "key": "cmd+w",
+        "command": "-workbench.action.closeActiveEditor"
     }
 ]
