@@ -7,3 +7,6 @@
 .emacs.d/bookmarks
 .emacs.d/url/cookies
 .emacs.d/projectile*
+
+.env
+.ruby-version
