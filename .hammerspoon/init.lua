@@ -71,7 +71,8 @@ for i = 96, 122 do
 end
 
 hs.hotkey.bind({}, ';', function()
-  if hs.keycodes.currentMethod():find('AquaSKK') then
+  method = hs.keycodes.currentMethod()
+  if method and method:find('AquaSKK') then
     stickyShift = true
   else
     hs.eventtap.keyStrokes(';')
