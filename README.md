@@ -4,11 +4,14 @@ my config files.
 
 - git
 - zsh
-- screen
-- emacs
+- tmux
+- VSCode
+- Hammerspoon
+
+etc.
 
 # how to use #
 
     $ cd some/local/directory
     $ git clone git://github.com/sugyan/dotfiles.git
-    $ ./dotfiles/create_symlink.sh
+    $ ./dotfiles/setup.sh
