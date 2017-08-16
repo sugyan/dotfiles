@@ -2,6 +2,7 @@
     "editor.fontFamily": "'Bitstream Vera Sans Mono', Menlo, Monaco, 'Courier New', monospace",
     "editor.fontSize": 13,
     "editor.minimap.enabled": false,
+    "editor.autoIndent": false,
     "editor.renderWhitespace": "boundary",
     "workbench.sideBar.location": "left",
     // ruby language settings
