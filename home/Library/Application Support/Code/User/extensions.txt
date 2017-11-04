@@ -1,5 +1,6 @@
 PeterJausovec.vscode-docker
 azemoh.one-monokai
+bungcip.better-toml
 dbaeumer.vscode-eslint
 donjayamanne.python
 eg2.tslint
