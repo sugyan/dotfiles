@@ -14,10 +14,9 @@ end
 launcher({'cmd', 'ctrl'}, 'q', 'iTerm')
 launcher({'cmd', 'ctrl'}, 'w', 'Visual Studio Code')
 launcher({'cmd', 'ctrl'}, 'e', 'Google Chrome')
-launcher({'cmd', 'ctrl'}, 't', 'Twitter')
 launcher({'cmd', 'ctrl'}, 's', 'Slack')
 launcher({'cmd', 'ctrl'}, 'l', 'LINE')
-launcher({'cmd', 'ctrl'}, 'c', 'HipChat')
+launcher({'cmd', 'ctrl'}, 'x', 'Xcode')
 
 
 -- KeyBind:
