@@ -76,27 +76,27 @@ appsWatcher:start()
 
 
 -- SKK
-local stickyShift = false
-local targets = {}
-for i = 96, 122 do
-  targets[hs.keycodes.map[string.char(i)]] = true
-end
+-- local stickyShift = false
+-- local targets = {}
+-- for i = 96, 122 do
+--   targets[hs.keycodes.map[string.char(i)]] = true
+-- end
 
-hs.hotkey.bind({}, ';', function()
-  method = hs.keycodes.currentMethod()
-  if method and method:find('AquaSKK') then
-    stickyShift = true
-  else
-    hs.eventtap.keyStrokes(';')
-  end
-end)
+-- hs.hotkey.bind({}, ';', function()
+--   method = hs.keycodes.currentMethod()
+--   if method and method:find('AquaSKK') then
+--     stickyShift = true
+--   else
+--     hs.eventtap.keyStrokes(';')
+--   end
+-- end)
 
-keyTap = hs.eventtap.new({hs.eventtap.event.types.keyDown}, function(event)
-  if stickyShift and targets[event:getKeyCode()] then
-    event:setFlags({shift = true})
-  end
-  stickyShift = false
-end):start()
+-- keyTap = hs.eventtap.new({hs.eventtap.event.types.keyDown}, function(event)
+--   if stickyShift and targets[event:getKeyCode()] then
+--     event:setFlags({shift = true})
+--   end
+--   stickyShift = false
+-- end):start()
 
 hs.hotkey.bind({'ctrl'}, 'm', function()
   if hs.keycodes.currentMethod():find('AquaSKK') then
