@@ -7,20 +7,15 @@
 -- Launcher Shortcut:
 
 local function launcher(mods, key, appname)
-  hs.hotkey.bind(mods, key, function()
-    hs.application.launchOrFocus('/Applications/' .. appname .. '.app')
-  end)
-end
-local function launcherPWA(mods, key, windowname)
-  hs.hotkey.bind(mods, key, function()
-    local chrome = hs.application.get('com.google.Chrome')
-    if chrome then
-      local target = chrome:findWindow(windowname):focus()
-      if target then
-        target:focus()
-      end
-    end
-  end)
+  if appname == 'Twitter' then
+    hs.hotkey.bind(mods, key, function()
+      hs.application.launchOrFocus(os.getenv('HOME') .. '/Applications/Chrome Apps.localized/' .. appname .. '.app')
+    end)
+  else
+    hs.hotkey.bind(mods, key, function()
+      hs.application.launchOrFocus('/Applications/' .. appname .. '.app')
+    end)
+  end
 end
 
 launcher({'cmd', 'ctrl'}, 'q', 'iTerm')
@@ -29,7 +24,7 @@ launcher({'cmd', 'ctrl'}, 'e', 'Google Chrome')
 launcher({'cmd', 'ctrl'}, 's', 'Slack')
 launcher({'cmd', 'ctrl'}, 'l', 'LINE')
 launcher({'cmd', 'ctrl'}, 'x', 'Xcode')
-launcherPWA({'cmd', 'ctrl'}, 't', 'Twitter')
+launcher({'cmd', 'ctrl'}, 't', 'Twitter')
 
 
 -- KeyBind:
