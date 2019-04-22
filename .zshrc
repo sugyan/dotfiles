@@ -12,7 +12,7 @@ setopt hist_ignore_all_dups
 REPORTTIME=3
 
 # prompt
-PROMPT=$'%{\e[31m%}%n@%M %{\e[33m%}%* %# %{\e[m%}'
+PROMPT=$'%{\e[31m%}%n@%M %{\e[33m%}%D{%H:%M:%S} %# %{\e[m%}'
 
 # pre exec
 
