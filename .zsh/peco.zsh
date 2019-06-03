@@ -21,7 +21,7 @@ function peco_select_directory() {
     else
         tac="tail -r"
     fi
-    local dest=$(_z -r 2>&1 | eval $tac | peco --query "$LBUFFER" | awk '{ print $2 }')
+    local dest=$(_z -r 2>&1 | eval $tac | peco --query "$LBUFFER" | awk '{ print substr($0, index($0, $2)) }')
     if [ -n "${dest}" ]; then
         cd ${dest}
         precmd_vcs
