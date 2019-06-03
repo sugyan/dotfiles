@@ -77,18 +77,8 @@
         "when": "editorTextFocus"
     },
     {
-        "key": "cmd+b",
-        "command": "emacs.cursorWordLeft",
-        "when": "editorTextFocus"
-    },
-    {
         "key": "alt+b",
         "command": "-emacs.cursorWordLeft",
-        "when": "editorTextFocus"
-    },
-    {
-        "key": "cmd+f",
-        "command": "emacs.cursorWordRight",
         "when": "editorTextFocus"
     },
     {
@@ -173,5 +163,25 @@
     {
         "key": "cmd+w",
         "command": "-workbench.action.closeActiveEditor"
+    },
+    {
+        "key": "cmd+f",
+        "command": "emacs-mcx.forwardWord",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "alt+f",
+        "command": "-emacs-mcx.forwardWord",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "cmd+b",
+        "command": "emacs-mcx.backwardWord",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "alt+b",
+        "command": "-emacs-mcx.backwardWord",
+        "when": "editorTextFocus"
     }
 ]

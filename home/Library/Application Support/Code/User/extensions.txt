@@ -4,7 +4,7 @@ bungcip.better-toml
 dbaeumer.vscode-eslint
 donjayamanne.python
 eg2.tslint
-hiro-sun.vscode-emacs
 lukehoban.Go
 rebornix.Ruby
 sianglim.slim
+tuttieee.emacs-mcx
