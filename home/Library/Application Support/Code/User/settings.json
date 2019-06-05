@@ -15,8 +15,11 @@
     "python.linting.flake8Path": "/usr/local/bin/flake8",
     // Others
     "workbench.activityBar.visible": false,
-    "workbench.colorTheme": "One Monokai",
     "window.zoomLevel": 0,
     "go.formatTool": "gofmt",
-    "go.formatFlags": ["-s"]
+    "go.formatFlags": [
+        "-s"
+    ],
+    "workbench.iconTheme": "Monokai Pro Icons",
+    "workbench.colorTheme": "Monokai Pro"
 }

@@ -1,10 +1,11 @@
 PeterJausovec.vscode-docker
-azemoh.one-monokai
 bungcip.better-toml
 dbaeumer.vscode-eslint
-donjayamanne.python
 eg2.tslint
 lukehoban.Go
 rebornix.Ruby
 sianglim.slim
+monokai.theme-monokai-pro-vscode
+ms-python.python
+ms-vscode.cpptools
 tuttieee.emacs-mcx
