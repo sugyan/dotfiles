@@ -21,5 +21,6 @@
         "-s"
     ],
     "workbench.iconTheme": "Monokai Pro Icons",
-    "workbench.colorTheme": "Monokai Pro"
+    "workbench.colorTheme": "Monokai Pro",
+    "terminal.integrated.macOptionIsMeta": true
 }
