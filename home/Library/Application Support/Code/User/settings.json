@@ -24,9 +24,15 @@
         "javascript",
         "javascriptreact",
         "typescript",
-        "typescriptreact"
+        "typescriptreact",
+        {
+            "language": "vue",
+            "autoFix": true
+        }
     ],
     "workbench.iconTheme": "Monokai Pro Icons",
     "workbench.colorTheme": "Monokai Pro",
-    "terminal.integrated.macOptionIsMeta": true
+    "terminal.integrated.macOptionIsMeta": true,
+    "breadcrumbs.enabled": false,
+    "workbench.editor.showTabs": false
 }
