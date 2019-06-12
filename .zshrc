@@ -55,8 +55,6 @@ alias gcp='git checkout $(git branch | peco)'
 alias gst="git stash"
 alias gsp="git stash pop"
 
-alias pad='plackup -MPlack::App::Directory -e '\''$app = Plack::App::Directory->new({ root => "." })->to_app'\'''
-
 alias -g L='| less'
 alias -g P='| peco'
 
