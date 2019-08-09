@@ -31,8 +31,14 @@
         }
     ],
     "workbench.iconTheme": "Monokai Pro Icons",
-    "workbench.colorTheme": "Monokai Pro",
+    "workbench.colorTheme": "One Dark Pro",
     "terminal.integrated.macOptionIsMeta": true,
     "breadcrumbs.enabled": false,
-    "workbench.editor.showTabs": false
+    "workbench.editor.showTabs": false,
+    "go.useLanguageServer": true,
+    "workbench.colorCustomizations": {
+        "[One Dark Pro]": {
+            "editor.selectionHighlightBorder": "#00000000"
+        }
+    }
 }
