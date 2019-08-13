@@ -1,11 +1,10 @@
-PeterJausovec.vscode-docker
-bungcip.better-toml
 dbaeumer.vscode-eslint
-eg2.tslint
-lukehoban.Go
-rebornix.Ruby
-sianglim.slim
-monokai.theme-monokai-pro-vscode
+mechatroner.rainbow-csv
 ms-python.python
 ms-vscode.cpptools
+ms-vscode.Go
+octref.vetur
 tuttieee.emacs-mcx
+VisualStudioExptTeam.vscodeintellicode
+william-voyek.vscode-nginx
+zhuangtongfa.Material-theme

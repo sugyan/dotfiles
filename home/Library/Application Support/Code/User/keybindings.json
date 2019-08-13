@@ -173,5 +173,13 @@
         "key": "alt+b",
         "command": "-emacs-mcx.backwardWord",
         "when": "editorTextFocus"
+    },
+    {
+        "key": "cmd+s",
+        "command": "-workbench.action.files.save"
+    },
+    {
+        "key": "cmd+s",
+        "command": "editor.action.showSnippets"
     }
 ]
