@@ -155,6 +155,26 @@
         "command": "-workbench.action.closeActiveEditor"
     },
     {
+        "key": "cmd+f",
+        "command": "emacs-mcx.forwardWord",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "alt+f",
+        "command": "-emacs-mcx.forwardWord",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "cmd+b",
+        "command": "emacs-mcx.backwardWord",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "alt+b",
+        "command": "-emacs-mcx.backwardWord",
+        "when": "editorTextFocus"
+    },
+    {
         "key": "cmd+s",
         "command": "-workbench.action.files.save"
     },
