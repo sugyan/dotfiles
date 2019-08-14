@@ -43,5 +43,6 @@
     },
     "editor.suggestSelection": "first",
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-    "python.jediEnabled": false
+    "python.jediEnabled": false,
+    "terminal.integrated.shell.osx": "/usr/local/bin/zsh"
 }
