@@ -1,3 +1,4 @@
+CoenraadS.bracket-pair-colorizer
 dbaeumer.vscode-eslint
 mechatroner.rainbow-csv
 ms-python.python
