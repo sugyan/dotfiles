@@ -30,7 +30,6 @@
             "autoFix": true
         }
     ],
-    "workbench.iconTheme": "Monokai Pro Icons",
     "workbench.colorTheme": "One Dark Pro",
     "terminal.integrated.macOptionIsMeta": true,
     "breadcrumbs.enabled": false,
@@ -43,6 +42,6 @@
     },
     "editor.suggestSelection": "first",
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-    "python.jediEnabled": false,
-    "terminal.integrated.shell.osx": "/usr/local/bin/zsh"
+    "editor.formatOnSave": true,
+    "C_Cpp.clang_format_fallbackStyle": "{ BasedOnStyle: Google, IndentWidth: 4 }"
 }

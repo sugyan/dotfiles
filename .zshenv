@@ -17,14 +17,14 @@ if command -v brew > /dev/null; then
 fi
 fpath=($fpath $HOME/local/functions(N-/))
 
-# nodebrew
-path=($HOME/.nodebrew/current/bin(N-/) $path)
 # rbenv
 path=($HOME/.rbenv/bin(N-/) $path)
 if command -v rbenv > /dev/null; then eval "$(rbenv init - zsh)"; fi
 # plenv
 path=($HOME/.plenv/bin(N-/) $path)
 if command -v plenv > /dev/null; then eval "$(plenv init - zsh)"; fi
+# cargo
+path=($HOME/.cargo/bin(N-/) $path)
 
 # golang
 if command -v go > /dev/null; then
