@@ -4,22 +4,30 @@
     "editor.minimap.enabled": false,
     "editor.autoIndent": false,
     "editor.renderWhitespace": "boundary",
+    "editor.formatOnSave": true,
+    "workbench.editor.showTabs": true,
+    "workbench.activityBar.visible": false,
     "workbench.sideBar.location": "left",
-    // ruby language settings
-    "ruby.lint": {
-        "rubocop": true
+    "workbench.colorTheme": "One Dark Pro",
+    "workbench.colorCustomizations": {
+        "[One Dark Pro]": {
+            "editor.selectionHighlightBorder": "#00000000"
+        }
     },
+    "window.zoomLevel": 0,
+    "terminal.integrated.macOptionIsMeta": true,
+    "terminal.integrated.shell.osx": "/usr/local/bin/zsh",
     // Python Configuration
     "python.linting.pylintEnabled": false,
     "python.linting.flake8Enabled": true,
     "python.linting.flake8Path": "/usr/local/bin/flake8",
-    // Others
-    "workbench.activityBar.visible": false,
-    "window.zoomLevel": 0,
+    // Go
     "go.formatTool": "gofmt",
     "go.formatFlags": [
         "-s"
     ],
+    "go.useLanguageServer": true,
+    // Others
     "eslint.validate": [
         "javascript",
         "javascriptreact",
@@ -30,18 +38,7 @@
             "autoFix": true
         }
     ],
-    "workbench.colorTheme": "One Dark Pro",
-    "terminal.integrated.macOptionIsMeta": true,
     "breadcrumbs.enabled": false,
-    "workbench.editor.showTabs": false,
-    "go.useLanguageServer": true,
-    "workbench.colorCustomizations": {
-        "[One Dark Pro]": {
-            "editor.selectionHighlightBorder": "#00000000"
-        }
-    },
-    "editor.suggestSelection": "first",
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-    "editor.formatOnSave": true,
     "C_Cpp.clang_format_fallbackStyle": "{ BasedOnStyle: Google, IndentWidth: 4 }"
 }
