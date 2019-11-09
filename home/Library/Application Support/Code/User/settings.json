@@ -4,7 +4,6 @@
     "editor.minimap.enabled": false,
     "editor.autoIndent": false,
     "editor.renderWhitespace": "boundary",
-    "editor.formatOnSave": true,
     "workbench.editor.showTabs": true,
     "workbench.activityBar.visible": false,
     "workbench.sideBar.location": "left",
@@ -38,7 +37,17 @@
             "autoFix": true
         }
     ],
+    "eslint.workingDirectories": [
+        "./frontend"
+    ],
     "breadcrumbs.enabled": false,
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-    "C_Cpp.clang_format_fallbackStyle": "{ BasedOnStyle: Google, IndentWidth: 4, AllowShortFunctionsOnASingleLine: false }"
+    "C_Cpp.clang_format_fallbackStyle": "{ BasedOnStyle: Google, IndentWidth: 4, AllowShortFunctionsOnASingleLine: false }",
+    "editor.suggestSelection": "first",
+    "[rust]": {
+        "editor.formatOnSave": true
+    },
+    "[cpp]": {
+        "editor.formatOnSave": true
+    }
 }
