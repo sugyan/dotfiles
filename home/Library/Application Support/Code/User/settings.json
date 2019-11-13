@@ -26,6 +26,10 @@
         "-s"
     ],
     "go.useLanguageServer": true,
+    // Vue
+    "vetur.format.defaultFormatter.js": "none",
+    "vetur.format.defaultFormatter.ts": "none",
+    "vetur.format.defaultFormatter.html": "prettier",
     // Others
     "eslint.validate": [
         "javascript",
@@ -48,6 +52,9 @@
         "editor.formatOnSave": true
     },
     "[cpp]": {
+        "editor.formatOnSave": true
+    },
+    "[vue]": {
         "editor.formatOnSave": true
     }
 }
