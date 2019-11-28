@@ -10,6 +10,5 @@ octref.vetur
 rebornix.ruby
 rust-lang.rust
 tuttieee.emacs-mcx
-VisualStudioExptTeam.vscodeintellicode
 william-voyek.vscode-nginx
 zhuangtongfa.Material-theme
