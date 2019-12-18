@@ -16,6 +16,7 @@
     "window.zoomLevel": 0,
     "terminal.integrated.macOptionIsMeta": true,
     "terminal.integrated.shell.osx": "/usr/local/bin/zsh",
+    "terminal.integrated.showExitAlert": false,
     // Python Configuration
     "python.linting.pylintEnabled": false,
     "python.linting.flake8Enabled": true,
