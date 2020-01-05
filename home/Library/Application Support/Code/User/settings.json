@@ -27,6 +27,8 @@
         "-s"
     ],
     "go.useLanguageServer": true,
+    // Rust
+    "rust.clippy_preference": "on",
     // Vue
     "vetur.format.defaultFormatter.js": "none",
     "vetur.format.defaultFormatter.ts": "none",
@@ -37,10 +39,7 @@
         "javascriptreact",
         "typescript",
         "typescriptreact",
-        {
-            "language": "vue",
-            "autoFix": true
-        }
+        "vue",
     ],
     "eslint.workingDirectories": [
         "./frontend"
