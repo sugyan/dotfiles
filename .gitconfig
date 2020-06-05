@@ -1,17 +1,19 @@
 [user]
-    name = sugyan
-    email = sugi1982@gmail.com
+	name = sugyan
+	email = sugi1982@gmail.com
 [color]
-    ui = auto
+	ui = auto
 [alias]
-    ci = commit
-    st = status
-    co = checkout
-    tr = log --graph --pretty='format:%C(yellow)%h%Creset %C(magenta)%cd%Creset %s %Cgreen(%an)%Creset %Cred%d%Creset' --date=iso
+	ci = commit
+	st = status
+	co = checkout
+	tr = log --graph --pretty='format:%C(yellow)%h%Creset %C(magenta)%cd%Creset %s %Cgreen(%an)%Creset %Cred%d%Creset' --date=iso
 [core]
-    pager = "LESS=-R less"
-    excludesfile = ~/.gitignore
+	pager = "LESS=-R less"
+	excludesfile = ~/.gitignore
 [push]
-    default = simple
+	default = simple
 [ghq]
-    root = ~/.ghq
+	root = ~/.ghq
+[pull]
+	rebase = false
