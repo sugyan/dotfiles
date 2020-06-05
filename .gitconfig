@@ -13,3 +13,5 @@
     excludesfile = ~/.gitignore
 [push]
     default = simple
+[ghq]
+    root = ~/.ghq
