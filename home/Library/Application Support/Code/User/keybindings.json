@@ -181,5 +181,24 @@
     {
         "key": "cmd+s",
         "command": "editor.action.showSnippets"
+    },
+    {
+        "key": "cmd+o",
+        "command": "search-in-current-file.searchInCurrentFile"
+    },
+    {
+        "key": "cmd+o",
+        "command": "workbench.action.closePanel",
+        "when": "activePanel == 'workbench.view.search'"
+    },
+    {
+        "key": "ctrl+n",
+        "command": "list.focusDown",
+        "when": "panelFocus"
+    },
+    {
+        "key": "ctrl+p",
+        "command": "list.focusUp",
+        "when": "panelFocus"
     }
 ]

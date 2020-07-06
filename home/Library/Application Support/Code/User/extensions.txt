@@ -2,13 +2,14 @@ bungcip.better-toml
 castwide.solargraph
 CoenraadS.bracket-pair-colorizer
 dbaeumer.vscode-eslint
+golang.go
 mechatroner.rainbow-csv
 ms-python.python
 ms-vscode.cpptools
-ms-vscode.Go
 octref.vetur
 rebornix.ruby
 rust-lang.rust
+shibayu36.search-in-current-file
 tuttieee.emacs-mcx
 william-voyek.vscode-nginx
 zhuangtongfa.Material-theme
