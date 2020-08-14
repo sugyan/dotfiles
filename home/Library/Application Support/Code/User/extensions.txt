@@ -1,6 +1,6 @@
 bungcip.better-toml
 castwide.solargraph
-CoenraadS.bracket-pair-colorizer
+CoenraadS.bracket-pair-colorizer-2
 dbaeumer.vscode-eslint
 golang.go
 mechatroner.rainbow-csv
