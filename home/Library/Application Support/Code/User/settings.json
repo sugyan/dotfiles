@@ -2,7 +2,6 @@
     "editor.fontFamily": "'Bitstream Vera Sans Mono', Menlo, Monaco, 'Courier New', monospace",
     "editor.fontSize": 13,
     "editor.minimap.enabled": false,
-    "editor.autoIndent": false,
     "editor.renderWhitespace": "boundary",
     "workbench.editor.showTabs": false,
     "workbench.activityBar.visible": false,
@@ -49,12 +48,17 @@
     "C_Cpp.clang_format_fallbackStyle": "{ BasedOnStyle: Google, IndentWidth: 4, AllowShortFunctionsOnASingleLine: false }",
     "editor.suggestSelection": "first",
     "[rust]": {
-        "editor.formatOnSave": true
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "matklad.rust-analyzer"
     },
     "[cpp]": {
         "editor.formatOnSave": true
     },
     "[vue]": {
         "editor.formatOnSave": true
-    }
+    },
+    "python.formatting.provider": "black",
+    "python.formatting.blackPath": "/usr/local/bin/black",
+    "python.linting.mypyEnabled": true,
+    "python.showStartPage": false
 }
