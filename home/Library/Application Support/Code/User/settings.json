@@ -20,6 +20,17 @@
     "python.linting.pylintEnabled": false,
     "python.linting.flake8Enabled": true,
     "python.linting.flake8Path": "/usr/local/bin/flake8",
+    "python.linting.mypyEnabled": true,
+    "python.linting.mypyPath": "/usr/local/bin/mypy",
+    "python.linting.mypyArgs": [
+        "--ignore-missing-imports",
+        "--follow-imports=silent",
+        "--show-column-numbers",
+        "--strict"
+    ],
+    "python.formatting.provider": "black",
+    "python.formatting.blackPath": "/usr/local/bin/black",
+    "python.showStartPage": false,
     // Go
     "go.formatTool": "gofmt",
     "go.formatFlags": [
@@ -28,6 +39,7 @@
     "go.useLanguageServer": true,
     // Rust
     "rust.clippy_preference": "on",
+    "rust-analyzer.checkOnSave.command": "clippy",
     // Vue
     "vetur.format.defaultFormatter.js": "none",
     "vetur.format.defaultFormatter.ts": "none",
@@ -56,9 +68,5 @@
     },
     "[vue]": {
         "editor.formatOnSave": true
-    },
-    "python.formatting.provider": "black",
-    "python.formatting.blackPath": "/usr/local/bin/black",
-    "python.linting.mypyEnabled": true,
-    "python.showStartPage": false
+    }
 }
