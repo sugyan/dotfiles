@@ -12,7 +12,6 @@
             "editor.selectionHighlightBorder": "#00000000"
         }
     },
-    "window.zoomLevel": 0,
     "terminal.integrated.macOptionIsMeta": true,
     "terminal.integrated.shell.osx": "/usr/local/bin/zsh",
     "terminal.integrated.showExitAlert": false,
@@ -26,7 +25,8 @@
         "--ignore-missing-imports",
         "--follow-imports=silent",
         "--show-column-numbers",
-        "--strict"
+        "--strict",
+        "--show-error-codes"
     ],
     "python.formatting.provider": "black",
     "python.formatting.blackPath": "/usr/local/bin/black",
@@ -38,7 +38,6 @@
     ],
     "go.useLanguageServer": true,
     // Rust
-    "rust.clippy_preference": "on",
     "rust-analyzer.checkOnSave.command": "clippy",
     // Vue
     "vetur.format.defaultFormatter.js": "none",
@@ -55,8 +54,6 @@
     "eslint.workingDirectories": [
         "./frontend"
     ],
-    "breadcrumbs.enabled": false,
-    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
     "C_Cpp.clang_format_fallbackStyle": "{ BasedOnStyle: Google, IndentWidth: 4, AllowShortFunctionsOnASingleLine: false }",
     "editor.suggestSelection": "first",
     "[rust]": {
@@ -67,6 +64,32 @@
         "editor.formatOnSave": true
     },
     "[vue]": {
-        "editor.formatOnSave": true
-    }
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "C_Cpp.updateChannel": "Insiders",
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[typescript]": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[typescriptreact]": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "tailwindCSS.includeLanguages": {
+        "typescript": "javascript",
+        "typescriptreact": "javascript"
+    },
+    "workbench.editorAssociations": [
+        {
+            "viewType": "jupyter.notebook.ipynb",
+            "filenamePattern": "*.ipynb"
+        }
+    ],
+    "go.toolsManagement.autoUpdate": true,
+    "css.lint.unknownAtRules": "ignore",
+    "python.languageServer": "Pylance"
 }
