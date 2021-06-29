@@ -3,8 +3,8 @@
     "editor.fontSize": 13,
     "editor.minimap.enabled": false,
     "editor.renderWhitespace": "boundary",
-    "workbench.editor.showTabs": false,
     "workbench.activityBar.visible": false,
+    "workbench.editor.showTabs": false,
     "workbench.sideBar.location": "left",
     "workbench.colorTheme": "One Dark Pro",
     "workbench.colorCustomizations": {
@@ -13,7 +13,6 @@
         }
     },
     "terminal.integrated.macOptionIsMeta": true,
-    "terminal.integrated.shell.osx": "/usr/local/bin/zsh",
     "terminal.integrated.showExitAlert": false,
     // Python Configuration
     "python.linting.pylintEnabled": false,
@@ -83,12 +82,6 @@
         "typescript": "javascript",
         "typescriptreact": "javascript"
     },
-    "workbench.editorAssociations": [
-        {
-            "viewType": "jupyter.notebook.ipynb",
-            "filenamePattern": "*.ipynb"
-        }
-    ],
     "go.toolsManagement.autoUpdate": true,
     "css.lint.unknownAtRules": "ignore",
     "python.languageServer": "Pylance"
