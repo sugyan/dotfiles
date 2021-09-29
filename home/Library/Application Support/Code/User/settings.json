@@ -1,10 +1,13 @@
 {
+    "breadcrumbs.enabled": false,
+    "editor.bracketPairColorization.enabled": true,
     "editor.fontFamily": "'Bitstream Vera Sans Mono', Menlo, Monaco, 'Courier New', monospace",
     "editor.fontSize": 13,
     "editor.minimap.enabled": false,
     "editor.renderWhitespace": "boundary",
-    "workbench.activityBar.visible": false,
+    "editor.suggestSelection": "first",
     "workbench.editor.showTabs": false,
+    "workbench.activityBar.visible": false,
     "workbench.sideBar.location": "left",
     "workbench.colorTheme": "One Dark Pro",
     "workbench.colorCustomizations": {
@@ -29,7 +32,6 @@
     ],
     "python.formatting.provider": "black",
     "python.formatting.blackPath": "/usr/local/bin/black",
-    "python.showStartPage": false,
     // Go
     "go.formatTool": "gofmt",
     "go.formatFlags": [
