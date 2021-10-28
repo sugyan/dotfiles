@@ -200,5 +200,15 @@
         "key": "ctrl+p",
         "command": "list.focusUp",
         "when": "panelFocus"
+    },
+    {
+        "key": "ctrl+i",
+        "command": "editor.action.inlineSuggest.commit",
+        "when": "inlineSuggestionVisible && !editorTabMovesFocus && !inlineSuggestionHasIndentation"
+    },
+    {
+        "key": "tab",
+        "command": "-editor.action.inlineSuggest.commit",
+        "when": "inlineSuggestionVisible && !editorTabMovesFocus && !inlineSuggestionHasIndentation"
     }
 ]
