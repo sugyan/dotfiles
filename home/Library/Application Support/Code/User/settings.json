@@ -1,6 +1,7 @@
 {
     "breadcrumbs.enabled": false,
     "editor.bracketPairColorization.enabled": true,
+    "workbench.colorTheme": "One Dark Pro",
     "editor.fontFamily": "'Bitstream Vera Sans Mono', Menlo, Monaco, 'Courier New', monospace",
     "editor.fontSize": 13,
     "editor.minimap.enabled": false,
@@ -9,7 +10,6 @@
     "workbench.editor.showTabs": false,
     "workbench.activityBar.visible": false,
     "workbench.sideBar.location": "left",
-    "workbench.colorTheme": "One Dark Pro",
     "workbench.colorCustomizations": {
         "[One Dark Pro]": {
             "editor.selectionHighlightBorder": "#00000000"
@@ -52,14 +52,10 @@
         "typescriptreact",
         "vue",
     ],
-    "eslint.workingDirectories": [
-        "./frontend"
-    ],
     "C_Cpp.clang_format_fallbackStyle": "{ BasedOnStyle: Google, IndentWidth: 4, AllowShortFunctionsOnASingleLine: false }",
-    "editor.suggestSelection": "first",
     "[rust]": {
         "editor.formatOnSave": true,
-        "editor.defaultFormatter": "matklad.rust-analyzer"
+        "editor.defaultFormatter": "rust-lang.rust-analyzer"
     },
     "[cpp]": {
         "editor.formatOnSave": true

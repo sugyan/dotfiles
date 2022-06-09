@@ -2,12 +2,10 @@
 typeset -U path
 # add "$HOME/local/bin" to head
 path=(/usr/local/bin(N-/) $path)
-path=(/usr/local/go/bin(N-/) $path)
 path=($HOME/local/bin(N-/) $path)
 path=($HOME/.bin(N-/) $path)
-
-# environment variables
-export H=$HOME
+# homebrew
+eval "$(/opt/homebrew/bin/brew shellenv)"
 
 # fpath
 typeset -U fpath
