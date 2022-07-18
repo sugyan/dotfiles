@@ -20,9 +20,7 @@
     // Python Configuration
     "python.linting.pylintEnabled": false,
     "python.linting.flake8Enabled": true,
-    "python.linting.flake8Path": "/usr/local/bin/flake8",
     "python.linting.mypyEnabled": true,
-    "python.linting.mypyPath": "/usr/local/bin/mypy",
     "python.linting.mypyArgs": [
         "--ignore-missing-imports",
         "--follow-imports=silent",
@@ -31,7 +29,10 @@
         "--show-error-codes"
     ],
     "python.formatting.provider": "black",
-    "python.formatting.blackPath": "/usr/local/bin/black",
+    "python.languageServer": "Pylance",
+    "[python]": {
+        "editor.formatOnSave": true,
+    },
     // Go
     "go.formatTool": "gofmt",
     "go.formatFlags": [
@@ -52,7 +53,6 @@
         "typescriptreact",
         "vue",
     ],
-    "C_Cpp.clang_format_fallbackStyle": "{ BasedOnStyle: Google, IndentWidth: 4, AllowShortFunctionsOnASingleLine: false }",
     "[rust]": {
         "editor.formatOnSave": true,
         "editor.defaultFormatter": "rust-lang.rust-analyzer"
@@ -64,7 +64,6 @@
         "editor.formatOnSave": true,
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
-    "C_Cpp.updateChannel": "Insiders",
     "[javascript]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
@@ -76,11 +75,10 @@
         "editor.formatOnSave": true,
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
-    "tailwindCSS.includeLanguages": {
-        "typescript": "javascript",
-        "typescriptreact": "javascript"
+    "[json]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
     },
-    "go.toolsManagement.autoUpdate": true,
-    "css.lint.unknownAtRules": "ignore",
-    "python.languageServer": "Pylance"
+    "[jsonc]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    }
 }
