@@ -1,4 +1,4 @@
-.env
-.ruby-version
-
 .DS_Store
+.env
+
+*.code-workspace

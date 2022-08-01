@@ -25,6 +25,7 @@ launcher({'cmd', 'ctrl'}, 's', 'Slack')
 launcher({'cmd', 'ctrl'}, 'l', 'LINE')
 launcher({'cmd', 'ctrl'}, 'x', 'Xcode')
 launcher({'cmd', 'ctrl'}, 't', 'Twitter')
+launcher({'cmd', 'ctrl'}, 'd', 'Discord')
 launcher({'cmd', 'ctrl'}, 'o', 'Obsidian')
 
 
