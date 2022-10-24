@@ -18,7 +18,7 @@ local function launcher(mods, key, appname)
   end
 end
 
-launcher({'cmd', 'ctrl'}, 'q', 'iTerm')
+launcher({'cmd', 'ctrl'}, 'q', 'Alacritty')
 launcher({'cmd', 'ctrl'}, 'w', 'Visual Studio Code')
 launcher({'cmd', 'ctrl'}, 'e', 'Google Chrome')
 launcher({'cmd', 'ctrl'}, 's', 'Slack')
