@@ -9,7 +9,7 @@
 # All imports must either be absolute paths starting with `/`, or paths relative
 # to the user's home directory starting with `~/`.
 import:
- - /Users/sugyan/.ghq/github.com/eendroroy/alacritty-theme/themes/iterm.yaml
+ - /Users/sugyan/.ghq/github.com/eendroroy/alacritty-theme/themes/monokai_pro.yaml
 
 # Any items in the `env` entry below will be added as
 # environment variables. Some entries may override variables
@@ -185,11 +185,11 @@ font:
 #draw_bold_text_with_bright_colors: false
 
 # Colors (Tomorrow Night)
-#colors:
+colors:
   # Default colors
-  #primary:
-  #  background: '#1d1f21'
-  #  foreground: '#c5c8c6'
+  primary:
+   background: '#1d1f21'
+   foreground: '#c5c8c6'
 
     # Bright and dim foreground colors
     #
@@ -867,10 +867,10 @@ key_bindings:
   #- { key: W,              mods: Command,                    action: Quit                  }
   #- { key: N,              mods: Command,                    action: SpawnNewInstance      }
   #- { key: F,              mods: Command|Control,            action: ToggleFullscreen      }
+  - { key: W,              mods: Command,                    action: None                  }
   - { key: F,              mods: Command, mode: ~Search,     chars: "\x1BF"                }
   - { key: B,              mods: Command, mode: ~Search,     chars: "\x1BB"                }
   - { key: D,              mods: Command, mode: ~Search,     chars: "\x1BD"                }
-  - { key: W,              mods: Command, mode: ~Search,     action: None                  }
 
 #debug:
   # Display the time it takes to redraw each frame.
