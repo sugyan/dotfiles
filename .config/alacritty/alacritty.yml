@@ -867,10 +867,12 @@ key_bindings:
   #- { key: W,              mods: Command,                    action: Quit                  }
   #- { key: N,              mods: Command,                    action: SpawnNewInstance      }
   #- { key: F,              mods: Command|Control,            action: ToggleFullscreen      }
-  - { key: W,              mods: Command,                    action: None                  }
-  - { key: F,              mods: Command, mode: ~Search,     chars: "\x1BF"                }
-  - { key: B,              mods: Command, mode: ~Search,     chars: "\x1BB"                }
-  - { key: D,              mods: Command, mode: ~Search,     chars: "\x1BD"                }
+  - { key: Y,              mods: Control,                    action: Paste                 }
+  - { key: W,              mods: Command,                    chars: "\x1Bw"                }
+  - { key: F,              mods: Command,                    chars: "\x1Bf"                }
+  - { key: B,              mods: Command,                    chars: "\x1Bb"                }
+  - { key: D,              mods: Command,                    chars: "\x1Bd"                }
+  - { key: V,              mods: Command,                    chars: "\x1Bv"                }
 
 #debug:
   # Display the time it takes to redraw each frame.
