@@ -24,7 +24,7 @@ if command -v plenv > /dev/null; then eval "$(plenv init - zsh)"; fi
 # cargo
 path=($HOME/.cargo/bin(N-/) $path)
 # python poetry
-path=($HOME/.poetry/bin(N-/) $path)
+path=($HOME/.local/bin(N-/) $path)
 
 # golang
 if command -v go > /dev/null; then
