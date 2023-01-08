@@ -33,11 +33,6 @@
         "command": "-workbench.action.terminal.toggleTerminal"
     },
     {
-        "key": "ctrl+i",
-        "command": "tab",
-        "when": "editorTextFocus && !editorReadonly && !editorTabMovesFocus"
-    },
-    {
         "key": "tab",
         "command": "-tab",
         "when": "editorTextFocus && !editorReadonly && !editorTabMovesFocus"
@@ -204,11 +199,11 @@
     {
         "key": "ctrl+i",
         "command": "editor.action.inlineSuggest.commit",
-        "when": "inlineSuggestionVisible && !editorTabMovesFocus && !inlineSuggestionHasIndentation"
+        "when": "inlineSuggestionHasIndentationLessThanTabSize && inlineSuggestionVisible && !editorTabMovesFocus"
     },
     {
         "key": "tab",
         "command": "-editor.action.inlineSuggest.commit",
-        "when": "inlineSuggestionVisible && !editorTabMovesFocus && !inlineSuggestionHasIndentation"
+        "when": "inlineSuggestionHasIndentationLessThanTabSize && inlineSuggestionVisible && !editorTabMovesFocus"
     }
 ]
