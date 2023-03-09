@@ -42,9 +42,9 @@ elif [ -f $HOME/.z.sh/z.sh ]; then
     source $HOME/.z.sh/z.sh
 fi
 
-# peco
-if command -v peco > /dev/null; then
-    source $HOME/.zsh/peco.zsh
+# skim
+if command -v sk > /dev/null; then
+    source $HOME/.zsh/skim.zsh
 fi
 
 # don't read /etc/zprofile!

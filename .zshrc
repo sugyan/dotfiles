@@ -51,12 +51,11 @@ alias gpl="git pull"
 alias gps="git push"
 alias gci="git commit"
 alias gco="git checkout"
-alias gcp='git checkout $(git branch | peco)'
+alias gcp='git checkout $(git branch | sk)'
 alias gst="git stash"
 alias gsp="git stash pop"
 
 alias -g L='| less'
-alias -g P='| peco'
 
 ##################################################
 # others
