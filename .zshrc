@@ -39,7 +39,6 @@ case "$OSTYPE" in
 esac
 alias ll="ls -l"
 alias la="ll -a"
-alias em="emacs-minimum"
 
 alias gi=git
 alias ga="git add"
