@@ -178,15 +178,6 @@
         "command": "editor.action.showSnippets"
     },
     {
-        "key": "cmd+o",
-        "command": "search-in-current-file.searchInCurrentFile"
-    },
-    {
-        "key": "cmd+o",
-        "command": "workbench.action.closePanel",
-        "when": "activePanel == 'workbench.view.search'"
-    },
-    {
         "key": "ctrl+n",
         "command": "list.focusDown",
         "when": "panelFocus"
@@ -205,5 +196,9 @@
         "key": "tab",
         "command": "-editor.action.inlineSuggest.commit",
         "when": "inlineSuggestionHasIndentationLessThanTabSize && inlineSuggestionVisible && !editorTabMovesFocus"
+    },
+    {
+        "key": "ctrl+cmd+`",
+        "command": "workbench.action.switchWindow"
     }
 ]
