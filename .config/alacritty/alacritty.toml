@@ -1,0 +1,50 @@
+import = [
+    "/Users/sugyan/.ghq/github.com/alacritty/alacritty-theme/themes/monokai_pro.toml",
+]
+
+[colors.primary]
+background = "#1d1f21"
+foreground = "#c5c8c6"
+
+[env]
+TERM = "alacritty"
+
+[font]
+size = 13.5
+
+[font.normal]
+family = "BitStream Vera Sans Mono"
+
+[[keyboard.bindings]]
+action = "Paste"
+key = "Y"
+mods = "Control"
+
+[[keyboard.bindings]]
+chars = "\u001Bw"
+key = "W"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u001Bf"
+key = "F"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u001Bb"
+key = "B"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u001Bd"
+key = "D"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u001Bv"
+key = "V"
+mods = "Command"
+
+[window]
+opacity = 0.85
+startup_mode = "SimpleFullscreen"
