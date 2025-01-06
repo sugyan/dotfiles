@@ -7,23 +7,15 @@
 -- Launcher Shortcut:
 
 local function launcher(mods, key, appname)
-  if appname == 'Twitter' then
-    hs.hotkey.bind(mods, key, function()
-      hs.application.launchOrFocus(os.getenv('HOME') .. '/Applications/Chrome Apps.localized/' .. appname .. '.app')
-    end)
-  else
-    hs.hotkey.bind(mods, key, function()
-      hs.application.launchOrFocus('/Applications/' .. appname .. '.app')
-    end)
-  end
+  hs.hotkey.bind(mods, key, function()
+    hs.application.launchOrFocus('/Applications/' .. appname .. '.app')
+  end)
 end
 
-launcher({'cmd', 'ctrl'}, 'q', 'Alacritty')
+launcher({'cmd', 'ctrl'}, 'q', 'WezTerm')
 launcher({'cmd', 'ctrl'}, 'w', 'Visual Studio Code')
 launcher({'cmd', 'ctrl'}, 'e', 'Google Chrome')
 launcher({'cmd', 'ctrl'}, 's', 'Slack')
-launcher({'cmd', 'ctrl'}, 'l', 'LINE')
-launcher({'cmd', 'ctrl'}, 't', 'Twitter')
 launcher({'cmd', 'ctrl'}, 'd', 'Discord')
 launcher({'cmd', 'ctrl'}, 'o', 'Obsidian')
 

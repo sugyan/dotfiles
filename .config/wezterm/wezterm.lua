@@ -24,8 +24,9 @@ config.font = wezterm.font_with_fallback({
     'Hiragino Maru Gothic ProN',
 })
 config.font_size = 13.5
+config.window_background_opacity = 0.90
 
-config.window_background_opacity = 0.85
+config.audible_bell = "Disabled"
 config.initial_rows = 48
 config.initial_cols = 180
 config.enable_tab_bar = false

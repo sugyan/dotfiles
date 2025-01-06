@@ -1,14 +1,11 @@
 {
     "breadcrumbs.enabled": false,
     "editor.bracketPairColorization.enabled": true,
-    "workbench.colorTheme": "One Dark Pro",
     "editor.fontFamily": "'Bitstream Vera Sans Mono', Menlo, Monaco, 'Courier New', monospace",
     "editor.fontSize": 13,
     "editor.minimap.enabled": false,
     "editor.renderWhitespace": "boundary",
     "editor.suggestSelection": "first",
-    "workbench.editor.showTabs": false,
-    "workbench.activityBar.visible": false,
     "workbench.sideBar.location": "left",
     "workbench.colorCustomizations": {
         "[One Dark Pro]": {
@@ -80,5 +77,8 @@
     },
     "[jsonc]": {
         "editor.defaultFormatter": "vscode.json-language-features"
-    }
+    },
+    "workbench.colorTheme": "One Dark Pro",
+    "workbench.editor.showTabs": "single",
+    "workbench.activityBar.location": "hidden"
 }
