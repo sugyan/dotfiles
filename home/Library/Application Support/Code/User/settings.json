@@ -37,7 +37,7 @@
     ],
     "go.useLanguageServer": true,
     // Rust
-    "rust-analyzer.checkOnSave.command": "clippy",
+    "rust-analyzer.check.command": "clippy",
     // Vue
     "vetur.format.defaultFormatter.js": "none",
     "vetur.format.defaultFormatter.ts": "none",
@@ -56,10 +56,6 @@
     },
     "[cpp]": {
         "editor.formatOnSave": true
-    },
-    "[vue]": {
-        "editor.formatOnSave": true,
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
     "[javascript]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -80,5 +76,7 @@
     },
     "workbench.colorTheme": "One Dark Pro",
     "workbench.editor.showTabs": "single",
-    "workbench.activityBar.location": "hidden"
+    "workbench.activityBar.location": "hidden",
+    "editor.accessibilitySupport": "off",
+    "git.openRepositoryInParentFolders": "never"
 }
